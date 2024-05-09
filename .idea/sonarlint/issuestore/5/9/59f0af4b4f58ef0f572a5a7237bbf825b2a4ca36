@@ -1,0 +1,13 @@
+
+	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¡Ó¶Ìõ1J$18527161-bf0e-4800-a59d-9f7238168d84
+	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¡Ó¶Ìõ1J$a311743e-2c5c-4a63-b8be-b163bb6936a4
+	java:S116#"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8´Ó¶Ìõ1J$376ea74b-7db1-4d6c-8f5f-0f12c8c8ba77
+›	java:S116&"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8´Ó¶Ìõ1J$a9ceb891-4693-42a1-9959-eca78bb86395
+e
+java:S1172I"CRemove these unused method parameters "loginText", "loginPassword".(¡œûÿÿÿÿ8€ÿÀÌõ1
+z
+java:S2440J"2Remove this instantiation of "DatabaseConnection".(÷õ¡İûÿÿÿÿ8ÊÓ¶Ìõ1J$1ec9d0ee-5a02-482c-bceb-d91d9f46b7db
+}
+java:S2209P"5Change this instance-reference to a static reference.(ıµæóşÿÿÿÿ8ÎÓ¶Ìõ1J$b60e6928-094a-432d-a53c-0d6bf2631aa8
+m	java:S106U"+Replace this use of System.out by a logger.(õÑÚò8ĞÓ¶Ìõ1J$2d627b0b-6792-4549-a1cf-4d91512cdddf
+r	java:S106j"+Replace this use of System.out by a logger.(µ½¨Òüÿÿÿÿ8ÛÓ¶Ìõ1J$946ecbbf-4d50-4204-a241-a6e479f80e50

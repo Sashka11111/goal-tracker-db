@@ -1,0 +1,42 @@
+.side-panel {
+  -fx-background-color: linear-gradient(to bottom, #483D8B, #8A2BE2);
+}
+.side-btn {
+  -fx-background-color: transparent;
+  -fx-text-fill: white; /* Білий колір тексту */
+  -fx-border-radius: 5px; /* Округлені кути */
+  -fx-cursor: hand; /* Зміна курсора при наведенні */
+}
+.side-btn:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.2); /* Прозорий колір фону при наведенні */
+  -fx-cursor: hand;
+}
+.border{
+  -fx-border-color:linear-gradient(to bottom, #483D8B, #8A2BE2);
+  -fx-border-radius: 8px;
+  -fx-border-width: 2px;
+}
+.table-view {
+  -fx-background-color: transparent; /* Встановлення прозорого фону */
+  -fx-border-color: linear-gradient(to bottom, #483D8B, #8A2BE2);
+  -fx-border-width: 2px;
+  -fx-border-radius: 8px;
+  -fx-padding: 0;
+  -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header-background {
+  -fx-background-color: rgba(255, 255, 255, 0.2);
+  -fx-background-radius: 8px 8px 0 0;
+  -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header, .filter {
+  -fx-background-color: linear-gradient(to bottom, #483D8B, #8A2BE2);
+  -fx-size: 50px;
+}
+
+.card{
+  -fx-background-color:linear-gradient(to bottom, #483D8B, #8A2BE2);
+  -fx-background-radius: 8px;
+}

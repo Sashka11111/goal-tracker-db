@@ -1,0 +1,21 @@
+
+¦	java:S116"_Rename this field "MyGoals_col_Category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á»œÄşÿÿÿÿ8Ö¬…Ìõ1J$8ee5aa93-35e7-4795-8e43-41874dca44f1
+¤	java:S116"bRename this field "MyGoals_col_Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç†·Ô8×¬…Ìõ1J$cb50d524-6338-4a96-a0e4-8bf9bfeecfca
+¢	java:S116"[Rename this field "MyGoals_col_Goal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÀ«®ûÿÿÿÿ8×¬…Ìõ1J$d76de30c-b2f3-4ced-a157-f1941353c917
+ 	java:S116""^Rename this field "MyGoals_col_endDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÜë¿8×¬…Ìõ1J$a7401b7c-3d78-4866-89d5-39952aed3731
+§	java:S116%"`Rename this field "MyGoals_col_startDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒĞ÷ÿÿÿÿÿ8×¬…Ìõ1J$36de1be4-6f1c-4dd9-9b0c-bf695cfd9852
+¤	java:S116("]Rename this field "MyGoals_col_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ú°æşÿÿÿÿ8×¬…Ìõ1J$4dbf5405-9d15-403f-8dc8-8061ec4c9fd4
+	java:S116+"\Rename this field "MyGoals_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡´ï‡8×¬…Ìõ1J$e55f073d-a9f0-4cf4-b74d-faea02bfb3d0
+”	java:S1163"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8×¬…Ìõ1J$c2de40d3-5695-40f6-ad32-37630a5a96f9
+–	java:S1166"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8×¬…Ìõ1J$d605ed97-54cb-4288-90b4-8647f84c6c29
+–	java:S1169"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8×¬…Ìõ1J$6d11e917-c501-4c6a-93d9-39baacbea76f
+—	java:S116<"URename this field "btn_update" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÑ¤¯8Ø¬…Ìõ1J$ed27265c-f4ad-4099-b336-a29ca9418f76
+d
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.dao.GoalDAO'.(ä·î¨ùÿÿÿÿ8Ó˜†Ìõ1
+_
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.Goal'.(­•˜ı8Ó˜†Ìõ1
+R
+java:S1128
+"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8Ó˜†Ìõ1
+X
+java:S1128";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ8Ó˜†Ìõ1

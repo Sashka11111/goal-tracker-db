@@ -1,0 +1,16 @@
+
+p	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ
+r	java:S116"XRename this field "btn_myProfile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ï´ôøÿÿÿÿ
+u	java:S116"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ðûÿÿÿÿ
+h	java:S116"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ
+l	java:S116$"WRename this field "lbl_userName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»«ãØ
+—
+java:S11860"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(µÃìì
+A
+java:S1602,",Remove useless curly braces around statement(Š¬Ï!
+`
+java:S1854Z"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨þÿÿÿÿ
+Q
+java:S1481Z"6Remove this unused "myGoalsController" local variable.(Ì®á¨þÿÿÿÿ
+J
+java:S11440"4Remove this unused private "displayUserName" method.(µÃìì

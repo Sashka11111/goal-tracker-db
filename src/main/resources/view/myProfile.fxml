@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="558.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liamtseva.presentation.controller.MyProfileController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="26.0" prefHeight="208.0" prefWidth="663.0" stylesheets="@../design/mainMenu.css">
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="card" />
+         </styleClass>
+         <children>
+            <ImageView fx:id="userPhoto" fitHeight="153.0" fitWidth="163.0" layoutX="25.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../data/goalTracker.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="209.0" layoutY="37.0" prefHeight="27.0" prefWidth="108.0" text="Користувач:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="37.0" prefHeight="27.0" prefWidth="108.0" text="User" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="28.0" layoutY="264.0" prefHeight="208.0" prefWidth="315.0" styleClass="card" stylesheets="@../design/mainMenu.css">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="97.0" layoutX="27.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../data/activeGoals.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="186.0" layoutY="171.0" prefHeight="27.0" prefWidth="115.0" text="Активні цілі" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="277.0" layoutY="14.0" prefHeight="27.0" prefWidth="24.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="375.0" layoutY="264.0" prefHeight="208.0" prefWidth="315.0" styleClass="card" stylesheets="@../design/mainMenu.css">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="115.0" layoutX="14.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../data/done.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="189.0" layoutY="168.0" prefHeight="27.0" prefWidth="115.0" text="Виконані цілі" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="279.0" layoutY="12.0" prefHeight="27.0" prefWidth="24.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

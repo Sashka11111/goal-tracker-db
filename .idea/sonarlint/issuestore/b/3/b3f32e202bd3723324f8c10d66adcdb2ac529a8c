@@ -1,0 +1,15 @@
+
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘•Ûúÿÿÿÿ8çğâËõ1
+l
+java:S20951"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(›‹·–8èğâËõ1
+i
+java:S2095""GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8èğâËõ1
+l
+java:S2095@"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(É©¤·8èğâËõ1
+l
+java:S2095N"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯œ8—Úğ»õ1
+<
+java:S6905#"Don't use the query "SELECT *".(Âó˜‘8şğâËõ1
+<
+java:S69051"Don't use the query "SELECT *".(›‹·–8†ñâËõ1
