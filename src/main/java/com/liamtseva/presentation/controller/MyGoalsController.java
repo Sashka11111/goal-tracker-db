@@ -1,13 +1,6 @@
 package com.liamtseva.presentation.controller;
 
-import com.liamtseva.persistence.config.DatabaseConnection;
-import com.liamtseva.persistence.dao.GoalDAO;
-import com.liamtseva.persistence.entity.Goal;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.time.LocalDate;
+import com.liamtseva.persistence.entity.Category;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -17,7 +10,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
 public class MyGoalsController {
 
@@ -60,13 +52,14 @@ public class MyGoalsController {
   private Button btn_update;
 
   @FXML
-  private ComboBox<String> category;
+  private ComboBox<Category> category;
 
   @FXML
   private DatePicker endDate;
 
   @FXML
   private DatePicker startDate;
+
 
   @FXML
   void initialize() {

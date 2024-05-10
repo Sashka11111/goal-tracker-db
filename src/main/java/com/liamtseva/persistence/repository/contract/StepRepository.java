@@ -1,4 +1,4 @@
-package com.liamtseva.persistence.repository;
+package com.liamtseva.persistence.repository.contract;
 
 import com.liamtseva.persistence.entity.Step;
 import com.liamtseva.persistence.exception.EntityNotFoundException;

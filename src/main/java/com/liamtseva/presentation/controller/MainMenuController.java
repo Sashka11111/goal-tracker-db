@@ -99,7 +99,7 @@ public class MainMenuController {
       MyGoalsController myGoalsController = loader.getController();
 
       // Вставити myGoalsPane в contentArea
-      contentArea.getChildren().clear(); // Очистіть будь-які попередні вміст, якщо потрібно
+      contentArea.getChildren().clear();
       contentArea.getChildren().add(myGoalsPane);
     } catch (IOException e) {
       e.printStackTrace();

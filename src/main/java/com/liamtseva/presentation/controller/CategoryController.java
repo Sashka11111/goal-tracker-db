@@ -1,24 +1,18 @@
 package com.liamtseva.presentation.controller;
 
-import com.liamtseva.persistence.dao.CategoryDAO;
 import com.liamtseva.persistence.entity.Category;
+import com.liamtseva.persistence.exception.EntityNotFoundException;
+import com.liamtseva.persistence.repository.contract.CategoryRepository;
 import com.liamtseva.presentation.viewmodel.CategoryViewModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.List;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class CategoryController {
-
-  @FXML
-  private ResourceBundle resources;
-
-  @FXML
-  private URL location;
 
   @FXML
   private TableColumn<CategoryViewModel, Integer> Category_col_IdCategory;
@@ -44,8 +38,13 @@ public class CategoryController {
   @FXML
   private Button btn_update;
 
-  private final CategoryDAO categoryDAO = new CategoryDAO();
+  private final CategoryRepository categoryRepository;
   private final ObservableList<CategoryViewModel> categoryList = FXCollections.observableArrayList();
+
+  // Конструктор, що приймає CategoryRepository
+  public CategoryController(CategoryRepository categoryRepository) {
+    this.categoryRepository = categoryRepository;
+  }
 
   @FXML
   void initialize() {
@@ -64,12 +63,14 @@ public class CategoryController {
   }
 
   private void loadData() {
-    ObservableList<Category> categories = FXCollections.observableArrayList(categoryDAO.getAllCategories());
-    categoryList.setAll(convertToViewModel(categories));
-    Category_tableView.setItems(categoryList);
+    if (categoryRepository != null) {
+      List<Category> categories = categoryRepository.getAllCategories();
+      categoryList.setAll(convertToViewModel(categories));
+      Category_tableView.setItems(categoryList);
+    }
   }
 
-  private ObservableList<CategoryViewModel> convertToViewModel(ObservableList<Category> categories) {
+  private ObservableList<CategoryViewModel> convertToViewModel(List<Category> categories) {
     ObservableList<CategoryViewModel> viewModels = FXCollections.observableArrayList();
     for (Category category : categories) {
       CategoryViewModel viewModel = new CategoryViewModel(category.id(), category.name());
@@ -80,14 +81,17 @@ public class CategoryController {
 
   private void addCategory() {
     String categoryName = addCategory.getText().trim();
-    if (!categoryName.isEmpty()) {
+    if (!categoryName.isEmpty() && categoryRepository != null) {
       Category newCategory = new Category(0, categoryName);
-      categoryDAO.addCategory(newCategory);
-      loadData(); // Оновлення даних у таблиці
-      clearFields(); // Очищення полів вводу
+      try {
+        categoryRepository.addCategory(newCategory);
+        loadData();
+        clearFields();
+      } catch (EntityNotFoundException e) {
+        e.printStackTrace();
+      }
     }
   }
-
 
   private void clearFields() {
     addCategory.clear();
@@ -95,20 +99,28 @@ public class CategoryController {
 
   private void deleteCategory() {
     CategoryViewModel selectedCategory = Category_tableView.getSelectionModel().getSelectedItem();
-    if (selectedCategory != null) {
-      categoryDAO.deleteCategory(selectedCategory.getId());
-      categoryList.remove(selectedCategory);
+    if (selectedCategory != null && categoryRepository != null) {
+      try {
+        categoryRepository.deleteCategory(selectedCategory.getId());
+        categoryList.remove(selectedCategory);
+      } catch (EntityNotFoundException e) {
+        e.printStackTrace();
+      }
     }
   }
 
   private void updateCategory() {
     CategoryViewModel selectedCategory = Category_tableView.getSelectionModel().getSelectedItem();
     String newName = addCategory.getText().trim();
-    if (selectedCategory != null && !newName.isEmpty()) {
+    if (selectedCategory != null && !newName.isEmpty() && categoryRepository != null) {
       selectedCategory.setName(newName);
-      categoryDAO.updateCategory(new Category(selectedCategory.getId(), newName));
-      Category_tableView.refresh();
-      clearFields();
+      try {
+        categoryRepository.updateCategory(new Category(selectedCategory.getId(), newName));
+        Category_tableView.refresh();
+        clearFields();
+      } catch (EntityNotFoundException e) {
+        e.printStackTrace();
+      }
     }
   }
 }

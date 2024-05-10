@@ -2,11 +2,13 @@ package com.liamtseva.persistence.exception;
 
 import java.io.Serial;
 
-public class EntityNotFoundException extends RuntimeException {
-
-  @Serial private static final long serialVersionUID = -6486296592874470767L;
+public class EntityNotFoundException extends Exception {
 
   public EntityNotFoundException(String message) {
     super(message);
+  }
+
+  public EntityNotFoundException(String message, Throwable cause) {
+    super(message, cause);
   }
 }

@@ -1,8 +1,11 @@
 package com.liamtseva.presentation.controller;
 
 import com.liamtseva.domain.exception.UserValidator;
-import com.liamtseva.persistence.dao.UserDAO;
+import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
+import com.liamtseva.persistence.exception.EntityNotFoundException;
+import com.liamtseva.persistence.repository.contract.UserRepository;
+import com.liamtseva.persistence.repository.impl.UserRepositoryImpl; // Імплементація UserRepository
 import com.liamtseva.presentation.animation.Shake;
 import java.io.File;
 import java.io.IOException;
@@ -32,11 +35,18 @@ public class RegistrationController {
 
   @FXML
   private PasswordField password_field;
+
   @FXML
   private Label errorMessageLabel;
+
   @FXML
   private ImageView profileImageView;
+
   private String selectedProfileImagePath;
+
+  // Ініціалізація об'єкту UserRepository
+  private final UserRepository userRepository = new UserRepositoryImpl(new DatabaseConnection());
+
 
   @FXML
   void chooseImageButtonClicked() {
@@ -62,8 +72,8 @@ public class RegistrationController {
 
   @FXML
   void initialize() {
+    // Логіка кнопки перехіду до екрану авторизації
     authSignInButton.setOnAction(event -> {
-      // Отримуємо сцену з кнопки
       Scene currentScene = authSignInButton.getScene();
       FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
       try {
@@ -74,6 +84,7 @@ public class RegistrationController {
       }
     });
 
+    // Логіка кнопки реєстрації користувача
     SignInButton.setOnAction(event -> {
       String username = login_field.getText();
       String password = password_field.getText();
@@ -87,19 +98,16 @@ public class RegistrationController {
       }
 
       if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
-        if (!UserValidator.isUsernameExists(username)) {
-          // Створюємо об'єкт користувача
+        if (!userRepository.isUsernameExists(username)) {
+          // Створення об'єкту користувача
           User user = new User(username, password);
-          // Створюємо об'єкт класу UserDAO
-          UserDAO userDAO = new UserDAO();
-
-          // Додаємо користувача до бази даних
-          userDAO.addUser(user);
+          // Додавання користувача до бази даних через UserRepository
+          userRepository.addUser(user);
 
           System.out.println("Registration successful.");
           SignInButton.getScene().getWindow().hide();
 
-          // Завантажуємо головне меню
+          // Перехід до головного меню
           FXMLLoader loader = new FXMLLoader(
               getClass().getResource("/view/mainMenu.fxml"));
           Stage stage = new Stage();
@@ -112,12 +120,10 @@ public class RegistrationController {
           }
         } else {
           errorMessageLabel.setText("Логін з ім'ям " + username + " уже існує");
-          // Відображення повідомлення про помилку та застосування анімації Shake
           Shake userLoginAnim = new Shake(login_field);
           userLoginAnim.playAnim();
         }
       } else {
-        // Відображення повідомлення про помилку та застосування анімації Shake
         errorMessageLabel.setText("Пароль має мати велику, маленьку букву та цифру");
         Shake userLoginAnim = new Shake(login_field);
         Shake userPassAnim = new Shake(password_field);

@@ -1,11 +1,12 @@
 package com.liamtseva.presentation.controller;
 
-import com.liamtseva.persistence.dao.UserDAO;
+import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
+import com.liamtseva.persistence.exception.EntityNotFoundException;
+import com.liamtseva.persistence.repository.contract.UserRepository;
+import com.liamtseva.persistence.repository.impl.UserRepositoryImpl;
 import com.liamtseva.presentation.animation.Shake;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -18,12 +19,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class AuthorizationController {
-
-  @FXML
-  private ResourceBundle resources;
-
-  @FXML
-  private URL location;
 
   @FXML
   private Button authSignInButton;
@@ -40,51 +35,54 @@ public class AuthorizationController {
   @FXML
   private Label errorMessageLabel;
 
+  private final UserRepository userRepository = new UserRepositoryImpl(new DatabaseConnection());
+
+
   @FXML
   void initialize() {
-    loginSingUpButton.setOnAction(event ->{
+    loginSingUpButton.setOnAction(event -> {
       // Отримуємо сцену з кнопки
       Scene currentScene = loginSingUpButton.getScene();
       // Завантажуємо нову сцену з файлу registration.fxml
-       try {
-         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/registration.fxml"));
-         Parent root = loader.load();
-         Scene newScene = new Scene(root);
-// Встановлюємо нову сцену на поточному вікні
-         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-         primaryStage.setScene(newScene);
-         primaryStage.show();
+      try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/registration.fxml"));
+        Parent root = loader.load();
+        Scene newScene = new Scene(root);
+        // Встановлюємо нову сцену на поточному вікні
+        Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        primaryStage.setScene(newScene);
+        primaryStage.show();
 
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
     });
 
-    authSignInButton.setOnAction(event ->{
+    authSignInButton.setOnAction(event -> {
       String loginText = login_field.getText().trim();
       String loginPassword = password_field.getText().trim();
 
-      if (!loginText.equals("") && !loginPassword.equals("")) {
-        // Перевірка логіну та пароля користувача
-        UserDAO userDAO = new UserDAO();
-        User user = userDAO.getUserByLogin(loginText);
-        if (user != null && user.password().equals(loginPassword)) {
-          loginSingUpButton.getScene().getWindow().hide();
-          FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
-          Parent root;
-          try {
-            root = loader.load();
-          } catch (IOException e) {
-            e.printStackTrace();
-            return;
+      if (!loginText.isEmpty() && !loginPassword.isEmpty()) {
+        try {
+          // Перевірка логіну та пароля користувача
+          User user = userRepository.findByUsername(loginText);
+          if (user != null && user.password().equals(loginPassword)) {
+            loginSingUpButton.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Трекер особистих цілей");
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+
+          } else {
+            errorMessageLabel.setText("Невірний логін або пароль");
+            Shake userLoginAnim = new Shake(login_field);
+            Shake userPassAnim = new Shake(password_field);
+            userLoginAnim.playAnim();
+            userPassAnim.playAnim();
           }
-
-          Stage stage = new Stage();
-          stage.setTitle("Трекер особистих цілей");
-          stage.setScene(new Scene(root));
-          stage.showAndWait();
-
-        } else {
+        } catch (EntityNotFoundException | IOException e) {
           errorMessageLabel.setText("Невірний логін або пароль");
           Shake userLoginAnim = new Shake(login_field);
           Shake userPassAnim = new Shake(password_field);

@@ -1,12 +1,16 @@
 
-	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…öäàõ1J$e78290a9-6e8b-49a3-99b0-0abb2dba09a4
-™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8Ÿöäàõ1J$b3ec5a29-1899-44bd-ad95-bac6680b2774
-	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8Ÿöäàõ1J$812db64a-fbb4-408a-abb0-236b7cce7620
-›	java:S116""YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8Ÿöäàõ1J$50a81ae9-6161-4474-a201-8cf8fe5a9c9e
+	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8’Œæ–ö1J$8bface03-085b-4194-b093-370fcf9c1167
+™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8«Œæ–ö1J$f5ef539a-19d8-4508-ba30-35693ea8efb0
+	java:S116""VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8«Œæ–ö1J$7a0df29b-6ede-44a4-a671-18c442f17a9e
+›	java:S116%"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8«Œæ–ö1J$f03f2cc7-a305-4fea-b236-2c31c99eaae5
 ©
-java:S1450'"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8¡öäàõ1J$8120cfb8-b05c-42b3-9579-d413114bf05a
+java:S1450-"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8¬Œæ–ö1J$0ef634a1-3a93-4a6b-b048-d3ca92978d86
+z
+java:S24400"2Remove this instantiation of "DatabaseConnection".(­äÿ‹ûÿÿÿÿ8±Œæ–ö1J$b4bcc555-9b31-45eb-9f9e-3924c39abb77
 š
-java:S3776@"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8¬öäàõ1J$6fa7d9e5-36d4-4368-a033-c8486169b29f
-m	java:S106c"+Replace this use of System.out by a logger.(Í¶®Ê8¸öäàõ1J$7feb2aa6-85a1-4202-80c4-828df2fac4bb
+java:S3776J"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8¹Œæ–ö1J$7501b41e-4056-4a58-83f1-5c9ff25e2fb3
+m	java:S106k"+Replace this use of System.out by a logger.(Í¶®Ê8ÂŒæ–ö1J$fde6599c-9da0-4cfa-bba4-9fe84b75eb07
+›
+java:S1128"XRemove this unused import 'com.liamtseva.persistence.exception.EntityNotFoundException'.(¢…æë8ËŒæ–ö1J$86ab5cf8-3267-491f-9e9c-e1e286b5acae
 ~
-java:S1068'"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8Áöäàõ1J$10305934-51e3-4b85-a792-950a1e2c14c1
+java:S1068-"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8ÌŒæ–ö1J$dd5ed4df-952d-4e47-bef4-b3794bcf905d
