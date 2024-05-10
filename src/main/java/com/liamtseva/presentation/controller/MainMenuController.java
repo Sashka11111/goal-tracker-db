@@ -1,11 +1,9 @@
-package com.liamtseva.goals;
+package com.liamtseva.presentation.controller;
 
-import com.liamtseva.goals.entity.User;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +14,9 @@ import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
 public class MainMenuController {
+
+  @FXML
+  private Button btn_category;
 
   @FXML
   private Button btn_myGoals;
@@ -43,6 +44,7 @@ public class MainMenuController {
     btn_myGoals.setOnAction(event -> showMyGoalPage());
     btn_myProfile.setOnAction(event -> showMyProfilelPage());
     btn_completeGoal.setOnAction(event -> showCompleteGoalsPage());
+    btn_category.setOnAction(actionEvent -> showCategoryPage());
     btn_exit.setOnAction(event ->{
       System.exit(0);
     });
@@ -61,17 +63,21 @@ public class MainMenuController {
 
   private void showMyGoalPage() {
     moveStackPane(btn_myGoals);
-    loadFXML("myGoals.fxml");
+    loadFXML("/view/myGoals.fxml");
   }
 
   private void showMyProfilelPage() {
     moveStackPane(btn_myProfile);
-    loadFXML("myProfile.fxml");
+    loadFXML("/view/myProfile.fxml");
   }
 
   private void showCompleteGoalsPage() {
     moveStackPane(btn_completeGoal);
-    loadFXML("completeGoals.fxml");
+    loadFXML("/view/completeGoals.fxml");
+  }
+  private void showCategoryPage() {
+    moveStackPane(btn_category);
+    loadFXML("/view/category.fxml");
   }
 
   private void loadFXML(String fxmlFileName) {
@@ -83,9 +89,10 @@ public class MainMenuController {
       Logger.getLogger(MainMenuController.class.getName()).log(Level.SEVERE, null, ex);
     }
   }
+
   private void loadMyGoals() {
     try {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("myGoals.fxml"));
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/myGoals.fxml"));
       AnchorPane myGoalsPane = loader.load();
 
       // Отримати контролер myGoals.fxml

@@ -1,21 +1,37 @@
 
-¦	java:S116"_Rename this field "MyGoals_col_Category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á»œÄşÿÿÿÿ8Ö¬…Ìõ1J$8ee5aa93-35e7-4795-8e43-41874dca44f1
-¤	java:S116"bRename this field "MyGoals_col_Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç†·Ô8×¬…Ìõ1J$cb50d524-6338-4a96-a0e4-8bf9bfeecfca
-¢	java:S116"[Rename this field "MyGoals_col_Goal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÀ«®ûÿÿÿÿ8×¬…Ìõ1J$d76de30c-b2f3-4ced-a157-f1941353c917
- 	java:S116""^Rename this field "MyGoals_col_endDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÜë¿8×¬…Ìõ1J$a7401b7c-3d78-4866-89d5-39952aed3731
-§	java:S116%"`Rename this field "MyGoals_col_startDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒĞ÷ÿÿÿÿÿ8×¬…Ìõ1J$36de1be4-6f1c-4dd9-9b0c-bf695cfd9852
-¤	java:S116("]Rename this field "MyGoals_col_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ú°æşÿÿÿÿ8×¬…Ìõ1J$4dbf5405-9d15-403f-8dc8-8061ec4c9fd4
-	java:S116+"\Rename this field "MyGoals_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡´ï‡8×¬…Ìõ1J$e55f073d-a9f0-4cf4-b74d-faea02bfb3d0
-”	java:S1163"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8×¬…Ìõ1J$c2de40d3-5695-40f6-ad32-37630a5a96f9
-–	java:S1166"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8×¬…Ìõ1J$d605ed97-54cb-4288-90b4-8647f84c6c29
-–	java:S1169"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8×¬…Ìõ1J$6d11e917-c501-4c6a-93d9-39baacbea76f
-—	java:S116<"URename this field "btn_update" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÑ¤¯8Ø¬…Ìõ1J$ed27265c-f4ad-4099-b336-a29ca9418f76
-d
-java:S1128"BRemove this unused import 'com.liamtseva.persistence.dao.GoalDAO'.(ä·î¨ùÿÿÿÿ8Ó˜†Ìõ1
-_
-java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.Goal'.(­•˜ı8Ó˜†Ìõ1
-R
+¦	java:S116"_Rename this field "MyGoals_col_Category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á»œÄşÿÿÿÿ8Ö¬…Ìõ1J$f1b26720-5ff2-42ff-bea1-d13915c88cd7
+¤	java:S116"bRename this field "MyGoals_col_Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç†·Ô8×¬…Ìõ1J$85df21ff-a261-425d-8360-8151c6d150a1
+¢	java:S116"[Rename this field "MyGoals_col_Goal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÀ«®ûÿÿÿÿ8×¬…Ìõ1J$20449314-d04b-4642-86ee-ca27e921651f
+ 	java:S116""^Rename this field "MyGoals_col_endDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÜë¿8×¬…Ìõ1J$09b8e934-5470-4b15-94f9-f97212e117a8
+§	java:S116%"`Rename this field "MyGoals_col_startDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒĞ÷ÿÿÿÿÿ8×¬…Ìõ1J$657f5e54-5ccc-472c-ac81-96b1dcda1739
+¤	java:S116("]Rename this field "MyGoals_col_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ú°æşÿÿÿÿ8×¬…Ìõ1J$4c61f889-9e08-4ceb-afff-77d26b372226
+	java:S116+"\Rename this field "MyGoals_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡´ï‡8×¬…Ìõ1J$197fcd00-cba2-4962-b6cd-8c80720e5384
+”	java:S1163"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8×¬…Ìõ1J$0191a478-5a9b-4fb4-846c-abf03b1ae982
+–	java:S1166"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8×¬…Ìõ1J$dd1bad2a-ce70-4c04-9076-9f97d3df4278
+–	java:S1169"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8×¬…Ìõ1J$05b5f920-3b5c-446d-a1ef-1b15e8ff2482
+—	java:S116<"URename this field "btn_update" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÑ¤¯8Ø¬…Ìõ1J$6ff5b0b5-ab41-4e94-9e7f-b7b05d967502
+É
+java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷‹¾†ÿÿÿÿÿ8¸Š÷çõ1J$99798df5-5f94-4adf-b75f-26e28d99ce64
+“
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8»Š÷çõ1J$d07e6adc-0e4a-4f94-b9ab-cf0a54d04372
+Š
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.dao.GoalDAO'.(ä·î¨ùÿÿÿÿ8»Š÷çõ1J$6faa0ee2-e1d1-4961-8603-a892224132b1
+…
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.Goal'.(­•˜ı8»Š÷çõ1J$97913ca8-3643-4ed2-bdac-c3076f678dbb
+s
+java:S1128"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8»Š÷çõ1J$6272d69e-3fbe-4c63-974d-ef19099b5ca4
+
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8»Š÷çõ1J$91c5214e-7626-46f5-a457-19983bf27b2d
+q
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8¼Š÷çõ1J$9b87eb9c-de90-4be6-9116-3ed17a9dac48
+u
+java:S1128	"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8¼Š÷çõ1J$bb4a3011-436b-4b20-9dab-58849117c194
+x
 java:S1128
-"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8Ó˜†Ìõ1
-X
-java:S1128";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ8Ó˜†Ìõ1
+"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8¼Š÷çõ1J$f8f842b5-2794-4511-ac03-b84d9d32d19b
+€
+java:S1128"=Remove this unused import 'javafx.collections.FXCollections'.(´¶²Æ8¼Š÷çõ1J$945adcd0-2203-42dc-9d61-0a1e12179b0d
+†
+java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8¼Š÷çõ1J$6d9da3e0-0960-45bc-a8bb-e69ca36c146f
+~
+java:S1128";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ8¼Š÷çõ1J$786cea24-5205-444e-9b19-ef318d0c3d8b

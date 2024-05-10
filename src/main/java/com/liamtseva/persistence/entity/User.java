@@ -1,11 +1,14 @@
-package com.liamtseva.entity;
+package com.liamtseva.persistence.entity;
 
-import java.util.UUID;
-public record User(UUID  id,
-                   String username,
-                   String password,
-                   String profileImage)
+public record User(
+    int id,
+    String username,
+    String password,
+    String profileImage)
     implements Entity, Comparable<User> {
+  public User(String username, String password) {
+    this(0, username, password, null); // id = 0, profileImage = null
+  }
   @Override
   public int compareTo(User o) {
     return this.username.compareTo(o.username);

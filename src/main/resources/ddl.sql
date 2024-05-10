@@ -28,14 +28,14 @@ CREATE TABLE Category (
 );
 
 -- Створення таблиці "Steps"
-CREATE TABLE Steps (
-    id_step     INTEGER PRIMARY KEY AUTOINCREMENT,
-    id_goal     INTEGER,
-    description TEXT,
-    FOREIGN KEY (
-    id_goal
-    )
-    REFERENCES Goals (id_goal)
+create table Steps
+(
+    id_step     INTEGER
+        primary key autoincrement,
+    id_goal     INTEGER
+        references Goals
+            on update cascade on delete cascade,
+    description TEXT
 );
 
 -- Створення таблиці "Progress"

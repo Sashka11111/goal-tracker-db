@@ -1,4 +1,4 @@
-package com.liamtseva.exception;
+package com.liamtseva.persistence.exception;
 
 public class EntityDeleteException extends RuntimeException {
 

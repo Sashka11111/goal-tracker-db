@@ -1,12 +1,14 @@
-package com.liamtseva.entity;
+package com.liamtseva.persistence.entity;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 public record Goal(
-    UUID id,
+    int id,
+    int userId,
+    String nameGoal,
     String description,
-    String category,
+
+    int categoryId,
     LocalDate startDate,
     LocalDate endDate,
     String status)
@@ -14,6 +16,6 @@ public record Goal(
 
   @Override
   public int compareTo(Goal o) {
-    return this.description.compareTo(o.description);
+    return Integer.compare(this.id, o.id());
   }
 }

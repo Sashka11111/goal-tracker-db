@@ -39,7 +39,7 @@
       <children>
         <PasswordField fx:id="password_field" layoutX="40.0" layoutY="203.0" prefHeight="34.0" prefWidth="217.0" promptText="Пароль" style="-fx-background-color: WHITE; -fx-border-color: #9370DB; -fx-border-radius: 5;" />
         <TextField fx:id="login_field" layoutX="39.0" layoutY="145.0" prefHeight="34.0" prefWidth="218.0" promptText="Логін" style="-fx-background-color: WHITE; -fx-border-color: #9370DB; -fx-border-radius: 5;" />
-        <Button fx:id="SignInButton" layoutX="103.0" layoutY="260.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #9370DB;" stylesheets="@../design/design.css" text="Вхід" textFill="WHITE" />
+        <Button fx:id="SignInButton" layoutX="95.0" layoutY="259.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #9370DB;" stylesheets="@../design/design.css" text="Зареєструватися" textFill="WHITE" />
         <Label layoutX="63.0" layoutY="62.0" prefHeight="54.0" prefWidth="186.0" text="Реєстрація" textFill="MEDIUMPURPLE">
           <font>
             <Font size="36.0" />

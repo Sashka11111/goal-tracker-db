@@ -1,4 +1,4 @@
-package com.liamtseva.goals;
+package com.liamtseva.presentation.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;

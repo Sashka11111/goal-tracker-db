@@ -1,4 +1,4 @@
-package com.liamtseva.exception;
+package com.liamtseva.persistence.exception;
 
 import java.io.Serial;
 

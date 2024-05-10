@@ -1,15 +1,27 @@
 
-q
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘•Ûúÿÿÿÿ8çğâËõ1
-l
-java:S20951"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(›‹·–8èğâËõ1
-i
-java:S2095""GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8èğâËõ1
-l
-java:S2095@"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(É©¤·8èğâËõ1
-l
-java:S2095N"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯œ8—Úğ»õ1
-<
-java:S6905#"Don't use the query "SELECT *".(Âó˜‘8şğâËõ1
-<
-java:S69051"Don't use the query "SELECT *".(›‹·–8†ñâËõ1
+–
+java:S1192&"NDefine a constant instead of duplicating this literal "profile_image" 3 times.(›”ñ´üÿÿÿÿ8‚ÕÜàõ1J$e7df66a8-d202-4ece-92c9-6ba830b3bd1a
+‘
+java:S1192&"IDefine a constant instead of duplicating this literal "password" 3 times.(›”ñ´üÿÿÿÿ8‚ÕÜàõ1J$2ff2e70b-3e40-4eb9-a6de-5f6e34785603
+
+java:S1192&"HDefine a constant instead of duplicating this literal "id_user" 3 times.(›”ñ´üÿÿÿÿ8ƒÕÜàõ1J$0da60ece-a57b-4571-aadc-6b21ff344af1
+‘
+java:S1192&"IDefine a constant instead of duplicating this literal "username" 3 times.(›”ñ´üÿÿÿÿ8ƒÕÜàõ1J$3ef36b00-75d4-4ae9-9544-8099f8180118
+‘
+java:S2095!"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(•ù–98¤ÕÜàõ1J$dd6eb5ff-5023-4515-af1f-58ca34a36bd5
+’
+java:S2095A"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(›‹·–8èğâËõ1J$fead559c-539a-4dec-8a15-cee0ffeeda5f
+—
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘•Ûúÿÿÿÿ8çğâËõ1J$894e5fd5-147c-409d-8610-6efa0cbf6639
+
+java:S20952"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8èğâËõ1J$1855cd9b-d903-496a-a051-5701b8ed722a
+’
+java:S2095P"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(É©¤·8èğâËõ1J$6cde7b76-eb00-4d29-8bc7-9004c79ef187
+’
+java:S2095^"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯œ8—Úğ»õ1J$414956b1-b5b1-487c-9837-17a2a2609812
+a
+java:S6905!"Don't use the query "SELECT *".(•ù–98¬ÕÜàõ1J$a5b420f0-f26d-4f40-b175-ff7d4b1802f9
+b
+java:S69053"Don't use the query "SELECT *".(Âó˜‘8şğâËõ1J$656be58f-2b00-42f9-b65d-3d43cf9750c7
+b
+java:S6905A"Don't use the query "SELECT *".(›‹·–8†ñâËõ1J$3d2121d1-eb9f-4f2c-850e-2337d901ff32

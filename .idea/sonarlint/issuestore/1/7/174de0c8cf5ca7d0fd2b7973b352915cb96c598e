@@ -1,8 +1,8 @@
 
-~	java:S116"bRename this field "category_col_IdCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ã†ğ8µÉàßõ1
-€	java:S116"dRename this field "category_col_NameCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıåÇ8µÉàßõ1
-y	java:S116"]Rename this field "category_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áö¬¢8µÉàßõ1
-n	java:S116"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8µÉàßõ1
-p	java:S116"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8µÉàßõ1
-p	java:S116""URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8µÉàßõ1
-q	java:S116%"URename this field "btn_update" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÑ¤¯8¸Éàßõ1
+©	java:S116"bRename this field "Category_col_IdCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıòÜîøÿÿÿÿ8²·óëõ1J$32bac9fd-68ad-48cd-b549-6890c7ec66ea
+¦	java:S116"dRename this field "Category_col_NameCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎŠºâ8²·óëõ1J$235dbb58-a8dd-4f83-9d11-ce841b61689c
+Ÿ	java:S116"]Rename this field "Category_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ®ÖÖ8²·óëõ1J$79f21672-89e9-408e-b09a-7e09d3e2ba5c
+”	java:S116$"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8²·óëõ1J$0b9fea91-56be-440a-94a1-57e5c46fa255
+–	java:S116'"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8²·óëõ1J$9c852ced-03db-4e4c-8993-0aee4694e3e7
+–	java:S116*"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8²·óëõ1J$ebe216fd-8c0b-4d05-a34e-8a6f34d26e70
+—	java:S116-"URename this field "btn_update" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÑ¤¯8²·óëõ1J$428537de-a0e9-4b64-9af1-d54f99c49f0f

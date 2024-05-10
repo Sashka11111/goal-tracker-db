@@ -1,7 +1,9 @@
-package com.liamtseva.goals;
+package com.liamtseva.presentation.controller;
 
-import com.liamtseva.goals.animation.Shake;
-import com.liamtseva.goals.entity.User;
+import com.liamtseva.domain.exception.UserValidator;
+import com.liamtseva.persistence.dao.UserDAO;
+import com.liamtseva.persistence.entity.User;
+import com.liamtseva.presentation.animation.Shake;
 import java.io.File;
 import java.io.IOException;
 import javafx.fxml.FXML;
@@ -54,7 +56,7 @@ public class RegistrationController {
       profileImageView.setImage(image);
     } else {
       // Set default image if no image is selected
-      profileImageView.setImage(new Image(getClass().getResourceAsStream("/default_image.png")));
+      profileImageView.setImage(new Image(getClass().getResourceAsStream("/data/profile.png")));
     }
   }
 
@@ -63,7 +65,7 @@ public class RegistrationController {
     authSignInButton.setOnAction(event -> {
       // Отримуємо сцену з кнопки
       Scene currentScene = authSignInButton.getScene();
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("authorization.fxml"));
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
       try {
         Parent root = loader.load();
         currentScene.setRoot(root);
@@ -86,23 +88,28 @@ public class RegistrationController {
 
       if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
         if (!UserValidator.isUsernameExists(username)) {
+          // Створюємо об'єкт користувача
           User user = new User(username, password);
-          DatabaseHandler databaseHandler = new DatabaseHandler();
-          databaseHandler.signUpUser(user, signUpSuccess -> {
-            if (signUpSuccess) {
-              System.out.println("Registration successful.");
-              SignInButton.getScene().getWindow().hide();
-              FXMLLoader loader = new FXMLLoader(getClass().getResource("mainMenu.fxml"));
-              Stage stage = new Stage();
-              stage.setTitle("Трекер особистих цілей");
-              try {
-                stage.setScene(new Scene(loader.load()));
-                stage.show();
-              } catch (IOException e) {
-                e.printStackTrace();
-              }
-            }
-          });
+          // Створюємо об'єкт класу UserDAO
+          UserDAO userDAO = new UserDAO();
+
+          // Додаємо користувача до бази даних
+          userDAO.addUser(user);
+
+          System.out.println("Registration successful.");
+          SignInButton.getScene().getWindow().hide();
+
+          // Завантажуємо головне меню
+          FXMLLoader loader = new FXMLLoader(
+              getClass().getResource("/view/mainMenu.fxml"));
+          Stage stage = new Stage();
+          stage.setTitle("Трекер особистих цілей");
+          try {
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
         } else {
           errorMessageLabel.setText("Логін з ім'ям " + username + " уже існує");
           // Відображення повідомлення про помилку та застосування анімації Shake

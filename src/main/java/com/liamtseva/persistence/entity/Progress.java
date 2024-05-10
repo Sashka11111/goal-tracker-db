@@ -1,18 +1,15 @@
-package com.liamtseva.entity;
-
-import java.util.UUID;
+package com.liamtseva.persistence.entity;
 
 public record Progress(
-    UUID id,
-    UUID goalId,
-    UUID userId,
+    int id,
+    int userId,
+    int goalId,
     String status)
     implements Entity, Comparable<Progress> {
 
   @Override
   public int compareTo(Progress o) {
     // Порівняння за id
-    return this.id.compareTo(o.id);
+    return Integer.compare(this.id, o.id());
   }
 }
-

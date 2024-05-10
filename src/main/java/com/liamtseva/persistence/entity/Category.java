@@ -1,14 +1,15 @@
-package com.liamtseva.entity;
+package com.liamtseva.persistence.entity;
 
 import java.util.UUID;
 
 public record Category(
-    UUID id,
+    int id,
     String name)
     implements Entity, Comparable<Category> {
 
   @Override
   public int compareTo(Category o) {
-    return this.name.compareTo(o.name);
+    return Integer.compare(this.id, o.id);
   }
+
 }

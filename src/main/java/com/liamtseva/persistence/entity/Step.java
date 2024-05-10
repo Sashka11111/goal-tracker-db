@@ -1,16 +1,14 @@
-package com.liamtseva.entity;
-
-import java.util.UUID;
+package com.liamtseva.persistence.entity;
 
 public record Step(
-    UUID id,
-    UUID goalId,
+    int id,
+    int goalId,
     String description)
     implements Entity, Comparable<Step> {
 
   @Override
   public int compareTo(Step o) {
     // Порівняння за id
-    return this.id.compareTo(o.id);
+    return Integer.compare(this.id, o.id());
   }
 }

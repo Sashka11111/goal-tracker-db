@@ -1,12 +1,12 @@
 
-	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¦˜ŒÌõ1J$d2957ffd-e15f-436f-9825-92b84a47653d
-™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8¾˜ŒÌõ1J$41871e9b-19ff-4244-8702-8182fe843042
-	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8¿˜ŒÌõ1J$bc8012c6-bc5c-4884-8870-5a8db405bb78
-›	java:S116!"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8¿˜ŒÌõ1J$8fd3915d-df3c-4253-82fa-6c22052d5473
+	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…öäàõ1J$e78290a9-6e8b-49a3-99b0-0abb2dba09a4
+™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8Ÿöäàõ1J$b3ec5a29-1899-44bd-ad95-bac6680b2774
+	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8Ÿöäàõ1J$812db64a-fbb4-408a-abb0-236b7cce7620
+›	java:S116""YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8Ÿöäàõ1J$50a81ae9-6161-4474-a201-8cf8fe5a9c9e
 ©
-java:S1450&"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8À˜ŒÌõ1J$c17ae87a-d099-4dea-8a48-125838afb545
+java:S1450'"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8¡öäàõ1J$8120cfb8-b05c-42b3-9579-d413114bf05a
 š
-java:S3776?"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8Ê˜ŒÌõ1J$5ef9cfae-60ba-49d2-a48f-4050e3f01f8a
-m	java:S106^"+Replace this use of System.out by a logger.(Í¶®Ê8Õ˜ŒÌõ1J$2581c743-e9c5-4ca1-b405-d918a471948b
+java:S3776@"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8¬öäàõ1J$6fa7d9e5-36d4-4368-a033-c8486169b29f
+m	java:S106c"+Replace this use of System.out by a logger.(Í¶®Ê8¸öäàõ1J$7feb2aa6-85a1-4202-80c4-828df2fac4bb
 ~
-java:S1068&"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8Ù˜ŒÌõ1J$324aa4aa-f802-48a2-b69f-f97969f2f9a9
+java:S1068'"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8Áöäàõ1J$10305934-51e3-4b85-a792-950a1e2c14c1

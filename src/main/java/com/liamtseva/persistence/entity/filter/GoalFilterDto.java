@@ -1,2 +1,5 @@
-package com.liamtseva.persistence.entity.filter;public class GoalFilterDto {
+package com.liamtseva.persistence.entity.filter;
+
+public record GoalFilterDto(String status) {
+
 }
