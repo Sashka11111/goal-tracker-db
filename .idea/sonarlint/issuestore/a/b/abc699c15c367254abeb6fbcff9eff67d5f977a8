@@ -1,17 +1,17 @@
 
-	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8Ç‘—àõ1J$5708ba11-f66c-4059-af56-99fbe48d711e
-	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8Ç‘—àõ1J$eeeba799-119c-4db5-a381-ff8093f08694
-Ÿ	java:S116"XRename this field "btn_myProfile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ï´ôøÿÿÿÿ8Ç‘—àõ1J$aa4e00cc-0ae4-4c0b-9ae8-0b177d8d7257
-¢	java:S116"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8Ç‘—àõ1J$11884db1-f9f0-4952-b32f-7185a8817702
-•	java:S116"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8Ç‘—àõ1J$d6e8aba2-f657-4354-8745-e9a1fe069a1c
-™	java:S116'"WRename this field "lbl_userName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»«ãØ8È‘—àõ1J$38b0168a-94b0-4127-a540-619f2491949a
+	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8Ç‘—àõ1J$e95e473f-a4a6-49a5-bab8-63a1353b0ba3
+	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8Ç‘—àõ1J$10d29d9e-6c5d-4b00-94ee-601c86bd3da0
+Ÿ	java:S116"XRename this field "btn_myProfile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ï´ôøÿÿÿÿ8Ç‘—àõ1J$08524eeb-f83d-47f1-a34b-0a6092d98d26
+¢	java:S116"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8Ç‘—àõ1J$7ae7c308-cb1f-4186-879d-be6bc6ff2faf
+•	java:S116"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8Ç‘—àõ1J$ab45e269-e74c-4f38-9827-2a37a4238a2d
+™	java:S116'"WRename this field "lbl_userName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»«ãØ8È‘—àõ1J$7b650dbe-9b4e-40c3-9784-a40fd3426339
 Ä
-java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(µÃìì8È‘—àõ1J$aaa55c34-cede-4879-94a7-e9eee3468caf
+java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(µÃìì8È‘—àõ1J$05fcae07-6da8-4953-ace7-3559156ab70b
 n
-java:S16020",Remove useless curly braces around statement(Š¬Ï!8Ï‘—àõ1J$77e5b268-4f7c-4c8a-9b9c-2e6e2e31df61
+java:S16020",Remove useless curly braces around statement(Š¬Ï!8Ï‘—àõ1J$a94f21dc-75f6-4d20-81dc-75d05076905f
 
-java:S1854c"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨şÿÿÿÿ8×‘—àõ1J$7008c8f6-bbbd-436f-9cb4-2ab8a8554852
+java:S1854c"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨şÿÿÿÿ8×‘—àõ1J$aef0a582-34ea-4238-b420-c8b4f81469f5
 ~
-java:S1481c"6Remove this unused "myGoalsController" local variable.(Ì®á¨şÿÿÿÿ8İ‘—àõ1J$41925ab3-ca7c-4d4e-80c5-83ea0b147513
+java:S1481c"6Remove this unused "myGoalsController" local variable.(Ì®á¨şÿÿÿÿ8İ‘—àõ1J$00c1de06-f061-449e-a60f-27b7d60705cb
 w
-java:S11444"4Remove this unused private "displayUserName" method.(µÃìì8ß‘—àõ1J$fbfbbdfc-7875-4f99-b4b9-0150e90b2f24
+java:S11444"4Remove this unused private "displayUserName" method.(µÃìì8ß‘—àõ1J$ad8c2b5f-6ff7-450b-8556-30b3ee231404

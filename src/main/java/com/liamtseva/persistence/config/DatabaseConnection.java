@@ -13,7 +13,7 @@ public class DatabaseConnection {
       Class.forName("org.sqlite.JDBC");
 
       // Підключення до бази даних SQLite
-      String url = "jdbc:sqlite:Data/GoalTrackerDb";
+      String url = "jdbc:sqlite:db/GoalTrackerDb";
       connection = DriverManager.getConnection(url);
 
     } catch (ClassNotFoundException | SQLException e) {

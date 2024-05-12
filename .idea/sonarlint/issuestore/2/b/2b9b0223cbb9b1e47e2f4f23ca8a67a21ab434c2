@@ -1,0 +1,16 @@
+
+	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8ÓÚ»˜ö1J$96b1fd6b-ca3a-41d7-a6fc-5cc754e5302a
+—
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8á´Ü–ö1J$556b6ce9-8331-4813-86c7-67aa5fa12b97
+’
+java:S20958"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8™ÂÕ–ö1J$56d291ef-55d8-460f-bd4d-3e9bc92153d4
+’
+java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8éäØ–ö1J$e87c401d-6833-49c4-927c-c39261716c16
+’
+java:S2095\"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘ƒ±è8›ÂÕ–ö1J$2fbc86de-a7d7-4d26-a2e3-779b2ca3dc0c
+b
+java:S6905I"Don't use the query "SELECT *".(ê™ø8¥ÂÕ–ö1J$0d8a8430-416c-424f-abad-8f9f5909613d
+b
+java:S6905\"Don't use the query "SELECT *".(‘ƒ±è8§ÂÕ–ö1J$23f60615-f7a9-41ae-9931-c09223b1ec71
+“
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8ÏÑîßö1J$c9086132-cf21-4b25-8fa1-a97d736cd37e

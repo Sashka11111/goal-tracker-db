@@ -7,7 +7,7 @@ public record User(
     String profileImage)
     implements Entity, Comparable<User> {
   public User(String username, String password) {
-    this(0, username, password, null); // id = 0, profileImage = null
+    this(0, username, password, "");
   }
   @Override
   public int compareTo(User o) {

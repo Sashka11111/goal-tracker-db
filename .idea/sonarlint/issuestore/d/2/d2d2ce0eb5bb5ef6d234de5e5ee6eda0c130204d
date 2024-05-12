@@ -1,0 +1,9 @@
+
+{
+java:S1118
+":Add a private constructor to hide the implicit public one.(É›ÃıÿÿÿÿJ$66eb51e4-7562-4835-9c85-c586af8dc431
+x
+java:S6353"<Use concise character class syntax '\\d' instead of '[0-9]'.(şÃ»ËJ$adf2e575-7db1-44ab-881a-90a5966a5b9f
+[
+java:S6905"Don't use the query "SELECT *".(ÛŠ³J$8e7e26a8-fdd5-471c-8d05-61f4b8b3e222
+k	java:S106."+Replace this use of System.out by a logger.(¥Ê†íıÿÿÿÿJ$b489d313-b04c-4f03-a999-52eb816d0cb2

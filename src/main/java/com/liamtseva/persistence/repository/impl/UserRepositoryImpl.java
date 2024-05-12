@@ -2,7 +2,7 @@ package com.liamtseva.persistence.repository.impl;
 
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
-import com.liamtseva.persistence.exception.EntityNotFoundException;
+import com.liamtseva.domain.exception.EntityNotFoundException;
 import com.liamtseva.persistence.repository.contract.UserRepository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

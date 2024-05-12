@@ -39,9 +39,9 @@
       </AnchorPane>
       <AnchorPane layoutX="178.0" prefHeight="47.0" prefWidth="722.0" style="-fx-background-color: #483D8B;" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="272.0" layoutY="10.0" prefHeight="20.0" prefWidth="137.0" text="Трекер цілей" textFill="WHITE">
+            <Label layoutX="248.0" layoutY="8.0" prefHeight="30.0" prefWidth="225.0" text="Трекер особистих цілей" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font size="20.0" />
                </font>
             </Label>
          </children>

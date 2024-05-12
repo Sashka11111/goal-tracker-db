@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane  prefHeight="558.0" prefWidth="714.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liamtseva.presentation.controller.MyGoalsController">
+<AnchorPane prefHeight="558.0" prefWidth="714.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liamtseva.presentation.controller.MyGoalsController">
    <children>
-      <AnchorPane layoutX="10.4" layoutY="32.0" prefHeight="238.0" prefWidth="698.0" style="-fx-background-color: WHITE;" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="32.0">
+      <AnchorPane layoutX="11.2" layoutY="32.0" prefHeight="194.0" prefWidth="697.0" style="-fx-background-color: WHITE;" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="32.0">
          <children>
             <TextField fx:id="goal" layoutX="28.0" layoutY="43.0" prefHeight="14.0" prefWidth="166.0" />
             <Label layoutX="46.0" layoutY="22.0" text="Ціль">
@@ -32,22 +32,22 @@
             </Label>
             <DatePicker fx:id="startDate" layoutX="228.0" layoutY="43.0" prefHeight="26.0" prefWidth="166.0" />
             <DatePicker fx:id="endDate" layoutX="442.0" layoutY="43.0" prefHeight="26.0" prefWidth="166.0" />
-            <Button fx:id="btn_add" layoutX="88.0" layoutY="189.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" text="Додати" textFill="WHITE">
+            <Button fx:id="btn_add" layoutX="88.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Додати" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btn_clear" layoutX="368.0" layoutY="189.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" text="Очистити" textFill="WHITE">
+            <Button fx:id="btn_clear" layoutX="368.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Очистити" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btn_update" layoutX="228.0" layoutY="189.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" text="Редагувати" textFill="WHITE">
+            <Button fx:id="btn_update" layoutX="228.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Редагувати" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btn_delete" layoutX="502.0" layoutY="189.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" text="Видалити" textFill="WHITE">
+            <Button fx:id="btn_delete" layoutX="502.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Видалити" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -57,27 +57,32 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="description" layoutX="28.0" layoutY="102.0" prefHeight="75.0" prefWidth="387.0" />
-            <Label layoutX="442.0" layoutY="90.0" prefHeight="20.0" prefWidth="64.0" text="Категорія">
+            <TextField fx:id="description" layoutX="28.0" layoutY="102.0" prefHeight="30.0" prefWidth="387.0" />
+            <Label layoutX="442.0" layoutY="80.0" prefHeight="20.0" prefWidth="64.0" text="Категорія">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <ComboBox fx:id="category" layoutX="442.0" layoutY="119.0" prefWidth="150.0" promptText="Виберіть..." />
+            <ComboBox fx:id="category" layoutX="442.0" layoutY="109.0" prefWidth="150.0" promptText="Виберіть..." />
          </children>
       </AnchorPane>
       <TableView fx:id="MyGoals_tableView" layoutX="24.0" layoutY="287.2" prefHeight="257.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="287.0">
         <columns>
-          <TableColumn fx:id="MyGoals_col_Goal" prefWidth="77.59997940063477" text="Ціль" />
-          <TableColumn fx:id="MyGoals_col_Description" prefWidth="134.39996337890625" text="Опис" />
-            <TableColumn fx:id="MyGoals_col_Category" prefWidth="105.59996032714844" text="Категорія" />
-            <TableColumn fx:id="MyGoals_col_startDate" prefWidth="118.4000244140625" text="Дата початку" />
-            <TableColumn fx:id="MyGoals_col_endDate" prefWidth="118.4000244140625" text="Дата закінчення" />
+          <TableColumn fx:id="MyGoals_col_Goal" prefWidth="124.80002212524414" text="Ціль" />
+          <TableColumn fx:id="MyGoals_col_Description" prefWidth="171.1999969482422" text="Опис" />
+            <TableColumn fx:id="MyGoals_col_startDate" prefWidth="143.20001220703125" text="Дата початку" />
+            <TableColumn fx:id="MyGoals_col_endDate" prefWidth="105.60003662109375" text="Дата закінчення" />
             <TableColumn fx:id="MyGoals_col_status" prefWidth="115.20001220703125" text="Статус" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <TextField layoutX="163.0" layoutY="243.0" prefHeight="26.0" prefWidth="505.0"  />
+      <Label layoutX="37.0" layoutY="241.0" prefHeight="27.0" prefWidth="114.0" text="Пошук цілей:" textFill="DARKSLATEBLUE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

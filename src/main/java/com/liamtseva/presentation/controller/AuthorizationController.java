@@ -2,7 +2,7 @@ package com.liamtseva.presentation.controller;
 
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
-import com.liamtseva.persistence.exception.EntityNotFoundException;
+import com.liamtseva.domain.exception.EntityNotFoundException;
 import com.liamtseva.persistence.repository.contract.UserRepository;
 import com.liamtseva.persistence.repository.impl.UserRepositoryImpl;
 import com.liamtseva.presentation.animation.Shake;

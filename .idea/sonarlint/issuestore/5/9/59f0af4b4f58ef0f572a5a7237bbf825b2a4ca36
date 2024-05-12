@@ -1,8 +1,8 @@
 
-	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Şëø”ö1J$d29db6ee-f7aa-4493-b1c3-c8c6f627c2be
-	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8îëø”ö1J$70aa0ff6-bd0f-4960-8cfc-aefca869a489
-›	java:S116!"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8îëø”ö1J$0bfa679a-2b94-475b-90c5-22e24f79b93c
+	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Şëø”ö1J$ebeff297-50c4-4087-a83d-5ffc594c371f
+	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8îëø”ö1J$deeeb47b-6d9c-400d-a61b-247f6c37cdf0
+›	java:S116!"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8îëø”ö1J$1a93b861-3f59-492a-9672-bd779af8ad05
 z
-java:S2440&"2Remove this instantiation of "DatabaseConnection".(­äÿ‹ûÿÿÿÿ8™¥•ö1J$01123a89-f412-4614-b959-1e9325187293
+java:S2440&"2Remove this instantiation of "DatabaseConnection".(­äÿ‹ûÿÿÿÿ8Ãøßö1J$b2676d11-8e40-46f8-b026-a4bc72450b46
 y
-java:S1481-"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8÷ëø”ö1J$315e8f91-67a8-49ea-b213-aa04f1c5490e
+java:S1481-"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8÷ëø”ö1J$702013ab-d666-49b3-bb97-5fd203fcae43

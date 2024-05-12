@@ -1,3 +1,27 @@
 
-]
-java:S1220""Move this file to a named package.8Ê£³™ö1J$650c2fd9-4d73-470c-84c2-301dbd265602
+
+java:S1192&"HDefine a constant instead of duplicating this literal "id_user" 3 times.(›”ñ´üÿÿÿÿ8É£Öšö1J$91b9a35a-fe3f-415a-8b56-1fb75d98ad05
+–
+java:S1192&"NDefine a constant instead of duplicating this literal "profile_image" 3 times.(›”ñ´üÿÿÿÿ8È£Öšö1J$f5fee5f7-e260-4ef1-bb1b-a4a7677bff86
+‘
+java:S1192&"IDefine a constant instead of duplicating this literal "password" 3 times.(›”ñ´üÿÿÿÿ8É£Öšö1J$7009152b-5abc-49d7-865b-2d54c4b3d8c0
+‘
+java:S1192&"IDefine a constant instead of duplicating this literal "username" 3 times.(›”ñ´üÿÿÿÿ8É£Öšö1J$78cf665f-8d05-43df-89ee-d65b00baec59
+
+java:S20952"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8Ş£Öšö1J$8a99d0ab-928d-4c47-a2f5-72fb9cccacdc
+’
+java:S2095P"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(É©¤·8Ş£Öšö1J$e420877a-b780-4b66-908c-a0de179d9d0d
+’
+java:S2095A"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(›‹·–8Ş£Öšö1J$970cecf5-a153-40d0-9d24-8cf93c7e89f7
+—
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘•Ûúÿÿÿÿ8İ£Öšö1J$8c8ee101-234d-4309-bf7b-4bfd5a24151d
+’
+java:S2095^"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯œ8Ş£Öšö1J$ce83cc07-14a5-4532-a8f8-92e7b3f0fc71
+‘
+java:S2095!"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(•ù–98Ş£Öšö1J$cce19248-eb41-4e28-9edc-a1907eeacdc1
+a
+java:S6905!"Don't use the query "SELECT *".(•ù–98å£Öšö1J$1c43d5cf-a006-41c8-84d2-287dab046397
+b
+java:S69053"Don't use the query "SELECT *".(Âó˜‘8è£Öšö1J$f6c6f00b-b77b-44a9-8c46-834d96e7022e
+b
+java:S6905A"Don't use the query "SELECT *".(›‹·–8é£Öšö1J$09fe0990-1f6c-4ad9-9346-3ccb72e3b5ad

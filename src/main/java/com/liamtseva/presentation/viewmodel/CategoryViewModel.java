@@ -1,52 +1,39 @@
 package com.liamtseva.presentation.viewmodel;
 
-import javafx.beans.property.*;
+import com.liamtseva.persistence.entity.Category;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 public class CategoryViewModel {
+  private final SimpleIntegerProperty idCategory;
+  private final SimpleStringProperty nameCategory;
 
-  private final IntegerProperty id = new SimpleIntegerProperty();
-  private final StringProperty name = new SimpleStringProperty();
-
-  public CategoryViewModel() {
-    // Порожній конструктор
+  public CategoryViewModel(Category category) {
+    this.idCategory = new SimpleIntegerProperty(category.id());
+    this.nameCategory = new SimpleStringProperty(category.name());
   }
 
-  public CategoryViewModel(int id, String name) {
-    this.id.set(id);
-    this.name.set(name);
+  public int getIdCategory() {
+    return idCategory.get();
   }
 
-  // Геттери та сеттери для id
-  public int getId() {
-    return id.get();
+  public SimpleIntegerProperty idCategoryProperty() {
+    return idCategory;
   }
 
-  public IntegerProperty idProperty() {
-    return id;
+  public void setIdCategory(int idCategory) {
+    this.idCategory.set(idCategory);
   }
 
-  public void setId(int id) {
-    this.id.set(id);
+  public String getNameCategory() {
+    return nameCategory.get();
   }
 
-  // Геттери та сеттери для name
-  public String getName() {
-    return name.get();
+  public SimpleStringProperty nameCategoryProperty() {
+    return nameCategory;
   }
 
-  public StringProperty nameProperty() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name.set(name);
-  }
-
-  @Override
-  public String toString() {
-    return "CategoryViewModel{" +
-        "id=" + id +
-        ", name=" + name +
-        '}';
+  public void setNameCategory(String nameCategory) {
+    this.nameCategory.set(nameCategory);
   }
 }

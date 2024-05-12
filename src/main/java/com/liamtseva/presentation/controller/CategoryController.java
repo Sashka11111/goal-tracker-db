@@ -1,13 +1,18 @@
 package com.liamtseva.presentation.controller;
 
+import com.liamtseva.domain.exception.EntityNotFoundException;
+import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Category;
-import com.liamtseva.persistence.exception.EntityNotFoundException;
 import com.liamtseva.persistence.repository.contract.CategoryRepository;
+import com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl;
 import com.liamtseva.presentation.viewmodel.CategoryViewModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 import java.util.List;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -39,88 +44,73 @@ public class CategoryController {
   private Button btn_update;
 
   private final CategoryRepository categoryRepository;
-  private final ObservableList<CategoryViewModel> categoryList = FXCollections.observableArrayList();
 
-  // Конструктор, що приймає CategoryRepository
-  public CategoryController(CategoryRepository categoryRepository) {
-    this.categoryRepository = categoryRepository;
+  public CategoryController() {
+    // Ініціалізація репозиторію для роботи з категоріями
+    this.categoryRepository = new CategoryRepositoryImpl(DatabaseConnection.getConnection());
   }
 
   @FXML
   void initialize() {
-    initializeTable();
-    loadData();
+    // Прив'язка стовпців до даних таблиці
+    Category_col_IdCategory.setCellValueFactory(cellData -> cellData.getValue().idCategoryProperty().asObject());
+    Category_col_NameCategory.setCellValueFactory(cellData -> cellData.getValue().nameCategoryProperty());
+ // Загрузка категорій з бази даних та відображення їх у таблиці
+    loadCategories();
 
-    btn_add.setOnAction(event -> addCategory());
-    btn_clear.setOnAction(event -> clearFields());
-    btn_delete.setOnAction(event -> deleteCategory());
-    btn_update.setOnAction(event -> updateCategory());
+    // Обробники подій для кнопок
+    btn_add.setOnAction(event -> onAddClicked());
+    btn_clear.setOnAction(event -> onClearClicked());
+    btn_delete.setOnAction(event -> onDeleteClicked());
+    btn_update.setOnAction(event -> onUpdateClicked());
   }
 
-  private void initializeTable() {
-    Category_col_IdCategory.setCellValueFactory(new PropertyValueFactory<>("id"));
-    Category_col_NameCategory.setCellValueFactory(new PropertyValueFactory<>("name"));
+  // Завантаження категорій з бази даних
+  private void loadCategories() {
+    List<Category> categories = categoryRepository.getAllCategories();
+    ObservableList<CategoryViewModel> categoryViewModels = FXCollections.observableArrayList();
+    categories.forEach(category -> categoryViewModels.add(new CategoryViewModel(category)));
+    Category_tableView.setItems(categoryViewModels);
   }
 
-  private void loadData() {
-    if (categoryRepository != null) {
-      List<Category> categories = categoryRepository.getAllCategories();
-      categoryList.setAll(convertToViewModel(categories));
-      Category_tableView.setItems(categoryList);
-    }
-  }
-
-  private ObservableList<CategoryViewModel> convertToViewModel(List<Category> categories) {
-    ObservableList<CategoryViewModel> viewModels = FXCollections.observableArrayList();
-    for (Category category : categories) {
-      CategoryViewModel viewModel = new CategoryViewModel(category.id(), category.name());
-      viewModels.add(viewModel);
-    }
-    return viewModels;
-  }
-
-  private void addCategory() {
-    String categoryName = addCategory.getText().trim();
-    if (!categoryName.isEmpty() && categoryRepository != null) {
+  // Логіка додавання нової категорії
+  private void onAddClicked() {
+    String categoryName = addCategory.getText();
+    if (!categoryName.isEmpty()) {
       Category newCategory = new Category(0, categoryName);
       try {
         categoryRepository.addCategory(newCategory);
-        loadData();
-        clearFields();
       } catch (EntityNotFoundException e) {
-        e.printStackTrace();
+        throw new RuntimeException(e);
       }
+      loadCategories();
+      addCategory.clear();
+    } else {
+      // Вивести повідомлення про помилку, якщо поле пусте
     }
   }
 
-  private void clearFields() {
+  // Логіка очищення поля введення нової категорії
+  private void onClearClicked() {
     addCategory.clear();
   }
 
-  private void deleteCategory() {
-    CategoryViewModel selectedCategory = Category_tableView.getSelectionModel().getSelectedItem();
-    if (selectedCategory != null && categoryRepository != null) {
+  // Логіка видалення обраної категорії
+  private void onDeleteClicked() {
+    CategoryViewModel selectedCategoryViewModel = Category_tableView.getSelectionModel().getSelectedItem();
+    if (selectedCategoryViewModel != null) {
       try {
-        categoryRepository.deleteCategory(selectedCategory.getId());
-        categoryList.remove(selectedCategory);
+        categoryRepository.deleteCategory(selectedCategoryViewModel.getIdCategory());
+        loadCategories();
       } catch (EntityNotFoundException e) {
+        // Обробка помилки видалення категорії
         e.printStackTrace();
       }
     }
   }
 
-  private void updateCategory() {
-    CategoryViewModel selectedCategory = Category_tableView.getSelectionModel().getSelectedItem();
-    String newName = addCategory.getText().trim();
-    if (selectedCategory != null && !newName.isEmpty() && categoryRepository != null) {
-      selectedCategory.setName(newName);
-      try {
-        categoryRepository.updateCategory(new Category(selectedCategory.getId(), newName));
-        Category_tableView.refresh();
-        clearFields();
-      } catch (EntityNotFoundException e) {
-        e.printStackTrace();
-      }
-    }
+  // Логіка оновлення обраної категорії
+  private void onUpdateClicked() {
+    // Можна додати логіку оновлення категорії за потреби
   }
 }

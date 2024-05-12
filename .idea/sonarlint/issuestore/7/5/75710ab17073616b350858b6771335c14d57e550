@@ -1,16 +1,14 @@
 
-	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8’Œæ–ö1J$8bface03-085b-4194-b093-370fcf9c1167
-™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8«Œæ–ö1J$f5ef539a-19d8-4508-ba30-35693ea8efb0
-	java:S116""VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8«Œæ–ö1J$7a0df29b-6ede-44a4-a671-18c442f17a9e
-›	java:S116%"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8«Œæ–ö1J$f03f2cc7-a305-4fea-b236-2c31c99eaae5
+	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8“Â¦Ÿö1J$d67657b2-a97f-4665-8d34-fce8d87de69e
+™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8¨Â¦Ÿö1J$ba94322d-9503-4d56-add8-5c94c4ad8d1c
+	java:S116!"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8¨Â¦Ÿö1J$67b30f10-a3f6-4566-9c11-d1865418f9c4
+›	java:S116$"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8¨Â¦Ÿö1J$71558adf-1dea-4ab0-8c2b-8717412fe1b5
 ©
-java:S1450-"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8¬Œæ–ö1J$0ef634a1-3a93-4a6b-b048-d3ca92978d86
+java:S1450,"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8©Â¦Ÿö1J$29d2e361-6205-4968-bc9e-7ee183dac14c
 z
-java:S24400"2Remove this instantiation of "DatabaseConnection".(­äÿ‹ûÿÿÿÿ8±Œæ–ö1J$b4bcc555-9b31-45eb-9f9e-3924c39abb77
+java:S2440/"2Remove this instantiation of "DatabaseConnection".(­äÿ‹ûÿÿÿÿ8Ñ±úßö1J$7fcecd6a-aeea-43ef-9d61-230a306d9cd1
 š
-java:S3776J"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8¹Œæ–ö1J$7501b41e-4056-4a58-83f1-5c9ff25e2fb3
-m	java:S106k"+Replace this use of System.out by a logger.(Í¶®Ê8ÂŒæ–ö1J$fde6599c-9da0-4cfa-bba4-9fe84b75eb07
-›
-java:S1128"XRemove this unused import 'com.liamtseva.persistence.exception.EntityNotFoundException'.(¢…æë8ËŒæ–ö1J$86ab5cf8-3267-491f-9e9c-e1e286b5acae
+java:S3776I"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8²Â¦Ÿö1J$d48a1737-f0d4-4d01-95ed-959faaefb196
+m	java:S106j"+Replace this use of System.out by a logger.(Í¶®Ê8ºÂ¦Ÿö1J$b6f8fcb7-bd19-48ab-a436-2230485f6dc6
 ~
-java:S1068-"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8ÌŒæ–ö1J$dd5ed4df-952d-4e47-bef4-b3794bcf905d
+java:S1068,"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8ÂÂ¦Ÿö1J$b0dd7018-d5e9-4981-8a63-ea21cc1b8354

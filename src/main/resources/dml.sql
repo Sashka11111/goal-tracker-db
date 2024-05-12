@@ -1,30 +1,32 @@
--- Вставка тестових даних до таблиці "Users"
-INSERT INTO Users (username, password, profile_image) VALUES
-    ('john_doe', 'password123', 'john_profile.jpg'),
-    ('jane_smith', 'abc123', 'jane_profile.jpg'),
-    ('alex_jones', 'pass456', NULL);
+-- Додавання користувача
+INSERT INTO Users (id_user, username, password, profile_image)
+VALUES (1, 'Sashka', 'Sashka123', NULL),
+       (2, 'Dashka', 'Dashka67', NULL),
+       (3, 'Mashka', 'Mashka111', NULL);
 
--- Вставка тестових даних до таблиці "Goals"
-INSERT INTO Goals (id_user, description, id_category, start_date, end_date, status) VALUES
-    (1, 'Почати здоровий спосіб життя', 1, '2024-05-01', '2024-06-30', 'active'),
-    (2, 'Вивчити нову мову програмування', 2, '2024-06-01', '2024-09-30', 'active'),
-    (3, 'Закінчити проект з веб-розробки', 3, '2024-07-01', '2024-08-15', 'postponed');
+-- Додавання категорії
+INSERT INTO Category (id_category, name)
+VALUES (1, 'Саморозвиток'),
+       (2, 'Спорт'),
+       (3, 'Карєра');
 
--- Вставка тестових даних до таблиці "Category"
-INSERT INTO Category (name) VALUES
-    ('Фітнес'),
-    ('Освіта'),
-    ('Робота');
+-- Додавання цілей
+INSERT INTO Goals (id_goal, id_user, name_goal, description, id_category, start_date, end_date, status)
+VALUES (1, 1, 'Прочитати 10 книг цього року', 'Поставив собі за мету прочитати щонайменше 10 книг у цьому році', 1, '2024-05-15', '2024-12-31', 'active'),
+       (2, 1, 'Почати щоденні ранкові пробіжки', 'Розпочати кожен день з короткої пробіжки для здорового способу життя', 2, '2024-06-01', '2024-12-31', 'active'),
+       (3, 1, 'Підвищити кваліфікацію на курсах PM', 'Закінчити курси управління проектами та отримати сертифікат', 3, '2024-06-20', '2024-12-31', 'active');
 
--- Вставка тестових даних до таблиці "Steps"
-INSERT INTO Steps (id_goal, description) VALUES
-    (1, 'Придбати абонемент в спортзал'),
-    (1, 'Розпочати тренування 3 рази на тиждень'),
-    (2, 'Вивчити основи програмування на Python'),
-    (3, 'Закінчити дизайн сторінок');
+-- Додавання кроків для цілей
+INSERT INTO Steps (id_step, id_goal, description)
+VALUES (1, 1, 'Придбати список книг'),
+       (2, 1, 'Визначити графік читання'),
+       (3, 2, 'Підготувати трасу пробіжки'),
+       (4, 2, 'Розпочати пробіжку вранці'),
+       (5, 3, 'Зареєструватися на курси'),
+       (6, 3, 'Вивчити основні теми');
 
--- Вставка тестових даних до таблиці "Progress"
-INSERT INTO Progress (id_user, id_goal, status) VALUES
-    (1, 1, 'active'),
-    (2, 2, 'active'),
-    (3, 3, 'postponed');
+-- Додавання прогресу
+INSERT INTO Progress (id_progress, id_user, id_goal, status)
+VALUES (1, 1, 1, 'active'),
+       (2, 1, 2, 'active'),
+       (3, 1, 3, 'active');

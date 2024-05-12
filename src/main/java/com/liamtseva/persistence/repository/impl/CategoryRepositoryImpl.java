@@ -2,7 +2,7 @@ package com.liamtseva.persistence.repository.impl;
 
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Category;
-import com.liamtseva.persistence.exception.EntityNotFoundException;
+import com.liamtseva.domain.exception.EntityNotFoundException;
 import com.liamtseva.persistence.repository.contract.CategoryRepository;
 
 import java.sql.*;
@@ -13,10 +13,9 @@ public class CategoryRepositoryImpl implements CategoryRepository {
 
   private final Connection connection;
 
-  public CategoryRepositoryImpl() {
-    this.connection = DatabaseConnection.getConnection();
+  public CategoryRepositoryImpl(Connection connection) {
+    this.connection = connection;
   }
-
   @Override
   public void addCategory(Category category) throws EntityNotFoundException {
     try {

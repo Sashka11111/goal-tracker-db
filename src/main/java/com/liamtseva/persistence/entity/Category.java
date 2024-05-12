@@ -1,7 +1,5 @@
 package com.liamtseva.persistence.entity;
 
-import java.util.UUID;
-
 public record Category(
     int id,
     String name)

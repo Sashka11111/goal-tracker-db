@@ -3,7 +3,6 @@ package com.liamtseva.presentation.controller;
 import com.liamtseva.domain.exception.UserValidator;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
-import com.liamtseva.persistence.exception.EntityNotFoundException;
 import com.liamtseva.persistence.repository.contract.UserRepository;
 import com.liamtseva.persistence.repository.impl.UserRepositoryImpl; // Імплементація UserRepository
 import com.liamtseva.presentation.animation.Shake;
