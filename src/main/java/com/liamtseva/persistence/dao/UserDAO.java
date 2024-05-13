@@ -7,13 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-
-  private Connection connection;
+/*
+  private final Connection connection;
 
   public UserDAO() {
-    connection = DatabaseConnection.getConnection();
+    try {
+       this.connection = DatabaseConnection.getConnection();
+    } catch (SQLException e) {
+      throw new RuntimeException("Failed to obtain database connection", e);
+    }
   }
-
   // Додавання користувача
   public void addUser(User user) {
     try {
@@ -97,5 +100,5 @@ public class UserDAO {
     } catch (SQLException e) {
       e.printStackTrace();
     }
-  }
+  }*/
 }

@@ -11,11 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GoalDAO {
-
+/*
   private final Connection connection;
 
   public GoalDAO() {
-    this.connection = DatabaseConnection.getConnection();
+    try {
+      this.connection = DatabaseConnection.getConnection();
+    } catch (SQLException e) {
+      throw new RuntimeException("Failed to obtain database connection", e);
+    }
   }
 
   // Додавання цілі
@@ -80,5 +84,5 @@ public class GoalDAO {
     } catch (SQLException e) {
       e.printStackTrace();
     }
-  }
+  }*/
 }

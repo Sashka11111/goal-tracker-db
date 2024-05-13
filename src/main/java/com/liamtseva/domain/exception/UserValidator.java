@@ -26,7 +26,12 @@ public class UserValidator {
 
 
   public static boolean isUsernameExists(String username) {
-    Connection connection = DatabaseConnection.getConnection();
+    Connection connection = null;
+    try {
+      connection = DatabaseConnection.getConnection();
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
     if (connection != null) {
       String selectQuery = "SELECT * FROM Users WHERE username = ?";
       try (PreparedStatement statement = connection.prepareStatement(selectQuery)) {

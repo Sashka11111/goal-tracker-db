@@ -1,9 +1,11 @@
 
 
-java:S1192/"KDefine a constant instead of duplicating this literal " not found" 3 times.(ı«¥ƒ8âÂÀö1J$1b0e8c2e-a7f4-4be4-b7f0-05b23dbe00d3
+java:S11921"KDefine a constant instead of duplicating this literal " not found" 3 times.(ı«¥ƒ8é¦¯…÷1J$b4f13bc1-e004-44e5-ac7e-e11267d4c160
 ‘
-java:S1192/"NDefine a constant instead of duplicating this literal "Goal with id " 3 times.(ı«¥ƒ8âÂÀö1J$7dd60e14-7979-4b42-94f3-aaaef0a6af69
+java:S11921"NDefine a constant instead of duplicating this literal "Goal with id " 3 times.(ı«¥ƒ8é¦¯…÷1J$09209abd-fdd2-4dc0-8dc7-0b83f0bc0c62
 a
-java:S6905("Don't use the query "SELECT *".(˜ªÛ8±âÂÀö1J$f04a806c-50e2-4564-838e-342283039a7c
+java:S6905)"Don't use the query "SELECT *".(˜ªÛ8Š§¯…÷1J$57fe7dc6-7c85-4662-a921-cb6aa359e6d2
 g
-java:S6905;"Don't use the query "SELECT *".(ıé’©øÿÿÿÿ8¶âÂÀö1J$227c6b28-265f-4e53-97d6-d35c3a8906e2
+java:S6905<"Don't use the query "SELECT *".(ıé’©øÿÿÿÿ8§¯…÷1J$9f2e2bce-c963-47aa-98e7-3ccb0ae7910c
+“
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8¤şİ…÷1J$f5535b63-9dbf-4c81-96a1-279753e3c014

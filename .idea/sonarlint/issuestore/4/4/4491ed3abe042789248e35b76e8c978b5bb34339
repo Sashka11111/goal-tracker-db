@@ -1,25 +1,17 @@
 
 –
-java:S1192."NDefine a constant instead of duplicating this literal "User with id " 3 times.(¯õç¼øÿÿÿÿ8¦Ãâ”ö1J$463c341e-8056-4b06-8277-8243415a2217
+java:S11922"NDefine a constant instead of duplicating this literal "User with id " 3 times.(¯õç¼øÿÿÿÿ8ª­´…÷1J$92686127-35cd-4bdf-bed6-359af7fac778
 “
-java:S1192."KDefine a constant instead of duplicating this literal " not found" 3 times.(¯õç¼øÿÿÿÿ8§Ãâ”ö1J$562d9c4c-8ba5-4d15-8a3d-5bd7e18c2a34
-}
-java:S2209"5Change this instance-reference to a static reference.(‘Ô†œøÿÿÿÿ8î÷ßö1J$ace3cdb2-66ca-488e-85bb-84d1b34a1cd7
-}
-java:S2209'"5Change this instance-reference to a static reference.(‘Ô†œøÿÿÿÿ8ö÷ßö1J$a559f896-c7a1-49c8-a129-147150c94f09
+java:S11922"KDefine a constant instead of duplicating this literal " not found" 3 times.(¯õç¼øÿÿÿÿ8ª­´…÷1J$dc334116-77bb-46b2-80cd-cc1e408cd52a
+°
+java:S4165"hRemove this useless assignment; "dataSource" already holds the assigned value along all execution paths.(Ğè½×ıÿÿÿÿ8ÈÅ«†÷1J$37a13bec-5ff3-4b82-ba45-a858448f944a
 g
-java:S6905&"Don't use the query "SELECT *".(Ë¢œÿÿÿÿÿ8ÁÃâ”ö1J$8332edee-ccf1-4a38-9668-6cbf133ecfa1
-}
-java:S2209:"5Change this instance-reference to a static reference.(‘Ô†œøÿÿÿÿ8ú÷ßö1J$864908ca-6d21-4a27-b6d4-dab683f77595
+java:S6905*"Don't use the query "SELECT *".(Ë¢œÿÿÿÿÿ8É­´…÷1J$f444bd05-afd2-42dd-9ceb-a626f1bfabba
 g
-java:S69059"Don't use the query "SELECT *".(†îØşÿÿÿÿ8ÅÃâ”ö1J$8ed4c4e8-10a2-4387-85b1-593547be7796
-}
-java:S2209I"5Change this instance-reference to a static reference.(‘Ô†œøÿÿÿÿ8ş÷ßö1J$692cd58f-c751-4ede-9ed8-3c29f768340b
-a
-java:S6905H"Don't use the query "SELECT *".(ñ»ÎV8ã¥ˆ•ö1J$7b4d278d-2890-4c6b-a6d9-7a1655a963c2
-}
-java:S2209\"5Change this instance-reference to a static reference.(‘Ô†œøÿÿÿÿ8€Ÿ÷ßö1J$2d534f20-70e2-46f3-8cb9-2b34a3a0de1d
-}
-java:S2209m"5Change this instance-reference to a static reference.(‘Ô†œøÿÿÿÿ8ƒŸ÷ßö1J$56876151-06c8-4c90-a8b0-c63c13a80a41
-}
-java:S2209"5Change this instance-reference to a static reference.(‘Ô†œøÿÿÿÿ8‡Ÿ÷ßö1J$622ae017-953d-4183-a75e-889902c7f347
+java:S6905="Don't use the query "SELECT *".(†îØşÿÿÿÿ8Ê­´…÷1J$5327fca4-6908-481a-ad52-d94333ab3948
+g
+java:S6905L"Don't use the query "SELECT *".(ñ¨®ıÿÿÿÿ8Ê­´…÷1J$c7a0b7c2-547a-4a72-9516-ccc4c8b1c4dc
+w
+java:S1656"/Remove or correct this useless self-assignment.(Ğè½×ıÿÿÿÿ8İÅ«†÷1J$54cad1eb-880f-464b-bb25-71d0f10ba36e
+“
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8èõ’†÷1J$651a08ea-6927-4fba-b096-badac877cecf

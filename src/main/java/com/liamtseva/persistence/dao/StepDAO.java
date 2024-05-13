@@ -11,11 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StepDAO {
-
+/*
   private final Connection connection;
 
   public StepDAO() {
-    this.connection = DatabaseConnection.getConnection();
+    try {
+      this.connection = DatabaseConnection.getConnection();
+    } catch (SQLException e) {
+      throw new RuntimeException("Failed to obtain database connection", e);
+    }
   }
 
   // Додавання кроку
@@ -68,5 +72,5 @@ public class StepDAO {
     } catch (SQLException e) {
       e.printStackTrace();
     }
-  }
+  }*/
 }

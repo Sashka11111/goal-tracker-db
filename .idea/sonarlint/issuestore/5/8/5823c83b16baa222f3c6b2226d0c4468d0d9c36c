@@ -1,3 +1,21 @@
 
-b
-java:S6905"Don't use the query "SELECT *".(ˆëÍŸ8¡ªŠßö1J$bd8db417-da9e-4678-977b-ba9f5c88369d
+_
+java:S2094"BRemove this empty class, write its code or make it an "interface".(Ñ€¶8İ¼ƒíö1
+X	java:S125"<This block of commented-out lines of code should be removed.(•©Û÷8á¼ƒíö1
+m
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8á¼ƒíö1
+h
+java:S1128"FRemove this unused import 'com.liamtseva.persistence.entity.Category'.(¹Æşıÿÿÿÿ8â¼ƒíö1
+M
+java:S1128"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8â¼ƒíö1
+Y
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8â¼ƒíö1
+K
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8â¼ƒíö1
+O
+java:S1128	"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8â¼ƒíö1
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8â¼ƒíö1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8â¼ƒíö1

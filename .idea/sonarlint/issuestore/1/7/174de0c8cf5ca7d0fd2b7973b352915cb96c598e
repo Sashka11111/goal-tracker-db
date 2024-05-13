@@ -1,11 +1,11 @@
 
-	java:S112T"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8’ÀŸÂö1J$08cd2ff0-b0c7-4878-9078-425937af37f0
-©	java:S116"bRename this field "Category_col_IdCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıòÜîøÿÿÿÿ8©ÀŸÂö1J$83c47462-52c6-4d5f-a08e-83972b39db43
-¦	java:S116"dRename this field "Category_col_NameCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎŠºâ8©ÀŸÂö1J$6cee11be-8a79-41db-adb8-fe60993b4da5
-Ÿ	java:S116"]Rename this field "Category_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ®ÖÖ8©ÀŸÂö1J$fe60a29c-04db-4c3a-b3d9-b0f25bb09ccd
-”	java:S116#"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8©ÀŸÂö1J$dedae3ed-4a48-40df-83c4-de57dab328e5
-–	java:S116&"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8ªÀŸÂö1J$9833c6a8-7d0f-4b66-8526-f9dfa2589464
-–	java:S116)"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8ªÀŸÂö1J$11ea19b5-6625-4088-b665-c61218772d6c
-—	java:S116,"URename this field "btn_update" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÑ¤¯8ªÀŸÂö1J$a542fb56-a7dd-4d2c-9c7b-72b14c9554c0
+	java:S112T"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8›ä†÷1J$e95ecdbb-2944-473f-b551-0d8d72ecb5ea
+©	java:S116"bRename this field "Category_col_IdCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıòÜîøÿÿÿÿ8Å›ä†÷1J$8678ea65-5843-40cb-9cb7-52afca1ec7a2
+¦	java:S116"dRename this field "Category_col_NameCategory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎŠºâ8Å›ä†÷1J$c7a53c9c-b6c1-44e3-9947-a30b92682d35
+Ÿ	java:S116"]Rename this field "Category_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ®ÖÖ8Å›ä†÷1J$e1f39626-4ffc-4fac-8067-9f8cfa1c34f8
+”	java:S116#"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8Ç›ä†÷1J$9a755b23-2d0e-4c56-bfe7-554ff8eddde9
+–	java:S116&"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8Ç›ä†÷1J$bcad0b2e-28d2-4b8e-ae07-6a09dddfbb5f
+–	java:S116)"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8Ç›ä†÷1J$16aa2abe-8474-4499-b148-f99c0aef6a45
+—	java:S116,"URename this field "btn_update" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÑ¤¯8Ç›ä†÷1J$40bbab64-7986-448d-85b5-3697d5af11a9
 
-java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ8ÅÅİßö1J$0bd17a40-0170-4938-897e-33141b978fe1
+java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ8¼®ÿ†÷1J$4e7c4870-6b0d-499d-9b2b-016a7b173f9d

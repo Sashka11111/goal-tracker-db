@@ -9,6 +9,8 @@ import com.liamtseva.persistence.repository.contract.GoalRepository;
 import com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
 import com.liamtseva.presentation.viewmodel.GoalViewModel;
+import java.sql.Connection;
+import java.sql.SQLException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -72,9 +74,8 @@ public class MyGoalsController {
   private final CategoryRepository categoryRepository;
 
   public MyGoalsController() {
-    // Ініціалізація репозиторіїв для роботи з цілями та категоріями
-    this.goalRepository = new GoalRepositoryImpl(DatabaseConnection.getConnection()); // Ініціалізуємо репозиторій цілей
-    this.categoryRepository = new CategoryRepositoryImpl(DatabaseConnection.getConnection()); // Ініціалізуємо репозиторій категорій
+    this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення GoalRepositoryImpl з DatabaseConnection
+    this.categoryRepository = new CategoryRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
   }
 
   @FXML
@@ -110,7 +111,6 @@ public class MyGoalsController {
     }
     MyGoals_tableView.setItems(goalViewModels);
   }
-
   // Логіка додавання нової цілі
   private void onAddClicked() {
     String goalName = goal.getText();
@@ -120,6 +120,7 @@ public class MyGoalsController {
     LocalDate goalEndDate = endDate.getValue();
 
     if (goalName != null && !goalName.isEmpty() && selectedCategory != null && goalStartDate != null && goalEndDate != null) {
+      // Передавати userId в конструктор Goal можна отримавши його з поточного користувача або якщо це поки що не реалізовано, то вказати 0
       Goal newGoal = new Goal(0, 0, goalName, goalDescription, selectedCategory.id(), goalStartDate, goalEndDate, "active");
       goalRepository.addGoal(newGoal);
       loadGoals();
@@ -128,6 +129,7 @@ public class MyGoalsController {
       // Вивести повідомлення про помилку, якщо не всі поля заповнені
     }
   }
+
 
   // Логіка очищення полів вводу
   private void onClearClicked() {
@@ -160,7 +162,7 @@ public class MyGoalsController {
       LocalDate newEndDate = endDate.getValue();
 
       if (newNameGoal != null && !newNameGoal.isEmpty() && newCategory != null && newStartDate != null && newEndDate != null) {
-        Goal updatedGoal = new Goal(selectedGoal.getIdGoal(), 0, newNameGoal, newDescription, newCategory.id(), newStartDate, newEndDate, "active");
+        Goal updatedGoal = new Goal(selectedGoal.getIdGoal(), selectedGoal.getUserId(), newNameGoal, newDescription, newCategory.id(), newStartDate, newEndDate, "active");
 
         try {
           goalRepository.updateGoal(updatedGoal);

@@ -1,11 +1,21 @@
 
-—
-java:S2095<"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ë‡Åşÿÿÿÿ8÷×ñôõ1J$96c38981-c885-4480-9782-70adf88b3975
-—
-java:S2095M"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÈíŞ¦ùÿÿÿÿ8äîú½õ1J$3300c488-89d2-43ee-bfd6-86ba151beea3
-’
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Œç­¿8÷×ñôõ1J$17f9bd69-9c3a-49ac-b562-9ccca7f2e77e
-—
-java:S2095*"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Áê»„øÿÿÿÿ8÷×ñôõ1J$6746be28-0d2d-4797-8ea2-40fbbf3545fe
-g
-java:S6905*"Don't use the query "SELECT *".(Áê»„øÿÿÿÿ8Øñôõ1J$320c7c4c-df3d-4575-8d06-64e1bfbf260d
+Š
+java:S2094"BRemove this empty class, write its code or make it an "interface".(ùáîòşÿÿÿÿ8”Ç„íö1J$8d1dda5b-77aa-40e2-8c49-fda2acf78c45
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(·ãÛöûÿÿÿÿ8–Ç„íö1J$e17122b7-0bf5-4b4f-a0f6-9e55a71d833f
+“
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8—Ç„íö1J$5d50c886-a8c2-41e1-8921-90648fce219d
+…
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.Goal'.(­•˜ı8—Ç„íö1J$24fe70be-0670-4a66-942e-e3fd9009dfa1
+s
+java:S1128"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8˜Ç„íö1J$8fb13717-6985-467d-a704-8a5406e11f98
+
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8˜Ç„íö1J$8be8dfa9-746a-4349-bd80-48229ed0204a
+q
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8˜Ç„íö1J$7e4e213a-fc74-45a0-87c9-67955ea8c74c
+u
+java:S1128	"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8˜Ç„íö1J$38b6c185-f43f-4450-bbf7-38117f917099
+s
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8˜Ç„íö1J$d783545f-01ac-473d-9290-370cf0f4f223
+s
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8˜Ç„íö1J$ae9896ff-d210-48b8-a396-2da7e8c83bf9

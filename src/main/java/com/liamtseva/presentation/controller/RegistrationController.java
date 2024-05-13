@@ -44,9 +44,11 @@ public class RegistrationController {
   private String selectedProfileImagePath;
 
   // Ініціалізація об'єкту UserRepository
-  private final UserRepository userRepository = new UserRepositoryImpl(new DatabaseConnection());
+  private final UserRepository userRepository;
 
-
+  public RegistrationController(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
   @FXML
   void chooseImageButtonClicked() {
     chooseImage();
@@ -68,7 +70,6 @@ public class RegistrationController {
       profileImageView.setImage(new Image(getClass().getResourceAsStream("/data/profile.png")));
     }
   }
-
   @FXML
   void initialize() {
     // Логіка кнопки перехіду до екрану авторизації

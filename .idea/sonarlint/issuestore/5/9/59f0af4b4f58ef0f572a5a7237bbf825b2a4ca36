@@ -1,8 +1,12 @@
 
-	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Şëø”ö1J$ebeff297-50c4-4087-a83d-5ffc594c371f
-	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8îëø”ö1J$deeeb47b-6d9c-400d-a61b-247f6c37cdf0
-›	java:S116!"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8îëø”ö1J$1a93b861-3f59-492a-9672-bd779af8ad05
-z
-java:S2440&"2Remove this instantiation of "DatabaseConnection".(­äÿ‹ûÿÿÿÿ8Ãøßö1J$b2676d11-8e40-46f8-b026-a4bc72450b46
+	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8“ø²†÷1J$0cf600cf-3a2e-4649-a67f-92e394a7df74
+	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8ˆÊœ†÷1J$a25b7b63-0b59-4e6b-908d-33236c60ce7c
+›	java:S116""YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8ˆÊœ†÷1J$9a484430-b232-4215-ae9c-4c2d69aa3dae
 y
-java:S1481-"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8÷ëø”ö1J$702013ab-d666-49b3-bb97-5fd203fcae43
+java:S14816"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8Æø²†÷1J$ed9189f6-bfe9-4cac-b80f-2970264b9c5a
+“
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8Ï¹£†÷1J$2173fe88-4fe9-4d32-a86a-8047f0ecc9a5
+¡
+java:S1128"YRemove this unused import 'com.liamtseva.persistence.repository.impl.UserRepositoryImpl'.(¬å±èşÿÿÿÿ8àø²†÷1J$a748f133-3855-4fd6-8b27-39c98ac5ba12
+y
+java:S1128"1Remove this unused import 'javax.sql.DataSource'.(ÉòÂ¿úÿÿÿÿ8Ï¹£†÷1J$7cf62e50-7eee-46fc-ba08-ce1865f019f9

@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.sql.DataSource;
 
 public class AuthorizationController {
 
@@ -34,9 +35,17 @@ public class AuthorizationController {
 
   @FXML
   private Label errorMessageLabel;
+  private UserRepository userRepository; // Змінна для зберігання UserRepository
 
-  private final UserRepository userRepository = new UserRepositoryImpl(new DatabaseConnection());
+  // Метод для ініціалізації userRepository
+  public void initUserRepository(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
 
+  // Параметризований конструктор, який приймає userRepository
+  public AuthorizationController() {
+    // Конструктор без параметрів
+  }
 
   @FXML
   void initialize() {
@@ -57,7 +66,6 @@ public class AuthorizationController {
         throw new RuntimeException(e);
       }
     });
-
     authSignInButton.setOnAction(event -> {
       String loginText = login_field.getText().trim();
       String loginPassword = password_field.getText().trim();
@@ -74,7 +82,6 @@ public class AuthorizationController {
             stage.setTitle("Трекер особистих цілей");
             stage.setScene(new Scene(root));
             stage.showAndWait();
-
           } else {
             errorMessageLabel.setText("Невірний логін або пароль");
             Shake userLoginAnim = new Shake(login_field);

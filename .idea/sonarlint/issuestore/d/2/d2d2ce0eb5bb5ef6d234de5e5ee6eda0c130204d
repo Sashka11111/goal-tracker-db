@@ -1,9 +1,10 @@
 
+g	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Û™¯áö1
 {
 java:S1118
-":Add a private constructor to hide the implicit public one.(É›ÃıÿÿÿÿJ$66eb51e4-7562-4835-9c85-c586af8dc431
+":Add a private constructor to hide the implicit public one.(É›ÃıÿÿÿÿJ$e01fff8c-19a1-48c1-898a-aa87ad26d794
 x
-java:S6353"<Use concise character class syntax '\\d' instead of '[0-9]'.(şÃ»ËJ$adf2e575-7db1-44ab-881a-90a5966a5b9f
+java:S6353"<Use concise character class syntax '\\d' instead of '[0-9]'.(şÃ»ËJ$b0fd034e-1a89-4956-ba45-d425280822d8
 [
-java:S6905"Don't use the query "SELECT *".(ÛŠ³J$8e7e26a8-fdd5-471c-8d05-61f4b8b3e222
-k	java:S106."+Replace this use of System.out by a logger.(¥Ê†íıÿÿÿÿJ$b489d313-b04c-4f03-a999-52eb816d0cb2
+java:S6905$"Don't use the query "SELECT *".(ÛŠ³J$a2655293-3838-4d2f-8682-1a6ee1da60aa
+k	java:S1063"+Replace this use of System.out by a logger.(¥Ê†íıÿÿÿÿJ$2faceef7-f9c4-40f3-b1a9-abb9a142663a

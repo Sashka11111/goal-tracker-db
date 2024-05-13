@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryDAO {
-
+/*
   public void addCategory(Category category) {
     String sql = "INSERT INTO Category(name) VALUES (?)";
     try (Connection connection = DatabaseConnection.getConnection();
@@ -61,5 +61,5 @@ public class CategoryDAO {
       e.printStackTrace();
     }
   }
-
+*/
 }

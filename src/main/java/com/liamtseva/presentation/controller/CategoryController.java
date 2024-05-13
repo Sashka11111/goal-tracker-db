@@ -46,16 +46,16 @@ public class CategoryController {
   private final CategoryRepository categoryRepository;
 
   public CategoryController() {
-    // Ініціалізація репозиторію для роботи з категоріями
-    this.categoryRepository = new CategoryRepositoryImpl(DatabaseConnection.getConnection());
+    this.categoryRepository = new CategoryRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
   }
+
 
   @FXML
   void initialize() {
     // Прив'язка стовпців до даних таблиці
     Category_col_IdCategory.setCellValueFactory(cellData -> cellData.getValue().idCategoryProperty().asObject());
     Category_col_NameCategory.setCellValueFactory(cellData -> cellData.getValue().nameCategoryProperty());
- // Загрузка категорій з бази даних та відображення їх у таблиці
+    // Загрузка категорій з бази даних та відображення їх у таблиці
     loadCategories();
 
     // Обробники подій для кнопок
