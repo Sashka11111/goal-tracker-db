@@ -4,6 +4,7 @@ import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.repository.contract.UserRepository;
 import com.liamtseva.persistence.repository.impl.UserRepositoryImpl;
 import com.liamtseva.presentation.controller.AuthorizationController;
+import com.liamtseva.presentation.controller.RegistrationController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,12 +18,6 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
     Parent root = loader.load();
-
-    AuthorizationController controller = loader.getController();
-    // Ініціалізуємо UserRepository
-    UserRepository userRepository = new UserRepositoryImpl(DatabaseConnection.getInstance().getDataSource());
-    controller.initUserRepository(userRepository);
-
     primaryStage.setTitle("Трекер особистих цілей");
     primaryStage.setScene(new Scene(root, 600, 400));
     primaryStage.show();

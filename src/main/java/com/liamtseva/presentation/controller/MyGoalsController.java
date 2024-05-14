@@ -58,8 +58,6 @@ public class MyGoalsController {
   @FXML
   private Button btn_delete;
 
-  @FXML
-  private Button btn_update;
 
   @FXML
   private ComboBox<Category> category;
@@ -99,7 +97,6 @@ public class MyGoalsController {
     btn_add.setOnAction(event -> onAddClicked());
     btn_clear.setOnAction(event -> onClearClicked());
     btn_delete.setOnAction(event -> onDeleteClicked());
-    btn_update.setOnAction(event -> onUpdateClicked());
   }
 
   // Завантаження цілей з бази даних
@@ -121,7 +118,7 @@ public class MyGoalsController {
 
     if (goalName != null && !goalName.isEmpty() && selectedCategory != null && goalStartDate != null && goalEndDate != null) {
       // Передавати userId в конструктор Goal можна отримавши його з поточного користувача або якщо це поки що не реалізовано, то вказати 0
-      Goal newGoal = new Goal(0, 0, goalName, goalDescription, selectedCategory.id(), goalStartDate, goalEndDate, "active");
+      Goal newGoal = new Goal(0, 0, goalName, goalDescription, selectedCategory.id(), goalStartDate, goalEndDate, "Активна");
       goalRepository.addGoal(newGoal);
       loadGoals();
       clearFields();
@@ -147,33 +144,6 @@ public class MyGoalsController {
       } catch (EntityNotFoundException e) {
         e.printStackTrace();
         // Обробити виняток відповідним чином
-      }
-    }
-  }
-
-  // Логіка оновлення обраної цілі
-  private void onUpdateClicked() {
-    GoalViewModel selectedGoal = MyGoals_tableView.getSelectionModel().getSelectedItem();
-    if (selectedGoal != null) {
-      String newNameGoal = goal.getText();
-      String newDescription = description.getText();
-      Category newCategory = category.getValue();
-      LocalDate newStartDate = startDate.getValue();
-      LocalDate newEndDate = endDate.getValue();
-
-      if (newNameGoal != null && !newNameGoal.isEmpty() && newCategory != null && newStartDate != null && newEndDate != null) {
-        Goal updatedGoal = new Goal(selectedGoal.getIdGoal(), selectedGoal.getUserId(), newNameGoal, newDescription, newCategory.id(), newStartDate, newEndDate, "active");
-
-        try {
-          goalRepository.updateGoal(updatedGoal);
-          loadGoals();
-          clearFields();
-        } catch (EntityNotFoundException e) {
-          e.printStackTrace();
-          // Обробити виняток відповідним чином
-        }
-      } else {
-        // Вивести повідомлення про помилку, якщо не всі поля заповнені
       }
     }
   }

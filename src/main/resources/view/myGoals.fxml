@@ -32,22 +32,17 @@
             </Label>
             <DatePicker fx:id="startDate" layoutX="228.0" layoutY="43.0" prefHeight="26.0" prefWidth="166.0" />
             <DatePicker fx:id="endDate" layoutX="442.0" layoutY="43.0" prefHeight="26.0" prefWidth="166.0" />
-            <Button fx:id="btn_add" layoutX="88.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Додати" textFill="WHITE">
+            <Button fx:id="btn_add" layoutX="165.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Додати" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btn_clear" layoutX="368.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Очистити" textFill="WHITE">
+            <Button fx:id="btn_clear" layoutX="27.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Очистити" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btn_update" layoutX="228.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Редагувати" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-            <Button fx:id="btn_delete" layoutX="502.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Видалити" textFill="WHITE">
+            <Button fx:id="btn_delete" layoutX="301.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Видалити" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -66,7 +61,7 @@
             <ComboBox fx:id="category" layoutX="442.0" layoutY="109.0" prefWidth="150.0" promptText="Виберіть..." />
          </children>
       </AnchorPane>
-      <TableView fx:id="MyGoals_tableView" layoutX="24.0" layoutY="287.2" prefHeight="257.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="287.0">
+      <TableView fx:id="MyGoals_tableView" layoutX="24.0" layoutY="248.8" prefHeight="295.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="249.0">
         <columns>
           <TableColumn fx:id="MyGoals_col_Goal" prefWidth="124.80002212524414" text="Ціль" />
           <TableColumn fx:id="MyGoals_col_Description" prefWidth="171.1999969482422" text="Опис" />
@@ -78,11 +73,5 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField layoutX="163.0" layoutY="243.0" prefHeight="26.0" prefWidth="505.0"  />
-      <Label layoutX="37.0" layoutY="241.0" prefHeight="27.0" prefWidth="114.0" text="Пошук цілей:" textFill="DARKSLATEBLUE">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

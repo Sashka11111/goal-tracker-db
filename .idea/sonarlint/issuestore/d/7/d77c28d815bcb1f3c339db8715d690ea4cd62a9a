@@ -1,12 +1,15 @@
 
-	java:S116"^Rename this field "complateGoal_GoalID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅØÊ©şÿÿÿÿJ$b24dfe2e-58f4-4bc9-b159-660e5393e2af
-¡	java:S116"aRename this field "complateGoal_btnUpdate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¾îùÿÿÿÿJ$a2d54b79-095c-461a-aeee-7ca732e27850
-	java:S116"bRename this field "complateGoal_col_GoalID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àí†“J$8fa4c600-471b-49bb-881c-61f51b715533
-¤	java:S116"dRename this field "complateGoal_col_GoalName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïõíúÿÿÿÿJ$d8d3b33c-52be-47cb-aa9b-580059d3c045
-£	java:S116!"cRename this field "complateGoal_col_engGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¶ÁúÿÿÿÿJ$125abc1b-30e0-417d-90f8-79cc9819c868
-¥	java:S116$"eRename this field "complateGoal_col_startGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¦á”ÿÿÿÿÿJ$f130315d-5221-462b-be05-f8523b7cd7e1
-	java:S116'"bRename this field "complateGoal_col_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÓÔÓJ$35dcbecd-5614-4c57-84b1-7c33466d06da
-˜	java:S116*"^Rename this field "complateGoal_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ğşGJ$c00eb112-31d0-4c39-9eb1-6573b5d2e5cc
-¡	java:S116-"aRename this field "complateGoal_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®ÅüûÿÿÿÿJ$73c6c376-81b0-4164-842f-509656294632
-Â
-java:S11860"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷‹¾†ÿÿÿÿÿJ$489e8b50-94d4-416f-819a-5a16741d9247
+¥	java:S116""^Rename this field "complateGoal_GoalID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅØÊ©şÿÿÿÿ8³Ğ‡»÷1J$5bf39232-b61a-4082-9b66-d6a2dc28e521
+¨	java:S116%"aRename this field "complateGoal_btnUpdate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¾îùÿÿÿÿ8³Ğ‡»÷1J$68f16827-f202-4162-b9ae-f36528f6037e
+©	java:S116'"bRename this field "complateGoal_col_GoalID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıĞÎ™ûÿÿÿÿ8³Ğ‡»÷1J$142d8ad9-e272-4119-81e7-b512fb426ea4
+«	java:S116*"dRename this field "complateGoal_col_GoalName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(  Êùÿÿÿÿ8³Ğ‡»÷1J$14d970d3-e5b5-46be-8bec-e2768ae93efb
+¥	java:S116-"cRename this field "complateGoal_col_endGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä¡äÏ8³Ğ‡»÷1J$d4e188fc-8c3c-45f9-a486-54074d5153b9
+§	java:S1160"eRename this field "complateGoal_col_startGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œàÖ€8³Ğ‡»÷1J$34e3aa69-aff5-4c54-9091-e72cf4b227f6
+ 	java:S1164"^Rename this field "complateGoal_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™»ğ•8³Ğ‡»÷1J$67779cf0-0b58-4f3d-bdbb-8ea6287ea6fc
+£	java:S1167"aRename this field "complateGoal_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜¬‚›8³Ğ‡»÷1J$0461b2b2-7d24-4b0f-8431-67a31dfae5bc
+¥
+java:S1128"]Remove this unused import 'com.liamtseva.persistence.repository.contract.CategoryRepository'.(ãšÑùÿÿÿÿ8¾Ğ‡»÷1J$e47e0757-fd70-4fe9-a00f-1f639c31b664
+ 
+java:S1128"]Remove this unused import 'com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl'.(âıÔî8¾Ğ‡»÷1J$8165ee0b-db81-49ae-9f45-3e49c98cd963
+
+java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ8¾Ğ‡»÷1J$ca18f4af-67ec-47d6-ab52-ed320a9bba70

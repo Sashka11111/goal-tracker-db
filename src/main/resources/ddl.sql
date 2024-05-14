@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Goals;
 DROP TABLE IF EXISTS Category;
 DROP TABLE IF EXISTS Steps;
-DROP TABLE IF EXISTS Progress;
+DROP TABLE IF EXISTS Tips;
 
 -- Створення таблиці "Users"
 CREATE TABLE Users (
@@ -22,7 +22,7 @@ CREATE TABLE Goals (
     id_category INTEGER,
     start_date  DATE          NOT NULL,
     end_date    DATE          NOT NULL,
-    status      VARCHAR (100) CHECK (Status IN ('active', 'completed', 'postponed') ),
+    status      VARCHAR (100) CHECK (Status IN ('Активна', 'Завершена', 'Відкладена') ),
     FOREIGN KEY (
         id_user
     )
@@ -55,14 +55,8 @@ CREATE TABLE Steps (
     ON UPDATE CASCADE
 );;
 
--- Створення таблиці "Progress"
-CREATE TABLE Progress (
-    id_progress [INT AUTO_INCREMENT] PRIMARY KEY,
-    id_user     INT                  NOT NULL,
-    id_goal     INT                  NOT NULL,
-    status      VARCHAR (100)           CHECK (Status IN ('active', 'completed', 'postponed') ),
-    FOREIGN KEY (
-    id_goal
-    )
-    REFERENCES Goals (id_goal)
+-- Створення таблиці "Tips"
+CREATE TABLE Tips (
+                      id_tip   INTEGER PRIMARY KEY AUTOINCREMENT,
+                      tip_text TEXT NOT NULL
 );

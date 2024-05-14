@@ -1,6 +1,6 @@
 package com.liamtseva.presentation.controller;
 
-import com.liamtseva.domain.exception.UserValidator;
+import com.liamtseva.domain.validation.UserValidator;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
 import com.liamtseva.persistence.repository.contract.UserRepository;
@@ -8,6 +8,9 @@ import com.liamtseva.persistence.repository.impl.UserRepositoryImpl; // Імпл
 import com.liamtseva.presentation.animation.Shake;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -43,12 +46,17 @@ public class RegistrationController {
 
   private String selectedProfileImagePath;
 
-  // Ініціалізація об'єкту UserRepository
-  private final UserRepository userRepository;
+  private UserRepository userRepository;
+  private byte[] imageBytes;
 
-  public RegistrationController(UserRepository userRepository) {
+  public RegistrationController() {
+    this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource());
+  }
+
+  public void initUserRepository(UserRepository userRepository) {
     this.userRepository = userRepository;
   }
+
   @FXML
   void chooseImageButtonClicked() {
     chooseImage();
@@ -62,17 +70,65 @@ public class RegistrationController {
     );
     File selectedFile = fileChooser.showOpenDialog(profileImageView.getScene().getWindow());
     if (selectedFile != null) {
-      selectedProfileImagePath = selectedFile.getPath(); // Збереження шляху до обраного зображення
+      selectedProfileImagePath = selectedFile.getPath();
       Image image = new Image(selectedFile.toURI().toString());
       profileImageView.setImage(image);
+
+      try {
+        Path imagePath = Paths.get(selectedProfileImagePath);
+        imageBytes = Files.readAllBytes(imagePath);
+
+        String username = login_field.getText();
+        String password = password_field.getText();
+        if (username.isEmpty() || password.isEmpty()) {
+          errorMessageLabel.setText("Логін та пароль не повинен бути пустим");
+          Shake userLoginAnim = new Shake(login_field);
+          Shake userPassAnim = new Shake(password_field);
+          userLoginAnim.playAnim();
+          userPassAnim.playAnim();
+          return;
+        }
+
+        if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
+          if (!userRepository.isUsernameExists(username)) {
+            User user = new User(username, password, imageBytes);
+            userRepository.addUser(user);
+
+            System.out.println("Registration successful.");
+            SignInButton.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Трекер особистих цілей");
+            try {
+              stage.setScene(new Scene(loader.load()));
+              stage.show();
+            } catch (IOException e) {
+              e.printStackTrace();
+            }
+          } else {
+            errorMessageLabel.setText("Логін з ім'ям " + username + " уже існує");
+            Shake userLoginAnim = new Shake(login_field);
+            userLoginAnim.playAnim();
+          }
+        } else {
+          errorMessageLabel.setText("Пароль має мати велику, маленьку букву та цифру");
+          Shake userLoginAnim = new Shake(login_field);
+          Shake userPassAnim = new Shake(password_field);
+          userLoginAnim.playAnim();
+          userPassAnim.playAnim();
+        }
+
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
     } else {
-      // Set default image if no image is selected
       profileImageView.setImage(new Image(getClass().getResourceAsStream("/data/profile.png")));
     }
   }
+
   @FXML
   void initialize() {
-    // Логіка кнопки перехіду до екрану авторизації
     authSignInButton.setOnAction(event -> {
       Scene currentScene = authSignInButton.getScene();
       FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
@@ -82,6 +138,10 @@ public class RegistrationController {
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
+    });
+
+    SignInButton.setOnAction(event -> {
+      // Implementation of SignInButton action moved to chooseImage method
     });
 
     // Логіка кнопки реєстрації користувача
@@ -96,11 +156,10 @@ public class RegistrationController {
         userPassAnim.playAnim();
         return;
       }
-
       if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
         if (!userRepository.isUsernameExists(username)) {
-          // Створення об'єкту користувача
-          User user = new User(username, password);
+          // Створення нового користувача
+          User user = new User(username, password,imageBytes);
           // Додавання користувача до бази даних через UserRepository
           userRepository.addUser(user);
 
@@ -108,8 +167,7 @@ public class RegistrationController {
           SignInButton.getScene().getWindow().hide();
 
           // Перехід до головного меню
-          FXMLLoader loader = new FXMLLoader(
-              getClass().getResource("/view/mainMenu.fxml"));
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
           Stage stage = new Stage();
           stage.setTitle("Трекер особистих цілей");
           try {

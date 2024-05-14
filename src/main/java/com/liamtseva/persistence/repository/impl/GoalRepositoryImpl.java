@@ -93,7 +93,22 @@ public class GoalRepositoryImpl implements GoalRepository {
       throw new EntityNotFoundException("Error while updating goal with id " + goal.id());
     }
   }
-
+  @Override
+  public void updateGoalStatus(int goalId, String newStatus) throws EntityNotFoundException {
+    String query = "UPDATE Goals SET status = ? WHERE id_goal = ?";
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement statement = connection.prepareStatement(query)) {
+      statement.setString(1, newStatus);
+      statement.setInt(2, goalId);
+      int rowsUpdated = statement.executeUpdate();
+      if (rowsUpdated == 0) {
+        throw new EntityNotFoundException("Goal with id " + goalId + " not found");
+      }
+    } catch (SQLException e) {
+      // Обробка помилок бази даних
+      e.printStackTrace();
+    }
+  }
   @Override
   public void deleteGoal(int id) throws EntityNotFoundException {
     String query = "DELETE FROM Goals WHERE id_goal = ?";

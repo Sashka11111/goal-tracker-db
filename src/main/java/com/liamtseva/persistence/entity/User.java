@@ -4,10 +4,10 @@ public record User(
     int id,
     String username,
     String password,
-    String profileImage)
+    byte[] profileImage)
     implements Entity, Comparable<User> {
-  public User(String username, String password) {
-    this(0, username, password, "");
+  public User(String username, String password, byte[]profileImage) {
+    this(0, username, password, profileImage);
   }
   @Override
   public int compareTo(User o) {

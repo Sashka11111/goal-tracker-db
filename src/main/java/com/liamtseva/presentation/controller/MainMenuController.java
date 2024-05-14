@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
@@ -22,7 +21,10 @@ public class MainMenuController {
   private Button btn_myGoals;
 
   @FXML
-  private Button btn_myProfile;
+  private Button btn_steps;
+
+  @FXML
+  private Button btn_tips;
 
   @FXML
   private Button btn_completeGoal;
@@ -35,22 +37,18 @@ public class MainMenuController {
 
   @FXML
   private StackPane contentArea;
-  @FXML
-  private Label lbl_userName;
 
   @FXML
   void initialize() {
     loadMyGoals();
     btn_myGoals.setOnAction(event -> showMyGoalPage());
-    btn_myProfile.setOnAction(event -> showMyProfilelPage());
     btn_completeGoal.setOnAction(event -> showCompleteGoalsPage());
     btn_category.setOnAction(actionEvent -> showCategoryPage());
+    btn_steps.setOnAction(event -> showStepsToGoalPage());
+    btn_tips.setOnAction(event -> showTipsPage());
     btn_exit.setOnAction(event ->{
       System.exit(0);
     });
-  }
-  private void displayUserName(){
-
   }
 
   private void moveStackPane(Button button) {
@@ -66,11 +64,6 @@ public class MainMenuController {
     loadFXML("/view/myGoals.fxml");
   }
 
-  private void showMyProfilelPage() {
-    moveStackPane(btn_myProfile);
-    loadFXML("/view/myProfile.fxml");
-  }
-
   private void showCompleteGoalsPage() {
     moveStackPane(btn_completeGoal);
     loadFXML("/view/completeGoals.fxml");
@@ -80,6 +73,14 @@ public class MainMenuController {
     loadFXML("/view/category.fxml");
   }
 
+  private void showStepsToGoalPage() {
+    moveStackPane(btn_steps);
+    loadFXML("/view/stepsToGoal.fxml");
+  }
+  private void showTipsPage() {
+    moveStackPane(btn_tips);
+    loadFXML("/view/tips.fxml");
+  }
   private void loadFXML(String fxmlFileName) {
     try {
       Parent fxml = FXMLLoader.load(getClass().getResource(fxmlFileName));

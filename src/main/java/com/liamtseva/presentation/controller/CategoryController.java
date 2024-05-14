@@ -40,9 +40,6 @@ public class CategoryController {
   @FXML
   private Button btn_delete;
 
-  @FXML
-  private Button btn_update;
-
   private final CategoryRepository categoryRepository;
 
   public CategoryController() {
@@ -62,7 +59,6 @@ public class CategoryController {
     btn_add.setOnAction(event -> onAddClicked());
     btn_clear.setOnAction(event -> onClearClicked());
     btn_delete.setOnAction(event -> onDeleteClicked());
-    btn_update.setOnAction(event -> onUpdateClicked());
   }
 
   // Завантаження категорій з бази даних
@@ -107,10 +103,5 @@ public class CategoryController {
         e.printStackTrace();
       }
     }
-  }
-
-  // Логіка оновлення обраної категорії
-  private void onUpdateClicked() {
-    // Можна додати логіку оновлення категорії за потреби
   }
 }

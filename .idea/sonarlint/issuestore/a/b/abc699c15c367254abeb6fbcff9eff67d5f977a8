@@ -1,17 +1,13 @@
 
-	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8Ç‘—àõ1J$a73d4b8d-7da0-4e13-884c-05dfe0f7b60a
-	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8Ç‘—àõ1J$5f9463c9-fe4f-455c-aef1-7d9a7c8bcf30
-Ÿ	java:S116"XRename this field "btn_myProfile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ï´ôøÿÿÿÿ8Ç‘—àõ1J$898728da-8edb-415c-b2fd-3798575d4fb6
-¢	java:S116"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8Ç‘—àõ1J$37058f49-52a3-41dc-b5e0-cc882d07c81a
-•	java:S116"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8Ç‘—àõ1J$07a31788-f53d-4a1a-a256-59ba51893a1d
-™	java:S116'"WRename this field "lbl_userName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»«ãØ8È‘—àõ1J$baed265c-15be-4a6b-94b6-80455a246020
-Ä
-java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(µÃìì8È‘—àõ1J$6c54d82e-98f5-484d-b1df-619976cc3561
+	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8£ßø÷1J$eef31e16-5192-4781-9eb0-df16011b646d
+	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8£ßø÷1J$8601be16-a587-4509-94c7-701842d729ad
+–	java:S116"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¼‹á8£ßø÷1J$2bf0c3e1-b19d-4ef1-ae84-eced41215974
+š	java:S116"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰äÌıÿÿÿÿ8¤ßø÷1J$79c0f17f-9d0e-4a8c-93d3-db95f6d391d2
+¢	java:S116"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8¤ßø÷1J$9df05f4c-430e-43d3-9e0e-aa742be9be0f
+•	java:S116!"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8¤ßø÷1J$c42cf240-be90-48c4-9254-94a148207018
 n
-java:S16020",Remove useless curly braces around statement(Š¬Ï!8Ï‘—àõ1J$d20aec3a-a224-4595-ba0b-343419649f86
+java:S16021",Remove useless curly braces around statement(Š¬Ï!8©ßø÷1J$ec11d997-5a40-430e-a819-e42c3dca3985
 
-java:S1854c"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨şÿÿÿÿ8×‘—àõ1J$40519bad-7838-4733-a117-2094487ed3d4
+java:S1854d"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨şÿÿÿÿ8…ÿû÷1J$aac2b95a-829a-4643-a68e-c4e4e72a5d1b
 ~
-java:S1481c"6Remove this unused "myGoalsController" local variable.(Ì®á¨şÿÿÿÿ8İ‘—àõ1J$b1a0995c-4688-419e-a18e-3a35f00b7b3e
-w
-java:S11444"4Remove this unused private "displayUserName" method.(µÃìì8ß‘—àõ1J$8d9c375e-4ea8-4a0d-a5b8-fc0a592ba8c0
+java:S1481d"6Remove this unused "myGoalsController" local variable.(Ì®á¨şÿÿÿÿ8‰ÿû÷1J$a26eaa07-1a7c-4383-b7d2-18a60afaf0bf

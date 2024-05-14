@@ -37,14 +37,10 @@ public class AuthorizationController {
   private Label errorMessageLabel;
   private UserRepository userRepository; // Змінна для зберігання UserRepository
 
-  // Метод для ініціалізації userRepository
-  public void initUserRepository(UserRepository userRepository) {
-    this.userRepository = userRepository;
-  }
-
   // Параметризований конструктор, який приймає userRepository
   public AuthorizationController() {
-    // Конструктор без параметрів
+    this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
+
   }
 
   @FXML

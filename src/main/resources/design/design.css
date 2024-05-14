@@ -9,3 +9,11 @@
   -fx-transition: background-color 0.3s;
   -fx-cursor: hand;
 }
+.list-cell {
+  -fx-background-color: transparent;
+  -fx-text-fill: WHITE; /* Білий колір тексту */
+  -fx-font-size: 14px; /* розмір шрифту */
+  -fx-padding: 10px; /* відступи */
+}
+.list-cell:hover {
+}

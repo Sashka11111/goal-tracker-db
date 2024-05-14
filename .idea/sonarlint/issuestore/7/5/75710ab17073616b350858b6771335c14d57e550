@@ -1,16 +1,15 @@
 
-	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8“Â¦Ÿö1J$9909ab02-3458-40a6-aca6-4b8dbaff1788
-™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8¨Â¦Ÿö1J$393989bb-6a9a-40c5-aa2e-bb928f9614b2
-	java:S116!"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8¨Â¦Ÿö1J$7ed9225e-dae0-48ca-a123-971436d3b0eb
-›	java:S116$"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8¨Â¦Ÿö1J$60b894ec-afaa-4a23-a894-9623a6376617
+	java:S112‹"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8öÒÀ÷1J$344d97e0-4ee8-40ea-92e6-ba9daf26a4aa
+}
+java:S1141g"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8øÒÀ÷1J$8454fa8a-d21a-4927-8b63-a89f8ce004d1
+™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8ˆÓÀ÷1J$4eeac7de-73b4-4ccf-935b-7dc3e432ff21
+	java:S116$"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8ˆÓÀ÷1J$229df6f7-b414-460e-81e9-38928ce2b837
+›	java:S116'"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8ˆÓÀ÷1J$7bcf3043-fea0-44e6-b3f5-1a34672a2c99
 ©
-java:S1450,"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8©Â¦Ÿö1J$0f8ebe5c-667b-470f-8717-cac426363868
+java:S1450/"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8‹ÓÀ÷1J$fc0bbb1a-a2b8-48a5-92da-f879acbc4905
 š
-java:S3776J"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8²Â¦Ÿö1J$3b4bdd18-fd33-4b20-9b88-a6bbbae0d853
-m	java:S106k"+Replace this use of System.out by a logger.(Í¶®Ê8ºÂ¦Ÿö1J$e9e1376c-6fa2-41d7-bb2c-c3ca88999baa
-“
-java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8€€ï„÷1J$1cf77115-6c5d-4d5a-88f0-ba646d0b7e61
-œ
-java:S1128"YRemove this unused import 'com.liamtseva.persistence.repository.impl.UserRepositoryImpl'.(Âó„š8€ï„÷1J$72b30210-ba09-45be-b173-d62dadaad450
-~
-java:S1068,"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8ÂÂ¦Ÿö1J$8e770a1d-03a5-4b41-bf0e-a4cb1105bf71
+java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¦Œ‰«ùÿÿÿÿ8“ÓÀ÷1J$d0e15370-1aab-4fc3-ae79-96dac2fb1052
+m	java:S106a"+Replace this use of System.out by a logger.(Í¶®Ê8©ÓÀ÷1J$7daa95a9-b47c-42b8-a46a-ece2dc4ec6ac
+›
+java:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8²ÓÀ÷1J$6fb74b8a-9c90-4d47-91ba-183b72fe9a85
+n	java:S106¦"+Replace this use of System.out by a logger.(Í¶®Ê8¶ÓÀ÷1J$3f5997c0-ef05-41f0-af31-f0400f63b58c

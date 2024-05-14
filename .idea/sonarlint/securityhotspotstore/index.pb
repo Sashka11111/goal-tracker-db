@@ -3,8 +3,6 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 U
 %src/main/java/com/liamtseva/Main.java,1\e\1ee0fbd42bc31fe386120d22bee56630cd36b603
-l
-<src/main/java/com/liamtseva/persistence/entity/Progress.java,a\5\a5a1cca118eaa6561c12f642e79d8c18b0b1b736
 h
 8src/main/java/com/liamtseva/persistence/dao/UserDAO.java,b\3\b3f32e202bd3723324f8c10d66adcdb2ac529a8c
 h
@@ -37,8 +35,6 @@ m
 Ksrc/main/java/com/liamtseva/presentation/controller/MainMenuController.java,a\b\abc699c15c367254abeb6fbcff9eff67d5f977a8
 €
 Psrc/main/java/com/liamtseva/presentation/controller/CompleteGoalsController.java,d\7\d77c28d815bcb1f3c339db8715d690ea4cd62a9a
-|
-Lsrc/main/java/com/liamtseva/presentation/controller/MyProfileController.java,b\4\b48b752a15d25cc66396527dcebd20d1fb0567e1
 
 Osrc/main/java/com/liamtseva/presentation/controller/RegistrationController.java,7\5\75710ab17073616b350858b6771335c14d57e550
 {
@@ -47,8 +43,6 @@ y
 Isrc/main/java/com/liamtseva/presentation/viewmodel/CategoryViewModel.java,a\c\ac8de1ffcc2c07b93f1d099e16d52391cccbf9e8
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
-o
-?src/main/java/com/liamtseva/domain/exception/UserValidator.java,d\2\d2d2ce0eb5bb5ef6d234de5e5ee6eda0c130204d
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 
@@ -79,8 +73,6 @@ G
 Db/GoalTrackerDb.sqlite,6\0\608973bf5fe576964eae96a7f0112b7b0b53d655
 
 Q.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,b\b\bbf202272a96de5cd6b6828ffdc55fb3ce45289c
-
-Q.idea/sonarlint/securityhotspotstore/d/2/d2d2ce0eb5bb5ef6d234de5e5ee6eda0c130204d,b\c\bcf17941c63b4ef665836e1c29a3b21caa1b3008
 w
 G.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,f\0\f0e0f9cec86fe4b939ae22be5264c758801eb28f
 
@@ -133,3 +125,21 @@ Q.idea/sonarlint/securityhotspotstore/4/3/4369bba461f5791f72f31ab25f9df06f87a925
 Q.idea/sonarlint/securityhotspotstore/6/0/608973bf5fe576964eae96a7f0112b7b0b53d655,4\f\4fe64e12f5896073769c88ce8cf69e4c384a277d
 
 Q.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,9\0\909762385fc6eb20f922a91c6865741308b57f2c
+h
+8src/main/java/com/liamtseva/persistence/entity/Tips.java,2\c\2c73fb5a7b9a40482bfaf2d978ea94b74431dfa2
+~
+Nsrc/main/java/com/liamtseva/presentation/controller/StepsToGoalController.java,5\a\5ada7cb5189edff2312080e9febbf8ed66ef75be
+
+Osrc/main/java/com/liamtseva/persistence/repository/contract/TipsRepository.java,e\5\e57b5ed045c4be99d9734be1e3b995730f5289d4
+
+Osrc/main/java/com/liamtseva/persistence/repository/impl/TipsRepositoryImpl.java,5\e\5e1a3687d71eb32b34f8f8de2c6cc6f5258c8aa2
+w
+Gsrc/main/java/com/liamtseva/presentation/controller/TipsController.java,a\0\a050c5cabeaeadfe178d6e3d48bd62406737a663
+
+Osrc/main/java/com/liamtseva/persistence/repository/impl/StepRepositoryImpl.java,b\0\b0fa663781f9e003b5ccd51cc7534b77b1527ea7
+u
+Esrc/main/java/com/liamtseva/presentation/viewmodel/StepViewModel.java,6\d\6d465316922e1840c7d8e18af01b7731cd3d4c4b
+u
+Esrc/main/java/com/liamtseva/presentation/viewmodel/UserViewModel.java,9\0\90bc07854d4fcf22cdbbf3074f07f02fc119994e
+p
+@src/main/java/com/liamtseva/domain/validation/UserValidator.java,e\c\ecea1bde46e7b415041d921a1367d413c1310c7c

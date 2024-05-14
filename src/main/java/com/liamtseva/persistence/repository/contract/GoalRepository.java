@@ -10,4 +10,6 @@ public interface GoalRepository {
   List<Goal> getAllGoals();
   void updateGoal(Goal goal) throws EntityNotFoundException;
   void deleteGoal(int id) throws EntityNotFoundException;
+  void updateGoalStatus(int goalId, String newStatus) throws EntityNotFoundException;
+
 }

@@ -1,4 +1,4 @@
-package com.liamtseva.domain.exception;
+package com.liamtseva.domain.validation;
 
 import com.liamtseva.persistence.config.DatabaseConnection;
 import java.sql.Connection;

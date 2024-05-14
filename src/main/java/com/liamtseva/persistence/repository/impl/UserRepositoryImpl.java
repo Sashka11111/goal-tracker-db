@@ -15,10 +15,8 @@ import javax.sql.DataSource;
 public class UserRepositoryImpl implements UserRepository {
 
   private DataSource dataSource;
-  public UserRepositoryImpl() {
-    // Встановлюємо дефолтне значення для dataSource, наприклад, null
-    this.dataSource = dataSource;
-  }
+
+  // Виправлення конструктора для встановлення значення dataSource
   public UserRepositoryImpl(DataSource dataSource) {
     this.dataSource = dataSource;
   }
@@ -30,7 +28,7 @@ public class UserRepositoryImpl implements UserRepository {
         PreparedStatement preparedStatement = connection.prepareStatement(query)) {
       preparedStatement.setString(1, user.username());
       preparedStatement.setString(2, user.password());
-      preparedStatement.setString(3, user.profileImage());
+      preparedStatement.setBytes(3, user.profileImage());
       preparedStatement.executeUpdate();
     } catch (SQLException e) {
       e.printStackTrace();
@@ -81,7 +79,7 @@ public class UserRepositoryImpl implements UserRepository {
         if (resultSet.next()) {
           int id = resultSet.getInt("id_user");
           String password = resultSet.getString("password");
-          String profileImage = resultSet.getString("profile_image");
+          byte[] profileImage = resultSet.getBytes("profile_image");
           return new User(id, username, password, profileImage);
         }
       }
@@ -116,7 +114,7 @@ public class UserRepositoryImpl implements UserRepository {
         PreparedStatement preparedStatement = connection.prepareStatement(query)) {
       preparedStatement.setString(1, user.username());
       preparedStatement.setString(2, user.password());
-      preparedStatement.setString(3, user.profileImage());
+      preparedStatement.setBytes(3, user.profileImage());
       preparedStatement.setInt(4, user.id());
       int rowsUpdated = preparedStatement.executeUpdate();
       if (rowsUpdated == 0) {
@@ -147,7 +145,7 @@ public class UserRepositoryImpl implements UserRepository {
         resultSet.getInt("id"),
         resultSet.getString("username"),
         resultSet.getString("password"),
-        resultSet.getString("profile_image")
+        resultSet.getBytes("profile_image")
     );
   }
 }
