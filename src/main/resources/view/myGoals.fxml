@@ -14,7 +14,7 @@
    <children>
       <AnchorPane layoutX="11.2" layoutY="32.0" prefHeight="194.0" prefWidth="697.0" style="-fx-background-color: WHITE;" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="32.0">
          <children>
-            <TextField fx:id="goal" layoutX="28.0" layoutY="43.0" prefHeight="14.0" prefWidth="166.0" />
+           <TextField fx:id="goal" layoutX="28.0" layoutY="43.0" prefHeight="14.0" prefWidth="166.0" />
             <Label layoutX="46.0" layoutY="22.0" text="Ціль">
                <font>
                   <Font size="14.0" />
@@ -58,7 +58,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ComboBox fx:id="category" layoutX="442.0" layoutY="109.0" prefWidth="150.0" promptText="Виберіть..." />
+            <ComboBox fx:id="category" layoutX="442.0" layoutY="104.0" prefWidth="150.0" promptText="Виберіть..." />
          </children>
       </AnchorPane>
       <TableView fx:id="MyGoals_tableView" layoutX="24.0" layoutY="248.8" prefHeight="295.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="249.0">

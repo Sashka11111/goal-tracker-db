@@ -18,7 +18,7 @@ public class StepRepositoryImpl implements StepRepository {
 
   @Override
   public void addStep(Step step) {
-    String query = "INSERT INTO Steps (id_step, id_goal, step_description) VALUES (?, ?, ?)";
+    String query = "INSERT INTO Steps (id_step, id_goal, description) VALUES (?, ?, ?)";
     try (Connection connection = dataSource.getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(query)) {
       preparedStatement.setInt(1, step.id());
@@ -70,7 +70,7 @@ public class StepRepositoryImpl implements StepRepository {
 
   @Override
   public void updateStep(Step step) throws EntityNotFoundException {
-    String query = "UPDATE Steps SET step_description = ? WHERE id_step = ?";
+    String query = "UPDATE Steps SET description = ? WHERE id_step = ?";
     try (Connection connection = dataSource.getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(query)) {
       preparedStatement.setString(1, step.description());
@@ -104,7 +104,7 @@ public class StepRepositoryImpl implements StepRepository {
   private Step extractStepsFromResultSet(ResultSet resultSet) throws SQLException {
     int id = resultSet.getInt("id_step");
     int goalId = resultSet.getInt("id_goal");
-    String description = resultSet.getString("step_description");
+    String description = resultSet.getString("description");
     return new Step(id, goalId, description);
   }
 }

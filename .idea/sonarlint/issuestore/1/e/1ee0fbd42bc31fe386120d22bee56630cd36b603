@@ -1,11 +1,11 @@
 
 }
-java:S2209&"5Change this instance-reference to a static reference.(š¯óøÿÿÿÿ8ÿ—ˆˆ÷1J$7d91c95e-c7b4-4b1d-a8eb-de0dd22cefb8
+java:S2209&"5Change this instance-reference to a static reference.(š¯óøÿÿÿÿ8ÿ—ˆˆ÷1J$6b627956-337e-4fcd-804f-c9cb07cbba7e
 œ
-java:S1128"YRemove this unused import 'com.liamtseva.persistence.repository.contract.UserRepository'.(Ãúè8¸Ş£‹÷1J$4afa39da-4b37-46d1-834d-24bbacfbb90a
+java:S1128"YRemove this unused import 'com.liamtseva.persistence.repository.contract.UserRepository'.(Ãúè8¸Ş£‹÷1J$8b6c470d-7046-4339-8552-f19a22bac51f
 ¡
-java:S1128"YRemove this unused import 'com.liamtseva.persistence.repository.impl.UserRepositoryImpl'.(¬å±èşÿÿÿÿ8¸Ş£‹÷1J$90d53efc-1294-496d-b0a2-f5dc7eb5a5f9
+java:S1128"YRemove this unused import 'com.liamtseva.persistence.repository.impl.UserRepositoryImpl'.(¬å±èşÿÿÿÿ8¸Ş£‹÷1J$9df64f4f-a32e-4eda-a43e-e59b2339465e
 
-java:S1128"ZRemove this unused import 'com.liamtseva.presentation.controller.AuthorizationController'.(ÕÉ–Â8İö¸‹÷1J$afaed69a-1a04-4aee-a3ee-7e07ba33ecc9
+java:S1128"ZRemove this unused import 'com.liamtseva.presentation.controller.AuthorizationController'.(ÕÉ–Â8İö¸‹÷1J$17d197b7-53f7-4006-bea2-f247158b5027
 ¡
-java:S1128"YRemove this unused import 'com.liamtseva.presentation.controller.RegistrationController'.(û¡õüúÿÿÿÿ8‹Ç™‹÷1J$a9df5d2c-2a76-40a4-95cb-5926a9177f38
+java:S1128"YRemove this unused import 'com.liamtseva.presentation.controller.RegistrationController'.(û¡õüúÿÿÿÿ8‹Ç™‹÷1J$ad6a1a56-df6c-41c7-9086-8a948fe29aa0

@@ -1,15 +1,21 @@
 
-	java:S112‹"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8öÒÀ÷1J$344d97e0-4ee8-40ea-92e6-ba9daf26a4aa
+	java:S112i"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Û®åë÷1J$3411488a-8ec7-4202-8a11-2b2f4163cab7
+	java:S112‰"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İ®åë÷1J$356bd62e-dd3e-42a1-9429-d309569ca150
+	java:S112­"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İ®åë÷1J$8d2826e2-259e-40aa-87be-43198c81c72d
+œ
+java:S1192d"YDefine a constant instead of duplicating this literal "/view/authorization.fxml" 3 times.(­ô×à8Ş®åë÷1J$8bb8c93b-978a-41a0-9a71-f138f7d6db78
 }
-java:S1141g"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8øÒÀ÷1J$8454fa8a-d21a-4927-8b63-a89f8ce004d1
-™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8ˆÓÀ÷1J$4eeac7de-73b4-4ccf-935b-7dc3e432ff21
-	java:S116$"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8ˆÓÀ÷1J$229df6f7-b414-460e-81e9-38928ce2b837
-›	java:S116'"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8ˆÓÀ÷1J$7bcf3043-fea0-44e6-b3f5-1a34672a2c99
+java:S1141e"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ß®åë÷1J$0a53f975-fd48-4f47-89ec-060a79884aa4
+™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8ø®åë÷1J$2abc176b-d6ab-4a97-81b4-46b68d565891
+	java:S116$"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8ø®åë÷1J$96728d9e-e121-4449-897c-e22b98dfd487
+›	java:S116'"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8ø®åë÷1J$51bc569d-abe6-42d6-863a-932c5a9a3901
 ©
-java:S1450/"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8‹ÓÀ÷1J$fc0bbb1a-a2b8-48a5-92da-f879acbc4905
+java:S1450/"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8ú®åë÷1J$8aaeb4b9-95a4-4593-ae81-07537bde9f47
 š
-java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¦Œ‰«ùÿÿÿÿ8“ÓÀ÷1J$d0e15370-1aab-4fc3-ae79-96dac2fb1052
-m	java:S106a"+Replace this use of System.out by a logger.(Í¶®Ê8©ÓÀ÷1J$7daa95a9-b47c-42b8-a46a-ece2dc4ec6ac
+java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¦Œ‰«ùÿÿÿÿ8ş®åë÷1J$441e971c-f32d-4d80-84a7-390d72daa208
+m	java:S106a"+Replace this use of System.out by a logger.(Í¶®Ê8†¯åë÷1J$d079b24f-7c59-40b1-8de0-4d50e1a4b4f0
 ›
-java:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8²ÓÀ÷1J$6fb74b8a-9c90-4d47-91ba-183b72fe9a85
-n	java:S106¦"+Replace this use of System.out by a logger.(Í¶®Ê8¶ÓÀ÷1J$3f5997c0-ef05-41f0-af31-f0400f63b58c
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8Œ¯åë÷1J$14c6779f-4050-4c73-bd48-16fb6d59deea
+n	java:S106¤"+Replace this use of System.out by a logger.(Í¶®Ê8¯åë÷1J$3a384a4d-f5ca-46ed-9678-45720e8e4a2f
+w
+java:S1128"/Remove this unused import 'javafx.stage.Stage'.(æÄ¸²úÿÿÿÿ8’¯åë÷1J$705cb807-8360-41ed-9829-e78f5b3b6d8e

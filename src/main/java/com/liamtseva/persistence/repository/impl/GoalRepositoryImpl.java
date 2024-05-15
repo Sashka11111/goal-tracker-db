@@ -57,13 +57,16 @@ public class GoalRepositoryImpl implements GoalRepository {
   @Override
   public List<Goal> getAllGoals() {
     List<Goal> goals = new ArrayList<>();
-    String query = "SELECT * FROM Goals";
+    String query = "SELECT * FROM Goals"; // Запит для вибору цілей, які належать поточному користувачеві
     try (Connection connection = dataSource.getConnection();
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(query)) {
-      while (resultSet.next()) {
-        Goal goal = extractGoalFromResultSet(resultSet);
-        goals.add(goal);
+        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+      //int currentUserId = getCurrentUserId(); // Отримання ідентифікатора поточного користувача
+     // preparedStatement.setInt(1, currentUserId);
+      try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        while (resultSet.next()) {
+          Goal goal = extractGoalFromResultSet(resultSet);
+          goals.add(goal);
+        }
       }
     } catch (SQLException e) {
       e.printStackTrace();
@@ -71,6 +74,43 @@ public class GoalRepositoryImpl implements GoalRepository {
     return goals;
   }
 
+  @Override
+  public List<Goal> filterGoalsByUserId(int userId) {
+    List<Goal> goals = new ArrayList<>();
+    String query = "SELECT * FROM Goals WHERE id_user = ?"; // Filter by user ID
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+      preparedStatement.setInt(1, userId);
+      try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        while (resultSet.next()) {
+          Goal goal = extractGoalFromResultSet(resultSet);
+          goals.add(goal);
+        }
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+      // Implement error handling
+    }
+    return goals;
+  }
+  @Override
+  public List<Goal> getAllGoalsByUserId(int userId) {
+    List<Goal> goals = new ArrayList<>();
+    String query = "SELECT * FROM Goals WHERE id_user = ?"; // Filter by user ID
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+      preparedStatement.setInt(1, userId);
+      try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        while (resultSet.next()) {
+          Goal goal = extractGoalFromResultSet(resultSet);
+          goals.add(goal);
+        }
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return goals;
+  }
   @Override
   public void updateGoal(Goal goal) throws EntityNotFoundException {
     String query = "UPDATE Goals SET id_user = ?, name_goal = ?, description = ?, id_category = ?, start_date = ?, end_date = ?, status = ? WHERE id_goal = ?";

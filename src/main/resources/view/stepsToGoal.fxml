@@ -47,7 +47,7 @@
             <ComboBox fx:id="goal" layoutX="28.0" layoutY="41.0" prefWidth="150.0" promptText="Виберіть..." />
       </children>
     </AnchorPane>
-    <TableView fx:id="Steps_tableView" layoutX="24.0" layoutY="228.0" prefHeight="316.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="228.0">
+    <TableView fx:id="Steps_tableView" layoutX="24.0" layoutY="192.0" prefHeight="352.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="192.0">
       <columns>
         <TableColumn fx:id="Steps_col_IdStep" prefWidth="136.0000343322754" text="ID шляху" />
         <TableColumn fx:id="Steps_col_IdGoal" prefWidth="174.40000915527344" text="ID цілі" />
@@ -57,11 +57,5 @@
         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
       </columnResizePolicy>
     </TableView>
-    <TextField layoutX="160.0" layoutY="191.0" prefHeight="26.0" prefWidth="505.0" />
-    <Label layoutX="38.0" layoutY="191.0" prefHeight="27.0" prefWidth="114.0" text="Пошук шляху:" textFill="DARKSLATEBLUE">
-      <font>
-        <Font size="18.0" />
-      </font>
-    </Label>
   </children>
 </AnchorPane>

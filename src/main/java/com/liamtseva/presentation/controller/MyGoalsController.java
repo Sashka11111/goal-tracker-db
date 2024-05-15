@@ -4,10 +4,13 @@ import com.liamtseva.domain.exception.EntityNotFoundException;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Category;
 import com.liamtseva.persistence.entity.Goal;
+import com.liamtseva.persistence.entity.User;
 import com.liamtseva.persistence.repository.contract.CategoryRepository;
 import com.liamtseva.persistence.repository.contract.GoalRepository;
+import com.liamtseva.persistence.repository.contract.UserRepository;
 import com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
+import com.liamtseva.persistence.repository.impl.UserRepositoryImpl;
 import com.liamtseva.presentation.viewmodel.GoalViewModel;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -67,13 +70,14 @@ public class MyGoalsController {
 
   @FXML
   private DatePicker startDate;
-
   private final GoalRepository goalRepository;
   private final CategoryRepository categoryRepository;
+  private final UserRepository userRepository;
 
   public MyGoalsController() {
     this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення GoalRepositoryImpl з DatabaseConnection
     this.categoryRepository = new CategoryRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
+    this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource());
   }
 
   @FXML
@@ -109,6 +113,7 @@ public class MyGoalsController {
     MyGoals_tableView.setItems(goalViewModels);
   }
   // Логіка додавання нової цілі
+  @FXML
   private void onAddClicked() {
     String goalName = goal.getText();
     String goalDescription = description.getText();
@@ -117,15 +122,27 @@ public class MyGoalsController {
     LocalDate goalEndDate = endDate.getValue();
 
     if (goalName != null && !goalName.isEmpty() && selectedCategory != null && goalStartDate != null && goalEndDate != null) {
-      // Передавати userId в конструктор Goal можна отримавши його з поточного користувача або якщо це поки що не реалізовано, то вказати 0
-      Goal newGoal = new Goal(0, 0, goalName, goalDescription, selectedCategory.id(), goalStartDate, goalEndDate, "Активна");
-      goalRepository.addGoal(newGoal);
-      loadGoals();
-      clearFields();
+      // Отримати поточного користувача за його ім'ям
+      User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
+      if (currentUser != null) {
+        // Створити новий об'єкт цілі з отриманими значеннями та ідентифікатором користувача
+        Goal newGoal = new Goal(0, currentUser.id(), goalName, goalDescription, selectedCategory.id(), goalStartDate, goalEndDate, "Активна");
+        // Додати нову ціль у репозиторій цілей
+        goalRepository.addGoal(newGoal);
+        // Оновити таблицю цілей у графічному інтерфейсі
+        loadGoals();
+        // Очистити поля введення після додавання цілі
+        clearFields();
+      } else {
+        // Обробити випадок, коли користувач не знайдений
+      }
     } else {
       // Вивести повідомлення про помилку, якщо не всі поля заповнені
     }
   }
+
+
+
 
 
   // Логіка очищення полів вводу

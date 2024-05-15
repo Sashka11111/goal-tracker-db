@@ -1,6 +1,5 @@
 package com.liamtseva.persistence.repository.impl;
 
-import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
 import com.liamtseva.domain.exception.EntityNotFoundException;
 import com.liamtseva.persistence.repository.contract.UserRepository;
@@ -34,10 +33,9 @@ public class UserRepositoryImpl implements UserRepository {
       e.printStackTrace();
     }
   }
-
   @Override
   public User getUserById(int id) throws EntityNotFoundException {
-    String query = "SELECT * FROM Users WHERE id = ?";
+    String query = "SELECT * FROM Users WHERE id_user = ?";
     try (Connection connection = dataSource.getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(query)) {
       preparedStatement.setInt(1, id);
@@ -68,26 +66,30 @@ public class UserRepositoryImpl implements UserRepository {
     }
     return users;
   }
-
   @Override
   public User findByUsername(String username) throws EntityNotFoundException {
     String query = "SELECT * FROM Users WHERE username = ?";
+    User user = null;
+
     try (Connection connection = dataSource.getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-      preparedStatement.setString(1, username);
+
+      preparedStatement.setString(1, username); // Встановлюємо значення параметра username
       try (ResultSet resultSet = preparedStatement.executeQuery()) {
         if (resultSet.next()) {
-          int id = resultSet.getInt("id_user");
-          String password = resultSet.getString("password");
-          byte[] profileImage = resultSet.getBytes("profile_image");
-          return new User(id, username, password, profileImage);
+          user = mapUser(resultSet); // Якщо є результати, встановлюємо значення user
+        } else {
+          throw new EntityNotFoundException("User with username " + username + " not found");
         }
       }
     } catch (SQLException e) {
-      e.printStackTrace();
+      throw new EntityNotFoundException("Error while fetching user by username: " + username, e);
     }
-    throw new EntityNotFoundException("User with username '" + username + "' not found");
+
+    return user;
   }
+
+
 
   @Override
   public boolean isUsernameExists(String username) {
@@ -142,7 +144,7 @@ public class UserRepositoryImpl implements UserRepository {
 
   private User mapUser(ResultSet resultSet) throws SQLException {
     return new User(
-        resultSet.getInt("id"),
+        resultSet.getInt("id_user"),
         resultSet.getString("username"),
         resultSet.getString("password"),
         resultSet.getBytes("profile_image")

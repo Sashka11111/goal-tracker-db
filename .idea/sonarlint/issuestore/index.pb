@@ -59,10 +59,6 @@ l
 Osrc/main/java/com/liamtseva/persistence/repository/contract/GoalRepository.java,a\a\aa67bc34ea649a245e623bb65d118cef9ed47ee2
 
 Osrc/main/java/com/liamtseva/persistence/repository/contract/StepRepository.java,a\4\a4ea569628ee02e3b8d96a0fe8017facc53ea34b
-w
-Gsrc/main/java/com/liamtseva/domain/exception/EntityDeleteException.java,2\7\271807e8b72d226a24a097e3e2791842d6d0fd3a
-w
-Gsrc/main/java/com/liamtseva/domain/exception/EntityUpdateException.java,9\0\902e5748304358ed577f71e11e450d91e898d299
 p
 @src/test/java/com/liamtseva/persistence/dao/CategoryDAOTest.java,c\c\ccd990749980e9b456969630f5c8f54e9b74ff4d
 
@@ -85,8 +81,6 @@ w
 G.idea/sonarlint/issuestore/b/e/be2254ed278a2bec9f1453fa389b7be6c17d0890,d\d\ddfe11e656469c359e2d5c01854c1a4787a3e5b3
 Å
 Q.idea/sonarlint/securityhotspotstore/b/e/be2254ed278a2bec9f1453fa389b7be6c17d0890,7\6\7658637b194bdc7becf49d888e66d7e7e66b1e54
-w
-Gsrc/main/java/com/liamtseva/domain/exception/EntityInsertException.java,3\c\3ce5c9d9e1c2f210a9247736fa8410e762f4331c
 y
 Isrc/main/java/com/liamtseva/domain/exception/EntityNotFoundException.java,8\9\898566e013e7ec930bda02140ae1960c3763e803
 Å
@@ -109,14 +103,6 @@ G.idea/sonarlint/issuestore/a/4/a4ea569628ee02e3b8d96a0fe8017facc53ea34b,6\3\63
 Q.idea/sonarlint/securityhotspotstore/a/c/ac8de1ffcc2c07b93f1d099e16d52391cccbf9e8,9\c\9c6901e421cecd167cbe9b1cfacccafe3848d940
 w
 G.idea/sonarlint/issuestore/a/a/aa67bc34ea649a245e623bb65d118cef9ed47ee2,5\9\590c6a12e3d86fb9997f9f6e9bc3bd7154954d36
-w
-G.idea/sonarlint/issuestore/9/0/902e5748304358ed577f71e11e450d91e898d299,7\f\7f499bd619af077c11820ad39720832dca411c79
-Å
-Q.idea/sonarlint/securityhotspotstore/9/0/902e5748304358ed577f71e11e450d91e898d299,1\d\1dcfe01b53d6589e73015403d23fbd896c0a931f
-w
-G.idea/sonarlint/issuestore/2/7/271807e8b72d226a24a097e3e2791842d6d0fd3a,6\1\6122b97b6a116c0df5cb84101fc27dccb678cf08
-Å
-Q.idea/sonarlint/securityhotspotstore/2/7/271807e8b72d226a24a097e3e2791842d6d0fd3a,b\1\b16865f8cf09fa67f420ce7b1ac074c97a071a9e
 w
 G.idea/sonarlint/issuestore/6/0/608973bf5fe576964eae96a7f0112b7b0b53d655,f\c\fccfb225dadaa7b1f13f68302685d7074aa36462
 Å
@@ -143,3 +129,5 @@ u
 Esrc/main/java/com/liamtseva/presentation/viewmodel/UserViewModel.java,9\0\90bc07854d4fcf22cdbbf3074f07f02fc119994e
 p
 @src/main/java/com/liamtseva/domain/validation/UserValidator.java,e\c\ecea1bde46e7b415041d921a1367d413c1310c7c
+z
+Jsrc/main/java/com/liamtseva/presentation/controller/AuthenticatedUser.java,7\f\7faccc17400244d6b990ecb4b92066184fc67aa7

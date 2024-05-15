@@ -122,8 +122,5 @@ public class GoalViewModel {
   public void setStatus(String status) {
     this.status.set(status);
   }
-  @Override
-  public String toString() {
-    return idGoal + ": " + nameGoal; // Повертаємо рядок з айді та назвою цілі
-  }
+
 }

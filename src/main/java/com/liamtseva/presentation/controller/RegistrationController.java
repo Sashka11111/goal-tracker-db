@@ -91,20 +91,18 @@ public class RegistrationController {
 
         if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
           if (!userRepository.isUsernameExists(username)) {
-            User user = new User(username, password, imageBytes);
+            User user = new User(0,username, password, imageBytes);
             userRepository.addUser(user);
 
             System.out.println("Registration successful.");
-            SignInButton.getScene().getWindow().hide();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("Трекер особистих цілей");
+            Scene currentScene = authSignInButton.getScene();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
             try {
-              stage.setScene(new Scene(loader.load()));
-              stage.show();
+              Parent root = loader.load();
+              currentScene.setRoot(root);
             } catch (IOException e) {
-              e.printStackTrace();
+              throw new RuntimeException(e);
             }
           } else {
             errorMessageLabel.setText("Логін з ім'ям " + username + " уже існує");
@@ -159,22 +157,20 @@ public class RegistrationController {
       if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
         if (!userRepository.isUsernameExists(username)) {
           // Створення нового користувача
-          User user = new User(username, password,imageBytes);
+          User user = new User(0,username, password,imageBytes);
           // Додавання користувача до бази даних через UserRepository
           userRepository.addUser(user);
 
           System.out.println("Registration successful.");
-          SignInButton.getScene().getWindow().hide();
 
-          // Перехід до головного меню
-          FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
-          Stage stage = new Stage();
-          stage.setTitle("Трекер особистих цілей");
+
+          Scene currentScene = authSignInButton.getScene();
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
           try {
-            stage.setScene(new Scene(loader.load()));
-            stage.show();
+            Parent root = loader.load();
+            currentScene.setRoot(root);
           } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
           }
         } else {
           errorMessageLabel.setText("Логін з ім'ям " + username + " уже існує");

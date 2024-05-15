@@ -69,8 +69,9 @@ public class AuthorizationController {
       if (!loginText.isEmpty() && !loginPassword.isEmpty()) {
         try {
           // Перевірка логіну та пароля користувача
-          User user = userRepository.findByUsername(loginText);
+          User user = userRepository.findByUsername(login_field.getText());
           if (user != null && user.password().equals(loginPassword)) {
+            AuthenticatedUser.getInstance().setCurrentUser(user);
             loginSingUpButton.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
             Parent root = loader.load();
