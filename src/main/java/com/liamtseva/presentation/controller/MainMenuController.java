@@ -1,18 +1,25 @@
 package com.liamtseva.presentation.controller;
 
+import com.liamtseva.persistence.AuthenticatedUser;
+import com.liamtseva.persistence.entity.Goal;
 import com.liamtseva.persistence.entity.User;
+import com.liamtseva.presentation.viewmodel.GoalViewModel;
 import com.liamtseva.presentation.viewmodel.UserViewModel;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
@@ -43,12 +50,8 @@ public class MainMenuController {
   private StackPane contentArea;
 
   @FXML
-  private Label userLabel;
-
-
-
-  @FXML
   void initialize() {
+    loadMyGoals();
     btn_myGoals.setOnAction(event -> showMyGoalPage());
     btn_completeGoal.setOnAction(event -> showCompleteGoalsPage());
     btn_category.setOnAction(actionEvent -> showCategoryPage());
@@ -91,26 +94,24 @@ public class MainMenuController {
   }
   private void loadFXML(String fxmlFileName) {
     try {
-      Parent fxml = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlFileName)));
+      Parent fxml = FXMLLoader.load(getClass().getResource(fxmlFileName));
       contentArea.getChildren().clear(); // Очищаємо contentArea
       contentArea.getChildren().add(fxml); // Додаємо завантажений контент
     } catch (IOException ex) {
       Logger.getLogger(MainMenuController.class.getName()).log(Level.SEVERE, null, ex);
     }
   }
-/*
-  private void loadGoals() {
-    // Get the logged-in user's ID
-    User currentUser = CurrentUserContext.getCurrentUser();
-    int userId = currentUser.id();
-
-    // Filter goals based on the logged-in user's ID
-    List<Goal> goals = goalRepository.getGoalsByUserId(userId);
-
-    // Convert goals to GoalViewModels
-    ObservableList<GoalViewModel> goalViewModels = FXCollections.observableArrayList();
-    for (Goal goal : goals) {
-      goalViewModels.add(new GoalViewModel(goal));
+  private void loadMyGoals() {
+    try {
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/myGoals.fxml"));
+      AnchorPane myGoalsPane = loader.load();
+      // Отримати контролер myGoals.fxml
+      MyGoalsController myGoalsController = loader.getController();
+      // Вставити myGoalsPane в contentArea
+      contentArea.getChildren().clear();
+      contentArea.getChildren().add(myGoalsPane);
+    } catch (IOException e) {
+      e.printStackTrace();
     }
-  }*/
+  }
 }

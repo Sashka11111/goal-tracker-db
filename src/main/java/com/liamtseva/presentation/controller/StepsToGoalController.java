@@ -1,10 +1,12 @@
 package com.liamtseva.presentation.controller;
 
 import com.liamtseva.domain.exception.EntityNotFoundException;
+import com.liamtseva.persistence.AuthenticatedUser;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Category;
 import com.liamtseva.persistence.entity.Goal;
 import com.liamtseva.persistence.entity.Step;
+import com.liamtseva.persistence.entity.User;
 import com.liamtseva.persistence.repository.contract.GoalRepository;
 import com.liamtseva.persistence.repository.contract.StepRepository;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
@@ -19,6 +21,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -35,7 +38,7 @@ public class StepsToGoalController {
   private TableView<StepViewModel> Steps_tableView;
 
   @FXML
-  private TableColumn<StepViewModel, Integer> Steps_col_IdGoal;
+  private TableColumn<StepViewModel, String> Steps_col_NameGoal;
 
   @FXML
   private TableColumn<StepViewModel, Integer> Steps_col_IdStep;
@@ -52,8 +55,6 @@ public class StepsToGoalController {
   @FXML
   private Button btn_delete;
 
-  @FXML
-  private Button btn_update;
 
   @FXML
   private TextField description;
@@ -75,33 +76,62 @@ public class StepsToGoalController {
     loadGoals();
 
     Steps_col_IdStep.setCellValueFactory(cellData -> cellData.getValue().idStepProperty().asObject());
-    Steps_col_IdGoal.setCellValueFactory(cellData -> cellData.getValue().idGoalProperty().asObject());
+    Steps_col_NameGoal.setCellValueFactory(cellData -> cellData.getValue().goalNameProperty());
     Steps_col_description.setCellValueFactory(cellData -> cellData.getValue().descriptionProperty());
 
     // Обробники подій для кнопок
     btn_add.setOnAction(event -> onAddClicked());
     btn_clear.setOnAction(event -> clearField());
     btn_delete.setOnAction(event -> onDeleteClicked());
-    btn_update.setOnAction(event -> onUpdateClicked());
   }
 
   // Завантаження кроків з бази даних
   private void loadGoals() {
-    List<Goal> goals = goalRepository.getAllGoals(); // Отримання всіх цілей з репозиторію
-    ObservableList<Goal> goalList = FXCollections.observableArrayList(goals); // Створення ObservableList зі списку цілей
-    goal.setItems(goalList); // Встановлення ObservableList як джерела даних для комбобокса
+    User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
+    if (currentUser != null) {
+      List<Goal> userGoals = goalRepository.filterGoalsByUserId(currentUser.id());
+      ObservableList<Goal> observableUserGoals = FXCollections.observableArrayList(userGoals);
+      // Після циклу завантаження списку цілей у методі loadGoals()
+      for (Goal goal : userGoals) {
+        List<Step> stepsForGoal = stepRepository.getStepsByGoalId(goal.id());
+        for (Step step : stepsForGoal) {
+          Steps_tableView.getItems().add(new StepViewModel(step));
+        }
+      }
+
+      goal.setItems(observableUserGoals);
+      // Встановлення фабрики відображення для комбобокса
+      goal.setCellFactory(param -> new ListCell<>() {
+        @Override
+        protected void updateItem(Goal item, boolean empty) {
+          super.updateItem(item, empty);
+          if (empty || item == null || item.nameGoal() == null) {
+            setText(null);
+          } else {
+            setText(item.nameGoal());
+          }
+        }
+      });
+    } else {
+      // Обробити випадок, коли користувач не знайдений
+    }
   }
 
   private void onAddClicked() {
     Goal selectedGoal = goal.getValue();
     String stepDescription = description.getText();
     if (selectedGoal != null && !stepDescription.isEmpty()){
-      Step newStep = new Step(0,selectedGoal.id(),stepDescription);
-      stepRepository.addStep(newStep);
+      Step newStep = new Step(0,selectedGoal.id(),selectedGoal.nameGoal(),stepDescription);
+      try {
+        stepRepository.addStep(newStep);
+      } catch (EntityNotFoundException e) {
+        throw new RuntimeException(e);
+      }
       loadGoals();
       clearField();
     }
   }
+
 
   private void onDeleteClicked() {
     StepViewModel selectedStep = Steps_tableView.getSelectionModel().getSelectedItem();
@@ -115,25 +145,8 @@ public class StepsToGoalController {
     }
   }
 
-  private void onUpdateClicked() {
-    StepViewModel selectedStep = Steps_tableView.getSelectionModel().getSelectedItem();
-    if (selectedStep != null) {
-      String newDescription = description.getText();
-      if (!newDescription.isEmpty()) {
-        selectedStep.setDescription(newDescription);
-        Step updatedStep = selectedStep.getStep();
-        try {
-          stepRepository.updateStep(updatedStep);
-          Steps_tableView.refresh();
-          clearField();
-        } catch (EntityNotFoundException e) {
-          e.printStackTrace(); // Обробка помилки
-        }
-      }
-    }
-  }
-
   private void clearField() {
     description.clear();
+    goal.setValue(null);
   }
 }

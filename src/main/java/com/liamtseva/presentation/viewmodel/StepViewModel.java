@@ -8,13 +8,14 @@ public class StepViewModel {
   private final SimpleIntegerProperty idStep;
   private final SimpleIntegerProperty idGoal;
   private final SimpleStringProperty description;
+  private final SimpleStringProperty goalName;
 
   public StepViewModel(Step step) {
     this.idStep = new SimpleIntegerProperty(step.id());
     this.idGoal = new SimpleIntegerProperty(step.goalId());
     this.description = new SimpleStringProperty(step.description());
+    this.goalName = new SimpleStringProperty(step.goalName());
   }
-
 
   public int getIdStep() {
     return idStep.get();
@@ -52,8 +53,20 @@ public class StepViewModel {
     this.description.set(description);
   }
 
+  public String getGoalName() {
+    return goalName.get();
+  }
+
+  public SimpleStringProperty goalNameProperty() {
+    return goalName;
+  }
+
+  public void setGoalName(String goalName) {
+    this.goalName.set(goalName);
+  }
+
   // Метод для отримання об'єкта Step з вмісту ViewModel
   public Step getStep() {
-    return new Step(getIdStep(), getIdGoal(), getDescription());
+    return new Step(getIdStep(), getIdGoal(), getGoalName(), getDescription());
   }
 }

@@ -1,4 +1,4 @@
-package com.liamtseva.presentation.controller;
+package com.liamtseva.persistence;
 
 import com.liamtseva.persistence.entity.User;
 

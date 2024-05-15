@@ -24,7 +24,7 @@
     </TableView>
     <AnchorPane layoutX="157.0" layoutY="315.0" prefHeight="200.0" prefWidth="402.0" styleClass="border" stylesheets="@../design/mainMenu.css">
       <children>
-        <Button fx:id="complateGoal_btnUpdate" layoutX="152.0" layoutY="151.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #483D8B;" text="Оновити" textFill="WHITE">
+        <Button fx:id="complateGoal_btnUpdate" layoutX="152.0" layoutY="151.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Оновити" textFill="WHITE">
           <font>
             <Font size="14.0" />
           </font>

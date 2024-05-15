@@ -1,16 +1,36 @@
 
-	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8 ‡Ìé÷1J$a7bbcf0d-96a1-4788-bade-8dd99690041f
-	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8 ‡Ìé÷1J$38f031b0-ecef-4137-9de4-cbc57657477a
-–	java:S116"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¼‹á8¡‡Ìé÷1J$fccf0b17-276b-48db-a710-3e6604797ba5
-š	java:S116"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰äÌıÿÿÿÿ8¡‡Ìé÷1J$ccfa23f2-6ef2-4541-9938-fb0b240d2a2d
-¢	java:S116""[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8¡‡Ìé÷1J$1b760beb-257d-43e8-a982-e58b95ed2674
-•	java:S116%"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8¡‡Ìé÷1J$2c6cd2e1-ba47-458b-a549-2c7711cbbc3d
+	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8 ‡Ìé÷1J$a9de9079-1bdf-4140-8dfc-04040d46632a
+	java:S116 "VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8 ‡Ìé÷1J$18f4f65e-b2e2-43e9-8923-12fe1ac41fe1
+–	java:S116#"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¼‹á8¡‡Ìé÷1J$28b95afe-6188-4180-a6ae-ebb9de63e806
+š	java:S116&"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰äÌıÿÿÿÿ8¡‡Ìé÷1J$72b10f12-ffc8-4cb5-a676-4a58ff7f9ad6
+¢	java:S116)"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8¡‡Ìé÷1J$0eaf2816-4911-4cb2-a8db-642ed79116bc
+•	java:S116,"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8¡‡Ìé÷1J$e83e36b5-3d54-4524-9d9e-8dcddf680bbb
 n
-java:S16029",Remove useless curly braces around statement(Š¬Ï!8¨‡Ìé÷1J$313a08c2-b82d-44c0-9ff2-2c54ef697468
-ƒ	java:S125f"<This block of commented-out lines of code should be removed.(•¸Úşùÿÿÿÿ8­‡Ìé÷1J$e64300c0-8155-444b-9fa5-97462f644dcc
+java:S1602<",Remove useless curly braces around statement(Š¬Ï!8¨‡Ìé÷1J$05998a96-dcd7-4588-bbee-d7340d3f59ad
+
+java:S1854m"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨şÿÿÿÿ8µ±Ší÷1J$96af4c1f-92e6-49d8-a5cf-c5ca93f9b859
+~
+java:S1481m"6Remove this unused "myGoalsController" local variable.(Ì®á¨şÿÿÿÿ8º±Ší÷1J$5da6649e-2a7a-4b40-93d2-e34d412666d4
+‹
+java:S1128"HRemove this unused import 'com.liamtseva.persistence.AuthenticatedUser'.(€¦À8¸¿Œí÷1J$395eac90-e207-4f42-a219-833efd74ca97
+…
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.Goal'.(­•˜ı8¸¿Œí÷1J$3e3b698f-a957-4d5d-808f-7f9f0c4b4f22
 Š
-java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.User'.(àˆ°¾ûÿÿÿÿ8×í•ë÷1J$192b1355-b784-4dec-ae51-3a655b52b4f4
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.User'.(àˆ°¾ûÿÿÿÿ8¸¿Œí÷1J$63a38e87-95e3-4d60-a77b-810fc639ec00
+—
+java:S1128"ORemove this unused import 'com.liamtseva.presentation.viewmodel.GoalViewModel'.(ıÅ¨»ùÿÿÿÿ8¸¿Œí÷1J$2fa7ed18-67de-449f-b330-5fdfa260fac3
 ’
-java:S1128"ORemove this unused import 'com.liamtseva.presentation.viewmodel.UserViewModel'.(ñ÷æé8×í•ë÷1J$2b07054f-a7bd-4891-ad54-bd5e3159529e
+java:S1128"ORemove this unused import 'com.liamtseva.presentation.viewmodel.UserViewModel'.(ñ÷æé8¹¿Œí÷1J$58867d33-e896-40d3-a7ed-51e2d2360869
+s
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¹¿Œí÷1J$f7b50743-832d-45b6-9110-8c0dd7e3131f
+q
+java:S1128
+".Remove this unused import 'java.util.Objects'.(¼¸õ›8¹¿Œí÷1J$8f2d262e-d0fc-4dab-98be-fa9bacdfda7c
+€
+java:S1128"=Remove this unused import 'javafx.collections.FXCollections'.(´¶²Æ8¹¿Œí÷1J$61e260d6-c5f1-4a29-baeb-00b05615c12e
+†
+java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8¹¿Œí÷1J$73a98731-dd8b-4549-94fb-18987388b853
 y
-java:S1128"7Remove this unused import 'javafx.scene.control.Alert'.(ÊÇê:8×í•ë÷1J$96879530-b45a-4894-ad5a-9e7e4cba7aa8
+java:S1128"7Remove this unused import 'javafx.scene.control.Alert'.(ÊÇê:8¹¿Œí÷1J$d807c7f3-a593-48fa-a534-5d4dedc11257
+
+java:S1128"7Remove this unused import 'javafx.scene.control.Label'.(ö²­ÿÿÿÿÿ8¹¿Œí÷1J$0be5091c-9877-4ecf-84a7-2274abee5b66

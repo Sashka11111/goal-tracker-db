@@ -73,6 +73,39 @@ public class GoalRepositoryImpl implements GoalRepository {
     }
     return goals;
   }
+  @Override
+  public Goal getGoalByName(String name) throws EntityNotFoundException {
+    String query = "SELECT * FROM Goals WHERE name_goal = ?";
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+      preparedStatement.setString(1, name);
+      ResultSet resultSet = preparedStatement.executeQuery();
+      if (resultSet.next()) {
+        return extractGoalFromResultSet(resultSet);
+      } else {
+        throw new EntityNotFoundException("Goal with name " + name + " not found");
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+      throw new EntityNotFoundException("Error while fetching goal with name " + name);
+    }
+  }
+  @Override
+  public void updateGoalStatusByName(String goalName, String newStatus) throws EntityNotFoundException {
+    String query = "UPDATE Goals SET status = ? WHERE name_goal = ?";
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement statement = connection.prepareStatement(query)) {
+      statement.setString(1, newStatus);
+      statement.setString(2, goalName);
+      int rowsUpdated = statement.executeUpdate();
+      if (rowsUpdated == 0) {
+        throw new EntityNotFoundException("Goal with name " + goalName + " not found");
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+      // Обробка помилок бази даних
+    }
+  }
 
   @Override
   public List<Goal> filterGoalsByUserId(int userId) {

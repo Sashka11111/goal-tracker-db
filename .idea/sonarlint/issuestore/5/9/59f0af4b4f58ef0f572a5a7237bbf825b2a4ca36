@@ -1,8 +1,6 @@
 
-	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¬œë÷1J$abfe6480-bdfb-4e53-be06-86dd3409c175
-	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8»œë÷1J$80e7865b-fe7c-4288-b704-3e32ee33cb4d
-›	java:S116""YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8»œë÷1J$d69ed9ee-2f99-4150-bcca-78fffad93418
+	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¬œë÷1J$2939b3aa-3187-40b4-ad48-3ba8fcddc077
+	java:S116"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8»œë÷1J$bae1d418-a255-41cb-a64f-a3b0b6280609
+›	java:S116""YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8»œë÷1J$b66ef06e-e4c5-476a-8f01-b27cb4d4d6a1
 y
-java:S14812"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8Àœë÷1J$20821bdb-542f-43a7-b094-bc114b3fa6c4
-y
-java:S1128"1Remove this unused import 'javax.sql.DataSource'.(ÉòÂ¿úÿÿÿÿ8œäĞë÷1J$88159adb-a7b2-4e76-b9b8-bf0dd9b5cdfc
+java:S14812"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8Àœë÷1J$fc44c218-ebb2-4bd2-a587-3e1fafec624d

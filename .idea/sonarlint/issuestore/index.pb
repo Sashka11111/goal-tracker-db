@@ -131,3 +131,7 @@ p
 @src/main/java/com/liamtseva/domain/validation/UserValidator.java,e\c\ecea1bde46e7b415041d921a1367d413c1310c7c
 z
 Jsrc/main/java/com/liamtseva/presentation/controller/AuthenticatedUser.java,7\f\7faccc17400244d6b990ecb4b92066184fc67aa7
+n
+>src/main/java/com/liamtseva/persistence/AuthenticatedUser.java,9\e\9e89f6b42c299ff1af016bcd31a5a6e3e8ae7e9f
+{
+Ksrc/main/java/com/liamtseva/presentation/controller/GreetingController.java,a\9\a9c9ce1f12d89e804d206cfa7b0b069a8f5617f4

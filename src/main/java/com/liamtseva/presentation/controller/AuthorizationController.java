@@ -1,5 +1,6 @@
 package com.liamtseva.presentation.controller;
 
+import com.liamtseva.persistence.AuthenticatedUser;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
 import com.liamtseva.domain.exception.EntityNotFoundException;
@@ -17,7 +18,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javax.sql.DataSource;
 
 public class AuthorizationController {
 

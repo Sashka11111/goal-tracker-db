@@ -1,6 +1,7 @@
 package com.liamtseva.presentation.controller;
 
 import com.liamtseva.domain.exception.EntityNotFoundException;
+import com.liamtseva.persistence.AuthenticatedUser;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Category;
 import com.liamtseva.persistence.entity.Goal;
@@ -12,8 +13,6 @@ import com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.UserRepositoryImpl;
 import com.liamtseva.presentation.viewmodel.GoalViewModel;
-import java.sql.Connection;
-import java.sql.SQLException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -105,13 +104,19 @@ public class MyGoalsController {
 
   // Завантаження цілей з бази даних
   private void loadGoals() {
-    List<Goal> goals = goalRepository.getAllGoals();
-    ObservableList<GoalViewModel> goalViewModels = FXCollections.observableArrayList();
-    for (Goal goal : goals) {
-      goalViewModels.add(new GoalViewModel(goal));
+    User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
+    if (currentUser != null) {
+      List<Goal> goals = goalRepository.getAllGoalsByUserId(currentUser.id());
+      ObservableList<GoalViewModel> goalViewModels = FXCollections.observableArrayList();
+      for (Goal goal : goals) {
+        goalViewModels.add(new GoalViewModel(goal));
+      }
+      MyGoals_tableView.setItems(goalViewModels);
+    } else {
+      // Обробити випадок, коли користувач не знайдений
     }
-    MyGoals_tableView.setItems(goalViewModels);
   }
+
   // Логіка додавання нової цілі
   @FXML
   private void onAddClicked() {

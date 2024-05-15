@@ -3,6 +3,7 @@ package com.liamtseva.persistence.entity;
 public record Step(
     int id,
     int goalId,
+    String goalName,
     String description)
     implements Entity, Comparable<Step> {
 

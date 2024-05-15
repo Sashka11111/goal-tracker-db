@@ -36,9 +36,11 @@ CREATE TABLE Category (
 CREATE TABLE Steps (
     id_step     INTEGER PRIMARY KEY AUTOINCREMENT,
     id_goal     INTEGER,
+    goal_name   VARCHAR (100),
     description TEXT,
     FOREIGN KEY (id_goal) REFERENCES Goals (id_goal) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 
 -- Створення таблиці "Tips"
 CREATE TABLE Tips (

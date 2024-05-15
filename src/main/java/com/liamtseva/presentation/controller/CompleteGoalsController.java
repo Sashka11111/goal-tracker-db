@@ -1,8 +1,10 @@
 package com.liamtseva.presentation.controller;
 
 import com.liamtseva.domain.exception.EntityNotFoundException;
+import com.liamtseva.persistence.AuthenticatedUser;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Goal;
+import com.liamtseva.persistence.entity.User;
 import com.liamtseva.persistence.repository.contract.CategoryRepository;
 import com.liamtseva.persistence.repository.contract.GoalRepository;
 import com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl;
@@ -72,12 +74,17 @@ public class CompleteGoalsController {
     complateGoal_btnUpdate.setOnAction(event -> onUpdateStatusClicked());
   }
   private void loadGoals() {
-    List<Goal> goals = goalRepository.getAllGoals();
-    ObservableList<GoalViewModel> goalViewModels = FXCollections.observableArrayList();
-    for (Goal goal : goals) {
-      goalViewModels.add(new GoalViewModel(goal));
+    User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
+    if (currentUser != null) {
+      List<Goal> goals = goalRepository.getAllGoalsByUserId(currentUser.id());
+      ObservableList<GoalViewModel> goalViewModels = FXCollections.observableArrayList();
+      for (Goal goal : goals) {
+        goalViewModels.add(new GoalViewModel(goal));
+      }
+      complateGoal_tableView.setItems(goalViewModels);
+    } else {
+      // Обробити випадок, коли користувач не знайдений
     }
-    complateGoal_tableView.setItems(goalViewModels);
   }
   @FXML
   void onUpdateStatusClicked() {
