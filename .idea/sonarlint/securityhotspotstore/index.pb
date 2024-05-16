@@ -4,14 +4,6 @@
 U
 %src/main/java/com/liamtseva/Main.java,1\e\1ee0fbd42bc31fe386120d22bee56630cd36b603
 h
-8src/main/java/com/liamtseva/persistence/dao/UserDAO.java,b\3\b3f32e202bd3723324f8c10d66adcdb2ac529a8c
-h
-8src/main/java/com/liamtseva/persistence/dao/GoalDAO.java,9\3\9388a2ea4aa8cb1174039265246816cd3b40e4cd
-l
-<src/main/java/com/liamtseva/persistence/dao/CategoryDAO.java,5\8\5823c83b16baa222f3c6b2226d0c4468d0d9c36c
-h
-8src/main/java/com/liamtseva/persistence/dao/StepDAO.java,f\d\fd3f445a695dd3d3634c70029fd8be0e5d55ad20
-h
 8src/main/java/com/liamtseva/persistence/entity/User.java,f\5\f5d97a845d3c96c4f72be96cbcc40708ba820d0b
 j
 :src/main/java/com/liamtseva/persistence/entity/Entity.java,3\2\321711571cc1885da2ef44f5b141c5962bdd9f05
@@ -21,8 +13,6 @@ h
 8src/main/java/com/liamtseva/persistence/entity/Goal.java,5\e\5e0ec44b717d8487f7eb924c7b05804b31ab2380
 l
 <src/main/java/com/liamtseva/persistence/entity/Category.java,b\3\b3a9c38e4255efa3b4e02e85849662c15deb393c
-x
-Hsrc/main/java/com/liamtseva/persistence/entity/filter/GoalFilterDto.java,8\6\86cd3c718dbd872a7fb7190a7fb790484267e99a
 v
 Fsrc/main/java/com/liamtseva/persistence/config/DatabaseConnection.java,c\3\c3a855052b5b95fa07f467cd2c905cd3ef23ed6e
 z
@@ -53,14 +43,10 @@ Osrc/main/java/com/liamtseva/persistence/repository/contract/UserRepository.java
 Ssrc/main/java/com/liamtseva/persistence/repository/contract/CategoryRepository.java,4\9\4974271efd9ec726cbdc5aacdc877716bb5638ee
 ƒ
 Ssrc/main/java/com/liamtseva/persistence/repository/impl/CategoryRepositoryImpl.java,2\b\2b9b0223cbb9b1e47e2f4f23ca8a67a21ab434c2
-l
-<src/test/java/com/liamtseva/persistence/dao/UserDAOTest.java,a\b\ab13520183b48b735f64a7bcaaa4b11f9641275e
 
 Osrc/main/java/com/liamtseva/persistence/repository/contract/GoalRepository.java,a\a\aa67bc34ea649a245e623bb65d118cef9ed47ee2
 
 Osrc/main/java/com/liamtseva/persistence/repository/contract/StepRepository.java,a\4\a4ea569628ee02e3b8d96a0fe8017facc53ea34b
-p
-@src/test/java/com/liamtseva/persistence/dao/CategoryDAOTest.java,c\c\ccd990749980e9b456969630f5c8f54e9b74ff4d
 
 Osrc/main/java/com/liamtseva/persistence/repository/impl/GoalRepositoryImpl.java,4\3\4369bba461f5791f72f31ab25f9df06f87a925c5
 u
@@ -125,8 +111,6 @@ Gsrc/main/java/com/liamtseva/presentation/controller/TipsController.java,a\0\a0
 Osrc/main/java/com/liamtseva/persistence/repository/impl/StepRepositoryImpl.java,b\0\b0fa663781f9e003b5ccd51cc7534b77b1527ea7
 u
 Esrc/main/java/com/liamtseva/presentation/viewmodel/StepViewModel.java,6\d\6d465316922e1840c7d8e18af01b7731cd3d4c4b
-u
-Esrc/main/java/com/liamtseva/presentation/viewmodel/UserViewModel.java,9\0\90bc07854d4fcf22cdbbf3074f07f02fc119994e
 p
 @src/main/java/com/liamtseva/domain/validation/UserValidator.java,e\c\ecea1bde46e7b415041d921a1367d413c1310c7c
 n

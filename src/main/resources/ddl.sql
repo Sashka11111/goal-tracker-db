@@ -7,8 +7,8 @@ DROP TABLE IF EXISTS Tips;
 -- Створення таблиці "Users"
 CREATE TABLE Users (
     id_user       INTEGER PRIMARY KEY AUTOINCREMENT,
-    username      TEXT    NOT NULL UNIQUE,
-    password      TEXT    NOT NULL,
+    username      VARCHAR (50)    NOT NULL UNIQUE,
+    password      VARCHAR (50)    NOT NULL,
     profile_image BYTEA
 );
 

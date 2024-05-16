@@ -1,14 +1,0 @@
-
-_
-java:S2094	"BRemove this empty class, write its code or make it an "interface".(ÁÇæÅ8×„†íö1
-]	java:S125"<This block of commented-out lines of code should be removed.(·ãÛöûÿÿÿÿ8Ú„†íö1
-m
-java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8Û„†íö1
-d
-java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.User'.(àˆ°¾ûÿÿÿÿ8Û„†íö1
-B
-java:S1128"%Remove this unused import 'java.sql'.(´İ…Å8Ü„†íö1
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ü„†íö1
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ü„†íö1
