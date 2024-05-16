@@ -15,7 +15,6 @@ public class UserRepositoryImpl implements UserRepository {
 
   private DataSource dataSource;
 
-  // Виправлення конструктора для встановлення значення dataSource
   public UserRepositoryImpl(DataSource dataSource) {
     this.dataSource = dataSource;
   }

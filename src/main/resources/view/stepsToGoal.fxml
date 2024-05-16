@@ -33,7 +33,7 @@
             <Font size="14.0" />
           </font>
         </Button>
-        <Label layoutX="36.0" layoutY="77.0" prefHeight="20.0" prefWidth="281.0" text="Опис шляху до досягнення">
+        <Label layoutX="36.0" layoutY="77.0" prefHeight="20.0" prefWidth="281.0" text="Опис кроку для досягнення цілі">
           <font>
             <Font size="14.0" />
           </font>
@@ -44,7 +44,7 @@
     </AnchorPane>
     <TableView fx:id="Steps_tableView" layoutX="24.0" layoutY="192.0" prefHeight="352.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="192.0">
       <columns>
-        <TableColumn fx:id="Steps_col_IdStep" prefWidth="135.20004653930664" text="ID шляху" />
+        <TableColumn fx:id="Steps_col_IdStep" prefWidth="135.20004653930664" text="ID кроку" />
         <TableColumn fx:id="Steps_col_NameGoal" prefWidth="179.19993591308594" text="Назва цілі" />
         <TableColumn fx:id="Steps_col_description" prefWidth="352.0" text="Опис шляху" />
       </columns>

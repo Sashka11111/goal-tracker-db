@@ -8,9 +8,6 @@ import com.liamtseva.persistence.repository.impl.UserRepositoryImpl; // Імпл
 import com.liamtseva.presentation.animation.Shake;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,7 +19,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 public class RegistrationController {
 
@@ -73,53 +69,6 @@ public class RegistrationController {
       selectedProfileImagePath = selectedFile.getPath();
       Image image = new Image(selectedFile.toURI().toString());
       profileImageView.setImage(image);
-
-      try {
-        Path imagePath = Paths.get(selectedProfileImagePath);
-        imageBytes = Files.readAllBytes(imagePath);
-
-        String username = login_field.getText();
-        String password = password_field.getText();
-        if (username.isEmpty() || password.isEmpty()) {
-          errorMessageLabel.setText("Логін та пароль не повинен бути пустим");
-          Shake userLoginAnim = new Shake(login_field);
-          Shake userPassAnim = new Shake(password_field);
-          userLoginAnim.playAnim();
-          userPassAnim.playAnim();
-          return;
-        }
-
-        if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
-          if (!userRepository.isUsernameExists(username)) {
-            User user = new User(0,username, password, imageBytes);
-            userRepository.addUser(user);
-
-            System.out.println("Registration successful.");
-
-            Scene currentScene = authSignInButton.getScene();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
-            try {
-              Parent root = loader.load();
-              currentScene.setRoot(root);
-            } catch (IOException e) {
-              throw new RuntimeException(e);
-            }
-          } else {
-            errorMessageLabel.setText("Логін з ім'ям " + username + " уже існує");
-            Shake userLoginAnim = new Shake(login_field);
-            userLoginAnim.playAnim();
-          }
-        } else {
-          errorMessageLabel.setText("Пароль має мати велику, маленьку букву та цифру");
-          Shake userLoginAnim = new Shake(login_field);
-          Shake userPassAnim = new Shake(password_field);
-          userLoginAnim.playAnim();
-          userPassAnim.playAnim();
-        }
-
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
     } else {
       profileImageView.setImage(new Image(getClass().getResourceAsStream("/data/profile.png")));
     }

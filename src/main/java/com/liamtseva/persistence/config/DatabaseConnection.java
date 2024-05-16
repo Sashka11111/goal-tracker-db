@@ -2,10 +2,7 @@ package com.liamtseva.persistence.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class DatabaseConnection {
 
@@ -24,12 +21,6 @@ public class DatabaseConnection {
     return instance;
   }
 
-  public static synchronized Connection getConnection() throws SQLException {
-    if (dataSource == null) {
-      initializeDataSource(); // Ініціалізація джерела даних, якщо воно ще не було ініціалізоване
-    }
-    return dataSource.getConnection();
-  }
 
   public static void initializeDataSource() {
     HikariConfig config = new HikariConfig();
@@ -39,7 +30,7 @@ public class DatabaseConnection {
 
   public DataSource getDataSource() {
     if (dataSource == null) {
-      initializeDataSource(); // Ініціалізація джерела даних, якщо воно ще не було ініціалізоване
+      initializeDataSource(); // Ініціалізація джерела даних
     }
     return dataSource;
   }

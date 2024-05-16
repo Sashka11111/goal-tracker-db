@@ -13,5 +13,4 @@ public interface UserRepository {
   List<User> getAllUsers();
   void updateUser(User user) throws EntityNotFoundException;
   void deleteUser(int id) throws EntityNotFoundException;
-
 }

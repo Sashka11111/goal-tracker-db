@@ -1,18 +1,18 @@
 
-‡	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(­æşY8¹ßª…÷1J$6d0b3a26-fa17-4007-bedb-2f08a800681a
-’
-java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘ƒ±è8Ğßª…÷1J$867a6b81-4cfe-420a-9e71-60f25b257110
+‡	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(­æşY8¹ßª…÷1J$49757303-4d38-4933-ae25-18d33ee90d0b
 —
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8İ£¬…÷1J$f1828009-e00a-43b4-8974-ea7ee4110f51
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8İ£¬…÷1J$39c15894-3cb8-4926-8e01-adae28812ef0
+’
+java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8Ğßª…÷1J$3397e768-80e8-4be1-b0dd-37462e1b7b5a
+’
+java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8Ğßª…÷1J$783e68ae-9b2b-4f6f-aa09-7b7bb33e6961
 
-java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8Ğßª…÷1J$2475db94-9ad3-42a0-813b-aab6c385c2f6
+java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8Ğßª…÷1J$67bee46d-76ef-4090-a412-61d96f31b6f1
 ’
-java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8Ğßª…÷1J$3afda8c1-24da-4e5d-a28a-eabf79f6351b
-’
-java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8Ğßª…÷1J$83520546-e611-482b-8286-068f5864d48a
+java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘ƒ±è8Ğßª…÷1J$2592f449-df62-45ba-90e4-93edaa7da56c
 b
-java:S6905G"Don't use the query "SELECT *".(ê™ø8Úßª…÷1J$e1c18692-d0cd-4a6f-b2f5-6f9cbbdef3f7
+java:S6905G"Don't use the query "SELECT *".(ê™ø8Úßª…÷1J$bc2f4865-6e97-4ec2-b8b0-4148e233d9ef
 b
-java:S6905U"Don't use the query "SELECT *".(‘ƒ±è8İßª…÷1J$44a58bd5-cb19-496a-88d7-e9274f74d45a
+java:S6905U"Don't use the query "SELECT *".(‘ƒ±è8İßª…÷1J$bd959f4d-4398-47b2-ae10-226147cd48bd
 “
-java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8èÆŞ…÷1J$ad0a4c0d-10ea-445d-9d14-9bc37fbab338
+java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8èÆŞ…÷1J$bb1f2b7a-a375-4f34-b5ee-6add52ca554e

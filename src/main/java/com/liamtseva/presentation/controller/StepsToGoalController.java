@@ -112,8 +112,6 @@ public class StepsToGoalController {
           }
         }
       });
-    } else {
-      // Обробити випадок, коли користувач не знайдений
     }
   }
 
@@ -144,7 +142,6 @@ public class StepsToGoalController {
       }
     }
   }
-
   private void clearField() {
     description.clear();
     goal.setValue(null);

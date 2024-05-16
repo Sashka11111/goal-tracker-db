@@ -1,10 +1,6 @@
 package com.liamtseva;
 
 import com.liamtseva.persistence.config.DatabaseConnection;
-import com.liamtseva.persistence.repository.contract.UserRepository;
-import com.liamtseva.persistence.repository.impl.UserRepositoryImpl;
-import com.liamtseva.presentation.controller.AuthorizationController;
-import com.liamtseva.presentation.controller.RegistrationController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

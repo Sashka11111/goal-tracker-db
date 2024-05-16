@@ -112,8 +112,6 @@ public class MyGoalsController {
         goalViewModels.add(new GoalViewModel(goal));
       }
       MyGoals_tableView.setItems(goalViewModels);
-    } else {
-      // Обробити випадок, коли користувач не знайдений
     }
   }
 
@@ -145,10 +143,6 @@ public class MyGoalsController {
       // Вивести повідомлення про помилку, якщо не всі поля заповнені
     }
   }
-
-
-
-
 
   // Логіка очищення полів вводу
   private void onClearClicked() {

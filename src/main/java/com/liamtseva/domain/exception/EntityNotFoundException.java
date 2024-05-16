@@ -1,7 +1,5 @@
 package com.liamtseva.domain.exception;
 
-import java.io.Serial;
-
 public class EntityNotFoundException extends Exception {
 
   public EntityNotFoundException(String message) {

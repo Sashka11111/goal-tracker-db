@@ -1,36 +1,13 @@
 
-	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8 ‡Ìé÷1J$a9de9079-1bdf-4140-8dfc-04040d46632a
-	java:S116 "VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8 ‡Ìé÷1J$18f4f65e-b2e2-43e9-8923-12fe1ac41fe1
-–	java:S116#"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¼‹á8¡‡Ìé÷1J$28b95afe-6188-4180-a6ae-ebb9de63e806
-š	java:S116&"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰äÌıÿÿÿÿ8¡‡Ìé÷1J$72b10f12-ffc8-4cb5-a676-4a58ff7f9ad6
-¢	java:S116)"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8¡‡Ìé÷1J$0eaf2816-4911-4cb2-a8db-642ed79116bc
-•	java:S116,"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8¡‡Ìé÷1J$e83e36b5-3d54-4524-9d9e-8dcddf680bbb
+	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8 ‡Ìé÷1J$dab16246-cb85-49cb-b7f9-66adbce3183f
+	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8 ‡Ìé÷1J$b966a6f9-b0e8-40cd-bf31-2a92dda4a7d6
+–	java:S116"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¼‹á8¡‡Ìé÷1J$137b51b0-0b3b-4e9e-bee4-20000e754ac4
+š	java:S116"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰äÌıÿÿÿÿ8¡‡Ìé÷1J$3455b427-b4db-4d64-9c23-5e843f553db2
+¢	java:S116"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8¡‡Ìé÷1J$407a7df9-e146-4df8-a30a-a5048155ed5a
+•	java:S116""SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¯ãÌ8¡‡Ìé÷1J$88cbccfb-fcc1-4ccb-8ec3-ed262409781f
 n
-java:S1602<",Remove useless curly braces around statement(Š¬Ï!8¨‡Ìé÷1J$05998a96-dcd7-4588-bbee-d7340d3f59ad
+java:S16022",Remove useless curly braces around statement(Š¬Ï!8¨‡Ìé÷1J$ba473f72-f26b-4057-b568-215688dc482b
 
-java:S1854m"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨şÿÿÿÿ8µ±Ší÷1J$96af4c1f-92e6-49d8-a5cf-c5ca93f9b859
+java:S1854c"ERemove this useless assignment to local variable "myGoalsController".(Ì®á¨şÿÿÿÿ8µ±Ší÷1J$02d241e9-7eff-4f4d-8391-91013881d214
 ~
-java:S1481m"6Remove this unused "myGoalsController" local variable.(Ì®á¨şÿÿÿÿ8º±Ší÷1J$5da6649e-2a7a-4b40-93d2-e34d412666d4
-‹
-java:S1128"HRemove this unused import 'com.liamtseva.persistence.AuthenticatedUser'.(€¦À8¸¿Œí÷1J$395eac90-e207-4f42-a219-833efd74ca97
-…
-java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.Goal'.(­•˜ı8¸¿Œí÷1J$3e3b698f-a957-4d5d-808f-7f9f0c4b4f22
-Š
-java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.User'.(àˆ°¾ûÿÿÿÿ8¸¿Œí÷1J$63a38e87-95e3-4d60-a77b-810fc639ec00
-—
-java:S1128"ORemove this unused import 'com.liamtseva.presentation.viewmodel.GoalViewModel'.(ıÅ¨»ùÿÿÿÿ8¸¿Œí÷1J$2fa7ed18-67de-449f-b330-5fdfa260fac3
-’
-java:S1128"ORemove this unused import 'com.liamtseva.presentation.viewmodel.UserViewModel'.(ñ÷æé8¹¿Œí÷1J$58867d33-e896-40d3-a7ed-51e2d2360869
-s
-java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¹¿Œí÷1J$f7b50743-832d-45b6-9110-8c0dd7e3131f
-q
-java:S1128
-".Remove this unused import 'java.util.Objects'.(¼¸õ›8¹¿Œí÷1J$8f2d262e-d0fc-4dab-98be-fa9bacdfda7c
-€
-java:S1128"=Remove this unused import 'javafx.collections.FXCollections'.(´¶²Æ8¹¿Œí÷1J$61e260d6-c5f1-4a29-baeb-00b05615c12e
-†
-java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8¹¿Œí÷1J$73a98731-dd8b-4549-94fb-18987388b853
-y
-java:S1128"7Remove this unused import 'javafx.scene.control.Alert'.(ÊÇê:8¹¿Œí÷1J$d807c7f3-a593-48fa-a534-5d4dedc11257
-
-java:S1128"7Remove this unused import 'javafx.scene.control.Label'.(ö²­ÿÿÿÿÿ8¹¿Œí÷1J$0be5091c-9877-4ecf-84a7-2274abee5b66
+java:S1481c"6Remove this unused "myGoalsController" local variable.(Ì®á¨şÿÿÿÿ8º±Ší÷1J$6c231275-39ae-4353-b406-9e50e9269947

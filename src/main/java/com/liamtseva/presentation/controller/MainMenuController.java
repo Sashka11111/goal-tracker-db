@@ -1,24 +1,14 @@
 package com.liamtseva.presentation.controller;
 
-import com.liamtseva.persistence.AuthenticatedUser;
-import com.liamtseva.persistence.entity.Goal;
-import com.liamtseva.persistence.entity.User;
-import com.liamtseva.presentation.viewmodel.GoalViewModel;
-import com.liamtseva.presentation.viewmodel.UserViewModel;
+
 import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;

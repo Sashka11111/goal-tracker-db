@@ -29,7 +29,7 @@
                </image>
             </ImageView>
             <Button fx:id="btn_category" layoutY="362.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="185.0" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Категорії" />
-            <Button fx:id="btn_steps" layoutY="421.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="185.0" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Шляхи до досягнення" />
+            <Button fx:id="btn_steps" layoutY="421.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="185.0" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Кроки до цілі" />
             <Button fx:id="btn_tips" layoutX="-4.0" layoutY="479.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="185.0" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Поради" />
          </children>
       </AnchorPane>

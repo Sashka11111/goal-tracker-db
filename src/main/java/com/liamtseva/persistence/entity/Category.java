@@ -9,5 +9,4 @@ public record Category(
   public int compareTo(Category o) {
     return Integer.compare(this.id, o.id);
   }
-
 }
