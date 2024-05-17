@@ -1,13 +1,17 @@
 
-	java:S112V"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8³Êä€ø1J$eff0c817-2190-4de7-a389-c5c85faa16fa
-	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8³Êä€ø1J$43d1b0fb-1ae7-49ed-aab7-5bb9ac68e9d3
-™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8ËÊä€ø1J$14c918dd-af8e-4237-91fe-927a377441a7
-	java:S116 "VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8ËÊä€ø1J$7021fad6-a951-4191-a433-cbf6b5b85827
-›	java:S116#"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8ËÊä€ø1J$400c39bd-faf7-429d-bb78-e712687cf0ba
+	java:S112`"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8³Êä€ø1J$5f0003e0-2600-46cf-b5b3-d30aadae0e35
+	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¶ı¸ø1J$bd4a9024-537a-4770-a3ee-040f674d57fe
+™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8ËÊä€ø1J$e876a5a8-a3b0-4a27-8348-b5f647abb9a7
+	java:S116!"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8ËÊä€ø1J$ebb0ea67-c9c5-4480-9bca-038ff76d6b01
+›	java:S116$"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8ËÊä€ø1J$a409b9e2-86c6-498c-beae-3ccec9662a20
 ©
-java:S1450+"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8ÍÊä€ø1J$8531b60f-fbf2-40a9-9153-66b11969719c
+java:S1450,"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8ÍÊä€ø1J$e910641b-693d-46ae-8c1d-be9ab7313e5d
+Œ
+java:S26748"JCheck the return value of the "read" call to see how many bytes were read.(±ñÔ8£±û¸ø1J$aee89899-829a-4d73-a633-dedf75188278
+i
+java:S1168<"&Return an empty array instead of null.(¥¹ï8õøú¸ø1J$448ef5d6-e570-4869-ad4b-f4becb208040
 š
-java:S3776N"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8×Êä€ø1J$85e56150-9147-49af-a68b-5399f652b455
-m	java:S106q"+Replace this use of System.out by a logger.(Í¶®Ê8áÊä€ø1J$6877db75-cb9b-4a08-a1da-3324709292f7
+java:S3776X"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8×Êä€ø1J$e0e47ed7-5a26-4014-a8ae-d368befbdbdc
+m	java:S106v"+Replace this use of System.out by a logger.(Í¶®Ê8ı¸ø1J$893db411-9029-4f78-9415-839b7dc68b58
 ~
-java:S1068+"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8åÊä€ø1J$074e4175-70a3-4248-8e3d-9c5da3a181df
+java:S1068,"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8åÊä€ø1J$7a9d8ec1-f750-4b27-a75f-f54d821029d0

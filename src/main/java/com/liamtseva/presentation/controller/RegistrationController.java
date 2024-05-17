@@ -7,6 +7,7 @@ import com.liamtseva.persistence.repository.contract.UserRepository;
 import com.liamtseva.persistence.repository.impl.UserRepositoryImpl; // Імплементація UserRepository
 import com.liamtseva.presentation.animation.Shake;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -49,15 +50,21 @@ public class RegistrationController {
     this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource());
   }
 
-  public void initUserRepository(UserRepository userRepository) {
-    this.userRepository = userRepository;
+  private byte[] readImageToBytes(File file) {
+    try (FileInputStream fis = new FileInputStream(file)) {
+      byte[] data = new byte[(int) file.length()];
+      fis.read(data);
+      return data;
+    } catch (IOException e) {
+      e.printStackTrace();
+      return null;
+    }
   }
 
   @FXML
   void chooseImageButtonClicked() {
     chooseImage();
   }
-
   public void chooseImage() {
     FileChooser fileChooser = new FileChooser();
     fileChooser.setTitle("Choose Profile Image");
@@ -69,10 +76,13 @@ public class RegistrationController {
       selectedProfileImagePath = selectedFile.getPath();
       Image image = new Image(selectedFile.toURI().toString());
       profileImageView.setImage(image);
+      imageBytes = readImageToBytes(selectedFile); // Зчитати зображення в масив байтів
     } else {
       profileImageView.setImage(new Image(getClass().getResourceAsStream("/data/profile.png")));
+      imageBytes = null; // Зображення не вибрано
     }
   }
+
 
   @FXML
   void initialize() {
@@ -88,11 +98,6 @@ public class RegistrationController {
     });
 
     SignInButton.setOnAction(event -> {
-      // Implementation of SignInButton action moved to chooseImage method
-    });
-
-    // Логіка кнопки реєстрації користувача
-    SignInButton.setOnAction(event -> {
       String username = login_field.getText();
       String password = password_field.getText();
       if (username.isEmpty() || password.isEmpty()) {
@@ -106,12 +111,11 @@ public class RegistrationController {
       if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
         if (!userRepository.isUsernameExists(username)) {
           // Створення нового користувача
-          User user = new User(0,username, password,imageBytes);
+          User user = new User(0, username, password, imageBytes); // Додавання зображення
           // Додавання користувача до бази даних через UserRepository
           userRepository.addUser(user);
 
           System.out.println("Registration successful.");
-
 
           Scene currentScene = authSignInButton.getScene();
           FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
@@ -134,5 +138,6 @@ public class RegistrationController {
         userPassAnim.playAnim();
       }
     });
+
   }
 }
