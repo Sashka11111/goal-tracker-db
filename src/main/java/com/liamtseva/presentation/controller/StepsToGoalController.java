@@ -40,8 +40,6 @@ public class StepsToGoalController {
   @FXML
   private TableColumn<StepViewModel, String> Steps_col_NameGoal;
 
-  @FXML
-  private TableColumn<StepViewModel, Integer> Steps_col_IdStep;
 
   @FXML
   private TableColumn<StepViewModel, String> Steps_col_description;
@@ -73,12 +71,11 @@ public class StepsToGoalController {
   @FXML
   void initialize() {
     // Ініціалізація ComboBox
-    loadGoals();
 
-    Steps_col_IdStep.setCellValueFactory(cellData -> cellData.getValue().idStepProperty().asObject());
+
     Steps_col_NameGoal.setCellValueFactory(cellData -> cellData.getValue().goalNameProperty());
     Steps_col_description.setCellValueFactory(cellData -> cellData.getValue().descriptionProperty());
-
+    loadGoals();
     // Обробники подій для кнопок
     btn_add.setOnAction(event -> onAddClicked());
     btn_clear.setOnAction(event -> clearField());
@@ -115,18 +112,18 @@ public class StepsToGoalController {
     }
   }
 
-  private void onAddClicked() {
+  private void onAddClicked()  {
     Goal selectedGoal = goal.getValue();
     String stepDescription = description.getText();
     if (selectedGoal != null && !stepDescription.isEmpty()){
       Step newStep = new Step(0,selectedGoal.id(),selectedGoal.nameGoal(),stepDescription);
       try {
         stepRepository.addStep(newStep);
+        Steps_tableView.getItems().add(new StepViewModel(newStep));
+        clearField();
       } catch (EntityNotFoundException e) {
         throw new RuntimeException(e);
       }
-      loadGoals();
-      clearField();
     }
   }
 
