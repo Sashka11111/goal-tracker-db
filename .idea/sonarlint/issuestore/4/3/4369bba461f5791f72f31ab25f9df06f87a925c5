@@ -1,20 +1,18 @@
 
 
-java:S11921"KDefine a constant instead of duplicating this literal " not found" 6 times.(ı«¥ƒ8‰„èÛ÷1J$8aebfee8-a4f1-4f92-adc1-d69fb960734c
+java:S11920"KDefine a constant instead of duplicating this literal " not found" 6 times.(ı«¥ƒ8‰„èÛ÷1J$c4aad210-2821-4ed4-8a0b-7d9825ce717b
 ‘
-java:S11921"NDefine a constant instead of duplicating this literal "Goal with id " 4 times.(ı«¥ƒ8Š„èÛ÷1J$5d7c2bb7-bef5-411f-b6ad-b40c11458649
+java:S11920"NDefine a constant instead of duplicating this literal "Goal with id " 4 times.(ı«¥ƒ8Š„èÛ÷1J$d6d07068-b633-443e-a357-5b8edbbba05d
 ­
-java:S4144‚"dUpdate this method so that its implementation is not identical to "filterGoalsByUserId" on line 111.(ĞŸ®³øÿÿÿÿ8’éÎİ÷1J$e5ee4c26-941c-4596-b9cc-8d5286a1b40f
+java:S4144"dUpdate this method so that its implementation is not identical to "filterGoalsByUserId" on line 110.(ĞŸ®³øÿÿÿÿ8’éÎİ÷1J$6f1931f0-36f7-4b9b-ad33-e8d6f60b0d99
 a
-java:S6905)"Don't use the query "SELECT *".(˜ªÛ8³„èÛ÷1J$8ce7c8f7-9888-490f-a9b5-1bbe9a7e2070
+java:S6905("Don't use the query "SELECT *".(˜ªÛ8³„èÛ÷1J$17e7b49d-0c5e-4573-ab2e-89926fc95632
 b
-java:S6905<"Don't use the query "SELECT *".(Î°ù’8µ„èÛ÷1J$cc7db892-36ea-4ca3-9fe6-bc01c5723bee
-ƒ	java:S125@"<This block of commented-out lines of code should be removed.(ôŸÿıÿÿÿÿ8¶„èÛ÷1J$63e4386a-15a8-41c1-9041-7bd420ca80ff
+java:S6905;"Don't use the query "SELECT *".(Î°ù’8µ„èÛ÷1J$15e1c4ea-bef6-49cd-abc2-737e8441c057
+ƒ	java:S125?"<This block of commented-out lines of code should be removed.(ôŸÿıÿÿÿÿ8¶„èÛ÷1J$82a53548-6a7a-43e5-8346-622be0f11666
 b
-java:S6905N"Don't use the query "SELECT *".(ãŞ·8ÒÂí÷1J$7809c8c4-9ead-49a0-ad57-e70fafac7848
+java:S6905M"Don't use the query "SELECT *".(ãŞ·8ÒÂí÷1J$3005c722-1e43-475e-9c7f-125f7441d223
 b
-java:S6905q"Don't use the query "SELECT *".(Ïó’æ8¸„èÛ÷1J$1c9cde00-5f11-4cd1-af61-2b619d772f8d
+java:S6905p"Don't use the query "SELECT *".(Ïó’æ8¸„èÛ÷1J$473c8c11-dfcf-4d28-b458-f7c6931dd074
 c
-java:S6905„"Don't use the query "SELECT *".(Ïó’æ8£éÎİ÷1J$561273f3-c47b-456d-a9be-037620236b1d
-m
-java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8¥¸ ğ÷1
+java:S6905ƒ"Don't use the query "SELECT *".(Ïó’æ8£éÎİ÷1J$146d318d-9b29-43a9-9ac0-c603f1922781

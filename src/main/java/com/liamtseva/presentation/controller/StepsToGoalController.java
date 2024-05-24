@@ -11,6 +11,7 @@ import com.liamtseva.persistence.repository.contract.GoalRepository;
 import com.liamtseva.persistence.repository.contract.StepRepository;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.StepRepositoryImpl;
+import com.liamtseva.presentation.viewmodel.GoalViewModel;
 import com.liamtseva.presentation.viewmodel.StepViewModel;
 import java.net.URL;
 import java.time.LocalDate;
@@ -75,7 +76,7 @@ public class StepsToGoalController {
 
     Steps_col_NameGoal.setCellValueFactory(cellData -> cellData.getValue().goalNameProperty());
     Steps_col_description.setCellValueFactory(cellData -> cellData.getValue().descriptionProperty());
-    loadGoals();
+    loadSteps();
     // Обробники подій для кнопок
     btn_add.setOnAction(event -> onAddClicked());
     btn_clear.setOnAction(event -> clearField());
@@ -83,7 +84,7 @@ public class StepsToGoalController {
   }
 
   // Завантаження кроків з бази даних
-  private void loadGoals() {
+  private void loadSteps() {
     User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
     if (currentUser != null) {
       List<Goal> userGoals = goalRepository.filterGoalsByUserId(currentUser.id());
@@ -132,13 +133,17 @@ public class StepsToGoalController {
     StepViewModel selectedStep = Steps_tableView.getSelectionModel().getSelectedItem();
     if (selectedStep != null) {
       try {
+        // Видаляємо крок з бази даних
         stepRepository.deleteStep(selectedStep.getIdStep());
-        Steps_tableView.getItems().remove(selectedStep);
+        // Після видалення перезавантажуємо список кроків
+        loadSteps();
+        clearField();
       } catch (EntityNotFoundException e) {
         e.printStackTrace(); // Обробка помилки
       }
     }
   }
+
   private void clearField() {
     description.clear();
     goal.setValue(null);

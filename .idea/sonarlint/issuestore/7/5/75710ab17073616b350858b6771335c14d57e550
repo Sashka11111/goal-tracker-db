@@ -1,17 +1,22 @@
 
-	java:S112`"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8³Êä€ø1J$5f0003e0-2600-46cf-b5b3-d30aadae0e35
-	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¶ı¸ø1J$bd4a9024-537a-4770-a3ee-040f674d57fe
-™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8ËÊä€ø1J$e876a5a8-a3b0-4a27-8348-b5f647abb9a7
-	java:S116!"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8ËÊä€ø1J$ebb0ea67-c9c5-4480-9bca-038ff76d6b01
-›	java:S116$"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8ËÊä€ø1J$a409b9e2-86c6-498c-beae-3ccec9662a20
-©
-java:S1450,"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8ÍÊä€ø1J$e910641b-693d-46ae-8c1d-be9ab7313e5d
-Œ
-java:S26748"JCheck the return value of the "read" call to see how many bytes were read.(±ñÔ8£±û¸ø1J$aee89899-829a-4d73-a633-dedf75188278
-i
-java:S1168<"&Return an empty array instead of null.(¥¹ï8õøú¸ø1J$448ef5d6-e570-4869-ad4b-f4becb208040
-š
-java:S3776X"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8×Êä€ø1J$e0e47ed7-5a26-4014-a8ae-d368befbdbdc
-m	java:S106v"+Replace this use of System.out by a logger.(Í¶®Ê8ı¸ø1J$893db411-9029-4f78-9415-839b7dc68b58
-~
-java:S1068,"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8åÊä€ø1J$7a9d8ec1-f750-4b27-a75f-f54d821029d0
+g	java:S112u"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ä³Ûú1
+h	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ä³Ûú1
+s	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8è³Ûú1
+w	java:S116""VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8è³Ûú1
+u	java:S116%"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8è³Ûú1
+u	java:S116("TRename this field "btn_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¤ışÿÿÿÿ8é³Ûú1
+ƒ
+java:S14502"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8ë³Ûú1
+f
+java:S2674@"JCheck the return value of the "read" call to see how many bytes were read.(±ñÔ8ó³Ûú1
+C
+java:S1168D"&Return an empty array instead of null.(¥¹ï8ô³Ûú1
+C
+java:S1168O"&Return an empty array instead of null.(¥¹ï8÷³Ûú1
+t
+java:S3776j"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8ÿ³Ûú1
+N
+java:S1602k",Remove useless curly braces around statement(çùúŠùÿÿÿÿ8´Ûú1
+H	java:S106‹"+Replace this use of System.out by a logger.(Í¶®Ê8Œ´Ûú1
+X
+java:S10682"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8´Ûú1

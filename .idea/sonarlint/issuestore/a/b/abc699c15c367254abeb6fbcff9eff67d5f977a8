@@ -1,13 +1,14 @@
 
-	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡ζ–όÿÿÿÿ8 ‡Μιχ1J$dab16246-cb85-49cb-b7f9-66adbce3183f
-	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Ϊζ£ϊÿÿÿÿ8 ‡Μιχ1J$b966a6f9-b0e8-40cd-bf31-2a92dda4a7d6
-–	java:S116"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ό‹α8΅‡Μιχ1J$137b51b0-0b3b-4e9e-bee4-20000e754ac4
-	java:S116"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ζ‰δΜύÿÿÿÿ8΅‡Μιχ1J$3455b427-b4db-4d64-9c23-5e843f553db2
-Ά	java:S116"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚χ½Πϋÿÿÿÿ8΅‡Μιχ1J$407a7df9-e146-4df8-a30a-a5048155ed5a
-•	java:S116""SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤―γΜ8΅‡Μιχ1J$88cbccfb-fcc1-4ccb-8ec3-ed262409781f
+›	java:S116"YRename this field "btn_myActivity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ…Χ8Ι¶ζΞϊ1J$cfbc5c96-dfba-4cd7-872f-df48cf2d9ecd
+	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡ζ–όÿÿÿÿ8 ‡Μιχ1J$3f7a96f9-5180-4fce-ac84-40f6abe3b8a4
+	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Ϊζ£ϊÿÿÿÿ8 ‡Μιχ1J$3fff6fe0-bc92-4bdf-af39-5bef6814f246
+–	java:S116"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ό‹α8΅‡Μιχ1J$ad727944-73d3-468a-bc8a-008f15407ba0
+	java:S116"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ζ‰δΜύÿÿÿÿ8΅‡Μιχ1J$850d0a3a-7968-4b2e-b329-25d35b2a35d3
+Ά	java:S116!"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚χ½Πϋÿÿÿÿ8΅‡Μιχ1J$c91a3af7-53fa-4b28-89f0-9c786025227a
+•	java:S116$"SRename this field "btn_exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤―γΜ8΅‡Μιχ1J$547fa7f1-3e06-4db5-ba93-12ade4b91eb2
 n
-java:S16022",Remove useless curly braces around statement(¬Ο!8¨‡Μιχ1J$ba473f72-f26b-4057-b568-215688dc482b
-
-java:S1854c"ERemove this useless assignment to local variable "myGoalsController".(Μ®α¨ώÿÿÿÿ8µ±νχ1J$02d241e9-7eff-4f4d-8391-91013881d214
-~
-java:S1481c"6Remove this unused "myGoalsController" local variable.(Μ®α¨ώÿÿÿÿ8Ί±νχ1J$6c231275-39ae-4353-b406-9e50e9269947
+java:S16025",Remove useless curly braces around statement(¬Ο!8¨‡Μιχ1J$c91921af-f8b7-491f-9739-2432014f47ff
+‹
+java:S1854j"HRemove this useless assignment to local variable "myActivityController".(·―Η­8ΕΎςΞϊ1J$27390ba0-56ce-4cbf-8a0b-215791df33f8
+|
+java:S1481j"9Remove this unused "myActivityController" local variable.(·―Η­8ΚΎςΞϊ1J$2119148b-ab8a-4ad5-8083-6828c055d4da

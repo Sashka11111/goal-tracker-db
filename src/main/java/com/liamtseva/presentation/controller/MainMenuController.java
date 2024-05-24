@@ -16,6 +16,8 @@ import javafx.util.Duration;
 public class MainMenuController {
 
   @FXML
+  private Button btn_myActivity;
+  @FXML
   private Button btn_category;
 
   @FXML
@@ -41,7 +43,8 @@ public class MainMenuController {
 
   @FXML
   void initialize() {
-    loadMyGoals();
+    myActivity();
+    btn_myActivity.setOnAction(event -> showMyActivityPage());
     btn_myGoals.setOnAction(event -> showMyGoalPage());
     btn_completeGoal.setOnAction(event -> showCompleteGoalsPage());
     btn_category.setOnAction(actionEvent -> showCategoryPage());
@@ -60,6 +63,10 @@ public class MainMenuController {
     stackPane.setLayoutY(buttonY);
   }
 
+  private void showMyActivityPage() {
+    moveStackPane(btn_myActivity);
+    loadFXML("/view/myActivity.fxml");
+  }
   private void showMyGoalPage() {
     moveStackPane(btn_myGoals);
     loadFXML("/view/myGoals.fxml");
@@ -91,15 +98,15 @@ public class MainMenuController {
       Logger.getLogger(MainMenuController.class.getName()).log(Level.SEVERE, null, ex);
     }
   }
-  private void loadMyGoals() {
+  private void myActivity() {
     try {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/myGoals.fxml"));
-      AnchorPane myGoalsPane = loader.load();
-      // Отримати контролер myGoals.fxml
-      MyGoalsController myGoalsController = loader.getController();
-      // Вставити myGoalsPane в contentArea
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/myActivity.fxml"));
+      AnchorPane myActivityPane = loader.load();
+      // Отримати контролер myActivity.fxml
+      MyActivityController myActivityController = loader.getController();
+      // Вставити myActivityPane в contentArea
       contentArea.getChildren().clear();
-      contentArea.getChildren().add(myGoalsPane);
+      contentArea.getChildren().add(myActivityPane);
     } catch (IOException e) {
       e.printStackTrace();
     }

@@ -27,14 +27,16 @@ public class StepRepositoryImpl implements StepRepository {
       preparedStatement.executeUpdate();
       ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
       if (generatedKeys.next()) {
-        step.id();
+        int id = generatedKeys.getInt(1); // Отримуємо згенерований ідентифікатор з результату запиту
+        step.id(); // Присвоюємо згенерований ідентифікатор об'єкту кроку
       } else {
-        throw new SQLException("Adding category failed, no ID obtained.");
+        throw new SQLException("Adding step failed, no ID obtained.");
       }
     } catch (SQLException e) {
-      throw new EntityNotFoundException("Failed to add category.", e);
+      throw new EntityNotFoundException("Failed to add step.", e);
     }
   }
+
 
 
   @Override

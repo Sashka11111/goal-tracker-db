@@ -3,17 +3,35 @@
   -fx-background-radius: 5;
   -fx-padding: 10 20;
   -fx-font-size: 14px;
-  -fx-border-color: #000000;
+  -fx-border-color: WHITE;
   -fx-border-width: 1;
   -fx-border-radius: 5;
   -fx-transition: background-color 0.3s;
   -fx-cursor: hand;
 }
+
 .list-cell {
   -fx-background-color: transparent;
   -fx-text-fill: WHITE; /* Білий колір тексту */
   -fx-font-size: 14px; /* розмір шрифту */
   -fx-padding: 10px; /* відступи */
 }
+
 .list-cell:hover {
+}
+
+.close-button {
+  -fx-background-color: #ffffff; /* Колір фону кнопки */
+  -fx-border-color: transparent; /* Колір межі кнопки */
+  -fx-cursor: hand;
+}
+
+.close-button:hover {
+  -fx-background-color: #ff0000; /* Колір фону кнопки при наведенні */
+  -fx-background-radius: 3;
+  -fx-padding: 5 10;
+  -fx-font-size: 14px;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+  -fx-border-radius: 2;
 }

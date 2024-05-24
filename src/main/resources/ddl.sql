@@ -3,13 +3,14 @@ DROP TABLE IF EXISTS Goals;
 DROP TABLE IF EXISTS Category;
 DROP TABLE IF EXISTS Steps;
 DROP TABLE IF EXISTS Tips;
+DROP TABLE IF EXISTS CategoryGoals;
 
 -- Створення таблиці "Users"
 CREATE TABLE Users (
     id_user       INTEGER PRIMARY KEY AUTOINCREMENT,
     username      VARCHAR (50)    NOT NULL UNIQUE,
     password      VARCHAR (50)    NOT NULL,
-    profile_image BYTEA
+    profile_image BYTEA           NOT NULL
 );
 
 -- Створення таблиці "Goals"
@@ -41,9 +42,17 @@ CREATE TABLE Steps (
     FOREIGN KEY (id_goal) REFERENCES Goals (id_goal) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
 -- Створення таблиці "Tips"
 CREATE TABLE Tips (
     id_tip   INTEGER PRIMARY KEY AUTOINCREMENT,
     tip_text TEXT NOT NULL
+);
+
+-- Створення проміжної таблиці "CategoryGoals"
+CREATE TABLE CategoryGoals (
+    id_category INTEGER,
+    id_goal     INTEGER,
+    PRIMARY KEY (id_category, id_goal),
+    FOREIGN KEY (id_category) REFERENCES Category (id_category) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_goal) REFERENCES Goals (id_goal) ON DELETE CASCADE ON UPDATE CASCADE
 );

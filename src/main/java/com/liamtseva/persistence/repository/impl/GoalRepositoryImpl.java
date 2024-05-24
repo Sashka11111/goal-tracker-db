@@ -1,7 +1,6 @@
 package com.liamtseva.persistence.repository.impl;
 
 import com.liamtseva.domain.exception.EntityNotFoundException;
-import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Goal;
 import com.liamtseva.persistence.repository.contract.GoalRepository;
 
@@ -197,7 +196,6 @@ public class GoalRepositoryImpl implements GoalRepository {
       throw new EntityNotFoundException("Error while deleting goal with id " + id);
     }
   }
-
   private Goal extractGoalFromResultSet(ResultSet resultSet) throws SQLException {
     int id = resultSet.getInt("id_goal");
     int userId = resultSet.getInt("id_user");

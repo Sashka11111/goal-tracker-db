@@ -1,0 +1,26 @@
+/* Стиль кнопки для закриття */
+.close-button {
+  -fx-background-color: transparent;
+}
+
+.close-button:hover {
+  -fx-background-color: red;
+}
+
+/* Стиль кнопки для згортання */
+.minimize-button {
+  -fx-background-color: transparent;
+}
+
+.minimize-button:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.2); /* Прозорий колір фону при наведенні */
+}
+
+/* Стиль кнопки для розгортання */
+.maximize-button {
+  -fx-background-color: transparent;
+}
+
+.maximize-button:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.2); /* Прозорий колір фону при наведенні */
+}

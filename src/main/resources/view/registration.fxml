@@ -39,13 +39,23 @@
       <children>
         <PasswordField fx:id="password_field" layoutX="40.0" layoutY="203.0" prefHeight="34.0" prefWidth="217.0" promptText="Пароль" style="-fx-background-color: WHITE; -fx-border-color: #9370DB; -fx-border-radius: 5;" />
         <TextField fx:id="login_field" layoutX="39.0" layoutY="145.0" prefHeight="34.0" prefWidth="218.0" promptText="Логін" style="-fx-background-color: WHITE; -fx-border-color: #9370DB; -fx-border-radius: 5;" />
-        <Button fx:id="SignInButton" layoutX="95.0" layoutY="259.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #9370DB;" stylesheets="@../design/design.css" text="Зареєструватися" textFill="WHITE" />
-        <Label layoutX="63.0" layoutY="62.0" prefHeight="54.0" prefWidth="186.0" text="Реєстрація" textFill="MEDIUMPURPLE">
+        <Button fx:id="SignInButton" layoutX="77.0" layoutY="263.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #9370DB;" stylesheets="@../design/design.css" text="Зареєструватися" textFill="WHITE" />
+        <Label layoutX="57.0" layoutY="62.0" prefHeight="54.0" prefWidth="178.0" text="Реєстрація" textFill="MEDIUMPURPLE">
           <font>
             <Font size="36.0" />
           </font>
         </Label>
-            <Label fx:id="errorMessageLabel" alignment="CENTER" layoutX="2.0" layoutY="116.0" prefHeight="18.0" prefWidth="294.0" textFill="#f20e0e" />
+            <Label fx:id="errorMessageLabel" alignment="CENTER" layoutX="1.0" layoutY="115.0" prefHeight="18.0" prefWidth="294.0" textFill="#f20e0e" />
+            <Label fx:id="errorPassword" alignment="CENTER" layoutX="1.0" layoutY="237.0" prefHeight="18.0" prefWidth="294.0" textFill="#f20e0e" />
+            <Button fx:id="btn_close" layoutX="246.0" layoutY="8.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="32.0" styleClass="close-button" stylesheets="@../design/design.css">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../data/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
       </children>
     </AnchorPane>
   </children>

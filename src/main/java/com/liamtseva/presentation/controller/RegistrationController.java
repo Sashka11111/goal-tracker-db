@@ -9,6 +9,7 @@ import com.liamtseva.presentation.animation.Shake;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,7 +37,12 @@ public class RegistrationController {
   private PasswordField password_field;
 
   @FXML
+  private Button btn_close;
+
+  @FXML
   private Label errorMessageLabel;
+  @FXML
+  private Label errorPassword;
 
   @FXML
   private ImageView profileImageView;
@@ -48,6 +54,8 @@ public class RegistrationController {
 
   public RegistrationController() {
     this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource());
+    // Завантажити зображення за замовчуванням
+    imageBytes = loadDefaultImageBytes();
   }
 
   private byte[] readImageToBytes(File file) {
@@ -60,7 +68,17 @@ public class RegistrationController {
       return null;
     }
   }
-
+  private byte[] loadDefaultImageBytes() {
+    try (InputStream is = getClass().getResourceAsStream("/data/profile.png")) {
+      if (is == null) {
+        throw new IOException("Default profile image not found");
+      }
+      return is.readAllBytes();
+    } catch (IOException e) {
+      e.printStackTrace();
+      return null;
+    }
+  }
   @FXML
   void chooseImageButtonClicked() {
     chooseImage();
@@ -86,6 +104,9 @@ public class RegistrationController {
 
   @FXML
   void initialize() {
+    btn_close.setOnAction(event ->{
+      System.exit(0);
+    });
     authSignInButton.setOnAction(event -> {
       Scene currentScene = authSignInButton.getScene();
       FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
@@ -111,7 +132,7 @@ public class RegistrationController {
       if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
         if (!userRepository.isUsernameExists(username)) {
           // Створення нового користувача
-          User user = new User(0, username, password, imageBytes); // Додавання зображення
+          User user = new User(0, username, password, imageBytes);
           // Додавання користувача до бази даних через UserRepository
           userRepository.addUser(user);
 
@@ -132,6 +153,7 @@ public class RegistrationController {
         }
       } else {
         errorMessageLabel.setText("Пароль має мати велику, маленьку букву та цифру");
+        errorPassword.setText("Мінімальна довжина паролю: 6 символів");
         Shake userLoginAnim = new Shake(login_field);
         Shake userPassAnim = new Shake(password_field);
         userLoginAnim.playAnim();

@@ -17,7 +17,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class AuthorizationController {
 
@@ -34,6 +36,9 @@ public class AuthorizationController {
   private PasswordField password_field;
 
   @FXML
+  private Button btn_close;
+
+  @FXML
   private Label errorMessageLabel;
   private UserRepository userRepository; // Змінна для зберігання UserRepository
 
@@ -45,6 +50,9 @@ public class AuthorizationController {
 
   @FXML
   void initialize() {
+    btn_close.setOnAction(event ->{
+      System.exit(0);
+    });
     loginSingUpButton.setOnAction(event -> {
       // Отримуємо сцену з кнопки
       Scene currentScene = loginSingUpButton.getScene();
@@ -76,7 +84,8 @@ public class AuthorizationController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
-            stage.setTitle("Трекер особистих цілей");
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/data/icon.png")));
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(new Scene(root));
             stage.showAndWait();
           } else {
