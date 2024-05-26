@@ -17,13 +17,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import java.time.LocalDate;
 import java.util.List;
+import org.controlsfx.control.CheckComboBox;
 
 public class MyGoalsController {
 
@@ -60,9 +61,8 @@ public class MyGoalsController {
   @FXML
   private Button btn_delete;
 
-
   @FXML
-  private ComboBox<Category> category;
+  private CheckComboBox<Category> categories;
 
   @FXML
   private DatePicker endDate;
@@ -82,10 +82,10 @@ public class MyGoalsController {
   @FXML
   void initialize() {
     loadGoals();
-    // Ініціалізація ComboBox категорій
-    ObservableList<Category> categories = FXCollections.observableArrayList();
-    categories.addAll(categoryRepository.getAllCategories());
-    category.setItems(categories);
+    // Ініціалізація CheckComboBox категорій
+    ObservableList<Category> categoryList = FXCollections.observableArrayList();
+    categoryList.addAll(categoryRepository.getAllCategories());
+    categories.getItems().addAll(categoryList);
 
     MyGoals_col_Goal.setCellValueFactory(cellData -> cellData.getValue().nameGoalProperty());
     MyGoals_col_Description.setCellValueFactory(cellData -> cellData.getValue().descriptionProperty());
@@ -120,22 +120,25 @@ public class MyGoalsController {
   private void onAddClicked() {
     String goalName = goal.getText();
     String goalDescription = description.getText();
-    Category selectedCategory = category.getValue();
+    List<Category> selectedCategories = categories.getCheckModel().getCheckedItems();
     LocalDate goalStartDate = startDate.getValue();
     LocalDate goalEndDate = endDate.getValue();
 
-    if (goalName != null && !goalName.isEmpty() && selectedCategory != null && goalStartDate != null && goalEndDate != null) {
-      // Отримати поточного користувача за його ім'ям
+    if (goalName != null && !goalName.isEmpty() && !selectedCategories.isEmpty() && goalStartDate != null && goalEndDate != null) {
       User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
       if (currentUser != null) {
-        // Створити новий об'єкт цілі з отриманими значеннями та ідентифікатором користувача
-        Goal newGoal = new Goal(0, currentUser.id(), goalName, goalDescription, selectedCategory.id(), goalStartDate, goalEndDate, "Активна");
-        // Додати нову ціль у репозиторій цілей
-        goalRepository.addGoal(newGoal);
-        // Оновити таблицю цілей у графічному інтерфейсі
-        loadGoals();
-        // Очистити поля введення після додавання цілі
-        clearFields();
+        Goal newGoal = new Goal(0, currentUser.id(), goalName, goalDescription, goalStartDate, goalEndDate, "Активна");
+        int newGoalId = goalRepository.addGoal(newGoal);
+
+        if (newGoalId != -1) {
+          for (Category category : selectedCategories) {
+            goalRepository.addCategoryToGoal(newGoalId, category.id());
+          }
+          loadGoals();
+          clearFields();
+        } else {
+          // Обробити помилку створення нової цілі
+        }
       }
     }
   }
@@ -164,7 +167,7 @@ public class MyGoalsController {
   private void clearFields() {
     goal.clear();
     description.clear();
-    category.getSelectionModel().clearSelection();
+    categories.getCheckModel().clearChecks();
     startDate.setValue(null);
     endDate.setValue(null);
   }

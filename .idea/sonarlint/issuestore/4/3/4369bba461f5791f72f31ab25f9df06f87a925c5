@@ -1,18 +1,17 @@
 
 
-java:S11920"KDefine a constant instead of duplicating this literal " not found" 6 times.(ı«¥ƒ8‰„èÛ÷1J$c4aad210-2821-4ed4-8a0b-7d9825ce717b
+java:S1192:"KDefine a constant instead of duplicating this literal " not found" 6 times.(ı«¥ƒ8Ã„‘„û1J$ed3e2d59-4919-4bf9-af17-d33e6bf3d636
 ‘
-java:S11920"NDefine a constant instead of duplicating this literal "Goal with id " 4 times.(ı«¥ƒ8Š„èÛ÷1J$d6d07068-b633-443e-a357-5b8edbbba05d
+java:S1192:"NDefine a constant instead of duplicating this literal "Goal with id " 4 times.(ı«¥ƒ8Ã„‘„û1J$33a842b3-66d8-4900-8132-d1ca462b3f47
 ­
-java:S4144"dUpdate this method so that its implementation is not identical to "filterGoalsByUserId" on line 110.(ĞŸ®³øÿÿÿÿ8’éÎİ÷1J$6f1931f0-36f7-4b9b-ad33-e8d6f60b0d99
+java:S4144‡"dUpdate this method so that its implementation is not identical to "filterGoalsByUserId" on line 117.(ĞŸ®³øÿÿÿÿ8á„‘„û1J$bee0e90b-546c-4f27-b70b-c8895f7cdb9f
 a
-java:S6905("Don't use the query "SELECT *".(˜ªÛ8³„èÛ÷1J$17e7b49d-0c5e-4573-ab2e-89926fc95632
+java:S69052"Don't use the query "SELECT *".(˜ªÛ8å„‘„û1J$f52b3980-bf66-4b4b-ac2f-7b9f618d1008
+g
+java:S6905E"Don't use the query "SELECT *".(ıé’©øÿÿÿÿ8å„‘„û1J$9e7e6e00-d0a2-416b-ad1a-f6a8bb840f35
 b
-java:S6905;"Don't use the query "SELECT *".(Î°ù’8µ„èÛ÷1J$15e1c4ea-bef6-49cd-abc2-737e8441c057
-ƒ	java:S125?"<This block of commented-out lines of code should be removed.(ôŸÿıÿÿÿÿ8¶„èÛ÷1J$82a53548-6a7a-43e5-8346-622be0f11666
+java:S6905T"Don't use the query "SELECT *".(ãŞ·8å„‘„û1J$20b70e5c-0b01-4581-8526-bcbf38a3f5c6
 b
-java:S6905M"Don't use the query "SELECT *".(ãŞ·8ÒÂí÷1J$3005c722-1e43-475e-9c7f-125f7441d223
-b
-java:S6905p"Don't use the query "SELECT *".(Ïó’æ8¸„èÛ÷1J$473c8c11-dfcf-4d28-b458-f7c6931dd074
+java:S6905w"Don't use the query "SELECT *".(š˜×›8ò„‘„û1J$666dab7d-ecdb-4bb8-a4d1-99632ca6cbee
 c
-java:S6905ƒ"Don't use the query "SELECT *".(Ïó’æ8£éÎİ÷1J$146d318d-9b29-43a9-9ac0-c603f1922781
+java:S6905‰"Don't use the query "SELECT *".(š˜×›8ó„‘„û1J$390a1a78-174d-4682-9077-afe9c17912dc

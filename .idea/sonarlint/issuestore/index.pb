@@ -219,3 +219,5 @@ C
 goal-tracker-db.exe,d\f\df7944f2397e7c3f42b3c503be8b17790bb2f9ac
 }
 Msrc/main/java/com/liamtseva/presentation/controller/MyActivityController.java,d\8\d89ad9fac60f3cbf96a54bd55dcac50aed1825a2
+€
+Psrc/main/java/com/liamtseva/presentation/controller/CompleteStepsController.java,c\5\c5942511945fffa903a4cdc48d0016c0e84544b9

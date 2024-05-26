@@ -7,7 +7,6 @@ public record Goal(
     int userId,
     String nameGoal,
     String description,
-    int categoryId,
     LocalDate startDate,
     LocalDate endDate,
     String status)

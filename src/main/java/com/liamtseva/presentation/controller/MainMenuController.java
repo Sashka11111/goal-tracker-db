@@ -33,7 +33,16 @@ public class MainMenuController {
   private Button btn_completeGoal;
 
   @FXML
-  private Button btn_exit;
+  private Button btn_completeSteps;
+
+  @FXML
+  private Button btn_close;
+
+  @FXML
+  private Button btn_maximize;
+
+  @FXML
+  private Button btn_minimize;
 
   @FXML
   private StackPane stackPane;
@@ -43,6 +52,9 @@ public class MainMenuController {
 
   @FXML
   void initialize() {
+    btn_close.setOnAction(event ->{
+      System.exit(0);
+    });
     myActivity();
     btn_myActivity.setOnAction(event -> showMyActivityPage());
     btn_myGoals.setOnAction(event -> showMyGoalPage());
@@ -50,9 +62,7 @@ public class MainMenuController {
     btn_category.setOnAction(actionEvent -> showCategoryPage());
     btn_steps.setOnAction(event -> showStepsToGoalPage());
     btn_tips.setOnAction(event -> showTipsPage());
-    btn_exit.setOnAction(event ->{
-      System.exit(0);
-    });
+    btn_completeSteps.setOnAction(event -> showCompleteStepsPage());
   }
 
   private void moveStackPane(Button button) {
@@ -88,6 +98,10 @@ public class MainMenuController {
   private void showTipsPage() {
     moveStackPane(btn_tips);
     loadFXML("/view/tips.fxml");
+  }
+  private void showCompleteStepsPage() {
+    moveStackPane(btn_completeSteps);
+    loadFXML("/view/completeSteps.fxml");
   }
   private void loadFXML(String fxmlFileName) {
     try {

@@ -11,7 +11,6 @@ public class DatabaseConnection {
   private static HikariDataSource dataSource;
 
   public DatabaseConnection() {
-    // Приватний конструктор, щоб заборонити створення інстанцій ззовні
   }
 
   public static synchronized DatabaseConnection getInstance() {

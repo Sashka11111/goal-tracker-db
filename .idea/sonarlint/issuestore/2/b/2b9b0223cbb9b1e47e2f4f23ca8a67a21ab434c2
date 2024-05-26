@@ -1,18 +1,22 @@
 
-‡	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(­æşY8¹ßª…÷1J$49757303-4d38-4933-ae25-18d33ee90d0b
-—
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8İ£¬…÷1J$39c15894-3cb8-4926-8e01-adae28812ef0
-’
-java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8Ğßª…÷1J$3397e768-80e8-4be1-b0dd-37462e1b7b5a
-’
-java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8Ğßª…÷1J$783e68ae-9b2b-4f6f-aa09-7b7bb33e6961
+‡	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(­æşY8°È‚ùú1J$d2685b76-959c-4819-8303-17154da74007
+	java:S112l"FDefine and throw a dedicated exception instead of using a generic one.(™òŒšùÿÿÿÿ8°È‚ùú1J$579fdb7e-6ca9-456e-bdd2-8fef4531e136
+ˆ	java:S112{"FDefine and throw a dedicated exception instead of using a generic one.(¼›Û´8°È‚ùú1J$df308374-b1aa-4a26-a26a-99629df71c8c
+	java:S112Š"FDefine and throw a dedicated exception instead of using a generic one.(ÇçÜ¾úÿÿÿÿ8±È‚ùú1J$6fc860f0-668f-4ef5-8792-177b328b1308
+‰	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(¾éŒá8±È‚ùú1J$c30cbdce-1099-45de-8462-7fccaa03c8e7
+”
+java:S1192I"LDefine a constant instead of duplicating this literal "id_category" 3 times.(Ô–¡Ñşÿÿÿÿ8³È‚ùú1J$3c059b96-6fd9-4586-b47e-e1bbcdd62b59
 
-java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8Ğßª…÷1J$67bee46d-76ef-4090-a412-61d96f31b6f1
+java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÒÈ‚ùú1J$6cfb4a02-9eaa-4b5b-9b5f-857b6e8c5922
 ’
-java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘ƒ±è8Ğßª…÷1J$2592f449-df62-45ba-90e4-93edaa7da56c
+java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8ÒÈ‚ùú1J$1a80f8c5-1f7b-428a-909b-5d3d4d46a4de
+’
+java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘ƒ±è8ÒÈ‚ùú1J$bc1301d8-da5f-40c1-9060-052259ee0321
+’
+java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8ÒÈ‚ùú1J$4ce4e017-9db1-4844-a52e-751125532d7e
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8—ƒùú1
 b
-java:S6905G"Don't use the query "SELECT *".(ê™ø8Úßª…÷1J$bc2f4865-6e97-4ec2-b8b0-4148e233d9ef
+java:S6905G"Don't use the query "SELECT *".(ê™ø8âÈ‚ùú1J$338f985c-bac6-4446-8309-1366e22c44c7
 b
-java:S6905U"Don't use the query "SELECT *".(‘ƒ±è8İßª…÷1J$bd959f4d-4398-47b2-ae10-226147cd48bd
-“
-java:S1128"PRemove this unused import 'com.liamtseva.persistence.config.DatabaseConnection'.(ùÏ˜à8èÆŞ…÷1J$bb1f2b7a-a375-4f34-b5ee-6add52ca554e
+java:S6905U"Don't use the query "SELECT *".(‘ƒ±è8åÈ‚ùú1J$1dcc393d-5b8f-42eb-ba42-ba443db8f054

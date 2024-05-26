@@ -5,7 +5,7 @@ import com.liamtseva.domain.exception.EntityNotFoundException;
 import java.util.List;
 
 public interface GoalRepository {
-  void addGoal(Goal goal);
+  int addGoal(Goal goal);
   Goal getGoalById(int id) throws EntityNotFoundException;
   Goal getGoalByName(String name) throws EntityNotFoundException;
   List<Goal> getAllGoalsByUserId(int userId);
@@ -15,4 +15,8 @@ public interface GoalRepository {
   void deleteGoal(int id) throws EntityNotFoundException;
   void updateGoalStatus(int goalId, String newStatus) throws EntityNotFoundException;
   void updateGoalStatusByName(String goalName, String newStatus) throws EntityNotFoundException;
+  void addCategoryToGoal(int goalId, int categoryId);
+  void removeCategoryFromGoal(int goalId, int categoryId);
+  List<Integer> getCategoriesByGoalId(int goalId);
+  List<Integer> getGoalsByCategoryId(int categoryId);
 }

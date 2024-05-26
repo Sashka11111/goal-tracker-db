@@ -11,7 +11,6 @@ public class GoalViewModel {
   private final SimpleIntegerProperty userId;
   private final SimpleStringProperty nameGoal;
   private final SimpleStringProperty description;
-  private final SimpleIntegerProperty categoryId;
   private final SimpleObjectProperty<LocalDate> startDate;
   private final SimpleObjectProperty<LocalDate> endDate;
   private final SimpleStringProperty status;
@@ -21,7 +20,6 @@ public class GoalViewModel {
     this.userId = new SimpleIntegerProperty(goal.userId());
     this.nameGoal = new SimpleStringProperty(goal.nameGoal());
     this.description = new SimpleStringProperty(goal.description());
-    this.categoryId = new SimpleIntegerProperty(goal.categoryId());
     this.startDate = new SimpleObjectProperty<>(goal.startDate());
     this.endDate = new SimpleObjectProperty<>(goal.endDate());
     this.status = new SimpleStringProperty(goal.status());
@@ -75,17 +73,6 @@ public class GoalViewModel {
     this.description.set(description);
   }
 
-  public int getCategoryId() {
-    return categoryId.get();
-  }
-
-  public SimpleIntegerProperty categoryIdProperty() {
-    return categoryId;
-  }
-
-  public void setCategoryId(int categoryId) {
-    this.categoryId.set(categoryId);
-  }
 
   public LocalDate getStartDate() {
     return startDate.get();

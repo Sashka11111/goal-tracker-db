@@ -19,12 +19,10 @@ CREATE TABLE Goals (
     id_user     INTEGER,
     name_goal   VARCHAR (100),
     description VARCHAR (255) NOT NULL,
-    id_category INTEGER,
     start_date  DATE          NOT NULL,
     end_date    DATE          NOT NULL,
     status      VARCHAR (100) CHECK (status IN ('Активна', 'Завершена', 'Відкладена')),
-    FOREIGN KEY (id_user) REFERENCES Users (id_user) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (id_category) REFERENCES Category (id_category) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (id_user) REFERENCES Users (id_user) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Створення таблиці "Category"
