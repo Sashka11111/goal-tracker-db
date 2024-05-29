@@ -11,14 +11,15 @@
 
 <AnchorPane prefHeight="558.0" prefWidth="714.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liamtseva.presentation.controller.MyActivityController">
    <children>
-      <AnchorPane layoutX="22.0" layoutY="22.0" prefHeight="181.0" prefWidth="200.0" styleClass="card" stylesheets="@../design/mainMenu.css">
+      <!-- Active Goals Card -->
+      <AnchorPane layoutX="22.0" layoutY="22.0" prefHeight="181.0" prefWidth="200.0" styleClass="card" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0">
          <children>
             <Label layoutX="56.0" layoutY="141.0" prefHeight="27.0" prefWidth="100.0" text="Активні цілі" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="166.0" layoutY="14.0" text="0" textFill="WHITE">
+            <Label fx:id="activeGoalsLabel" layoutX="166.0" layoutY="14.0" text="0" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -30,14 +31,16 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="257.0" layoutY="22.0" prefHeight="181.0" prefWidth="200.0" styleClass="card" stylesheets="@../design/mainMenu.css">
+
+      <!-- Completed Goals Card -->
+      <AnchorPane layoutX="257.0" layoutY="22.0" prefHeight="181.0" prefWidth="200.0" styleClass="card" stylesheets="@../design/mainMenu.css" AnchorPane.topAnchor="22.4">
          <children>
             <Label layoutX="34.0" layoutY="141.0" prefHeight="27.0" prefWidth="122.0" text="Завершені цілі" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="166.0" layoutY="14.0" text="0" textFill="WHITE">
+            <Label fx:id="completedGoalsLabel" layoutX="166.0" layoutY="14.0" text="0" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -49,14 +52,16 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="486.0" layoutY="22.0" prefHeight="181.0" prefWidth="200.0" styleClass="card" stylesheets="@../design/mainMenu.css">
+
+      <!-- Postponed Goals Card -->
+      <AnchorPane layoutX="486.0" layoutY="22.0" prefHeight="181.0" prefWidth="200.0" styleClass="card" stylesheets="@../design/mainMenu.css" AnchorPane.topAnchor="22.4">
          <children>
             <Label layoutX="38.0" layoutY="141.0" prefHeight="27.0" prefWidth="122.0" text="Відкладені цілі" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="166.0" layoutY="14.0" text="0" textFill="WHITE">
+            <Label fx:id="postponedGoalsLabel" layoutX="166.0" layoutY="14.0" text="0" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -68,15 +73,17 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="22.0" layoutY="218.0" prefHeight="321.0" prefWidth="667.0">
+
+      <!-- Area Chart -->
+      <AnchorPane layoutX="22.0" layoutY="218.0" prefHeight="321.0" prefWidth="667.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="24.399999999999977" AnchorPane.topAnchor="218.0">
          <children>
-            <AreaChart layoutX="61.0" layoutY="-39.0" prefHeight="361.6" prefWidth="667.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis side="LEFT" />
-              </yAxis>
+            <AreaChart fx:id="areaChart" layoutX="61.0" layoutY="-39.0" prefHeight="361.6" prefWidth="667.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
             </AreaChart>
          </children>
       </AnchorPane>

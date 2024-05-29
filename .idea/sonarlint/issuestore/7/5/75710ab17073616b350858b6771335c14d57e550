@@ -1,22 +1,21 @@
 
-g	java:S112u"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ä³Ûú1
-h	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ä³Ûú1
-s	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8è³Ûú1
-w	java:S116""VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8è³Ûú1
-u	java:S116%"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8è³Ûú1
-u	java:S116("TRename this field "btn_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¤ışÿÿÿÿ8é³Ûú1
-ƒ
-java:S14502"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8ë³Ûú1
-f
-java:S2674@"JCheck the return value of the "read" call to see how many bytes were read.(±ñÔ8ó³Ûú1
-C
-java:S1168D"&Return an empty array instead of null.(¥¹ï8ô³Ûú1
-C
-java:S1168O"&Return an empty array instead of null.(¥¹ï8÷³Ûú1
+	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8õº¢šü1J$b1b5b862-5ce3-4599-aa36-7b009cbe25cf
+	java:S112–"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8÷º¢šü1J$bc4aa44f-6b89-4616-951c-e44634d1dce1
+™	java:S116"WRename this field "SignInButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä®8“»¢šü1J$cce5ca70-c649-4b67-bf65-852ed6c7873d
+	java:S116$"VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8“»¢šü1J$a47c6e51-56f2-4292-a6ab-6f40fbf1f074
+›	java:S116'"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8“»¢šü1J$d246872a-7fb3-49e5-bf61-5a2aae54c2ad
+›	java:S116*"TRename this field "btn_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¤ışÿÿÿÿ8“»¢šü1J$2de2f9fe-68a0-4ceb-8347-12a73bec4ab1
+©
+java:S14502"gRemove the "selectedProfileImagePath" field and declare it as a local variable in the relevant methods.(ÇçÛ8•»¢šü1J$b05265bd-fa44-4a0d-805c-0fba2eab44fe
+Œ
+java:S2674@"JCheck the return value of the "read" call to see how many bytes were read.(±ñÔ8»¢šü1J$afcd5609-6d85-4c64-9e47-81e6ff3e24dc
+i
+java:S1168D"&Return an empty array instead of null.(¥¹ï8Ÿ»¢šü1J$4cccec46-0c98-410b-b847-56b9ab3f1eae
+i
+java:S1168P"&Return an empty array instead of null.(¥¹ï8 »¢šü1J$bc832e5a-943d-458d-9558-a88e4d11df8a
+š
+java:S3776l"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8§»¢šü1J$6fa69488-9ecb-42e8-8a74-f4f4ea2436a7
 t
-java:S3776j"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8ÿ³Ûú1
-N
-java:S1602k",Remove useless curly braces around statement(çùúŠùÿÿÿÿ8´Ûú1
-H	java:S106‹"+Replace this use of System.out by a logger.(Í¶®Ê8Œ´Ûú1
-X
-java:S10682"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8´Ûú1
+java:S1602m",Remove useless curly braces around statement(çùúŠùÿÿÿÿ8ª»¢šü1J$06153967-7ac3-4e6a-9536-84ef0e4aebf5
+~
+java:S10682"<Remove this unused "selectedProfileImagePath" private field.(ÇçÛ8·»¢šü1J$58af036d-c126-4bc6-b34e-0431857eefca

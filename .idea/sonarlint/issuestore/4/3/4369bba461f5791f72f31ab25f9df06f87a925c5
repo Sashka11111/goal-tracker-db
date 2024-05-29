@@ -1,17 +1,23 @@
 
+ƒ
+java:S1192w"fDefine a constant instead of duplicating this literal "SELECT * FROM Goals WHERE id_user = ?" 3 times.(š˜×›8Ä¦—Éû1
 
-java:S1192:"KDefine a constant instead of duplicating this literal " not found" 6 times.(ı«¥ƒ8Ã„‘„û1J$ed3e2d59-4919-4bf9-af17-d33e6bf3d636
+java:S1192:"KDefine a constant instead of duplicating this literal " not found" 6 times.(ı«¥ƒ8Ã„‘„û1J$dc86b7a2-e2ad-4fd7-92b5-1b090023fc0a
 ‘
-java:S1192:"NDefine a constant instead of duplicating this literal "Goal with id " 4 times.(ı«¥ƒ8Ã„‘„û1J$33a842b3-66d8-4900-8132-d1ca462b3f47
+java:S1192:"NDefine a constant instead of duplicating this literal "Goal with id " 4 times.(ı«¥ƒ8Ã„‘„û1J$6d730b3c-f8ea-4c22-a5ef-aceaa5fc3a76
+‡
+java:S4144†"dUpdate this method so that its implementation is not identical to "filterGoalsByUserId" on line 117.(Õ®¢ùÿÿÿÿ8Œ§—Éû1
 ­
-java:S4144‡"dUpdate this method so that its implementation is not identical to "filterGoalsByUserId" on line 117.(ĞŸ®³øÿÿÿÿ8á„‘„û1J$bee0e90b-546c-4f27-b70b-c8895f7cdb9f
+java:S4144˜"dUpdate this method so that its implementation is not identical to "filterGoalsByUserId" on line 117.(ĞŸ®³øÿÿÿÿ8á„‘„û1J$72882026-f912-4211-bce8-9d7b1a32dab9
 a
-java:S69052"Don't use the query "SELECT *".(˜ªÛ8å„‘„û1J$f52b3980-bf66-4b4b-ac2f-7b9f618d1008
+java:S69052"Don't use the query "SELECT *".(˜ªÛ8å„‘„û1J$51fee485-0627-429f-81c0-758a7d61db27
 g
-java:S6905E"Don't use the query "SELECT *".(ıé’©øÿÿÿÿ8å„‘„û1J$9e7e6e00-d0a2-416b-ad1a-f6a8bb840f35
+java:S6905E"Don't use the query "SELECT *".(ıé’©øÿÿÿÿ8å„‘„û1J$861dbdce-386a-4a08-b8f0-4fab317893d5
 b
-java:S6905T"Don't use the query "SELECT *".(ãŞ·8å„‘„û1J$20b70e5c-0b01-4581-8526-bcbf38a3f5c6
+java:S6905T"Don't use the query "SELECT *".(ãŞ·8å„‘„û1J$daac83d2-fa61-43bd-9542-981924eefb4e
 b
-java:S6905w"Don't use the query "SELECT *".(š˜×›8ò„‘„û1J$666dab7d-ecdb-4bb8-a4d1-99632ca6cbee
+java:S6905w"Don't use the query "SELECT *".(š˜×›8ò„‘„û1J$c684bd6d-be93-4885-853f-d84f566979ea
 c
-java:S6905‰"Don't use the query "SELECT *".(š˜×›8ó„‘„û1J$390a1a78-174d-4682-9077-afe9c17912dc
+java:S6905ˆ"Don't use the query "SELECT *".(š˜×›8ó„‘„û1J$f0ad253f-8a56-4c6d-a084-609cba780f5e
+=
+java:S6905š"Don't use the query "SELECT *".(š˜×›8­§—Éû1

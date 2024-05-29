@@ -1,0 +1,16 @@
+/* chart-styles.css */
+.chart-series-area-line {
+  -fx-stroke-width: 2px;
+}
+
+.default-color0.chart-series-area-fill {
+  -fx-fill: rgba(255, 87, 34, 0.5); /* Помаранчевий колір з прозорістю */
+}
+
+.default-color1.chart-series-area-fill {
+  -fx-fill: rgba(33, 150, 243, 0.5); /* Синій колір з прозорістю */
+}
+
+.default-color2.chart-series-area-fill {
+  -fx-fill: rgba(76, 175, 80, 0.5); /* Зелений колір з прозорістю */
+}

@@ -1,5 +1,6 @@
 package com.liamtseva;
 
+import atlantafx.base.theme.PrimerLight;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,7 @@ public class Main extends Application {
 
   @Override
   public void start(Stage primaryStage) throws Exception {
+    Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
     primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/data/icon.png")));
     FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
     Parent root = loader.load();

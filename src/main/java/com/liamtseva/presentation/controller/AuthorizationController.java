@@ -1,5 +1,6 @@
 package com.liamtseva.presentation.controller;
 
+import com.liamtseva.domain.PasswordHashing;
 import com.liamtseva.persistence.AuthenticatedUser;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
@@ -45,12 +46,11 @@ public class AuthorizationController {
   // Параметризований конструктор, який приймає userRepository
   public AuthorizationController() {
     this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
-
   }
 
   @FXML
   void initialize() {
-    btn_close.setOnAction(event ->{
+    btn_close.setOnAction(event -> {
       System.exit(0);
     });
     loginSingUpButton.setOnAction(event -> {
@@ -65,11 +65,11 @@ public class AuthorizationController {
         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         primaryStage.setScene(newScene);
         primaryStage.show();
-
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
     });
+
     authSignInButton.setOnAction(event -> {
       String loginText = login_field.getText().trim();
       String loginPassword = password_field.getText().trim();
@@ -77,17 +77,27 @@ public class AuthorizationController {
       if (!loginText.isEmpty() && !loginPassword.isEmpty()) {
         try {
           // Перевірка логіну та пароля користувача
-          User user = userRepository.findByUsername(login_field.getText());
-          if (user != null && user.password().equals(loginPassword)) {
-            AuthenticatedUser.getInstance().setCurrentUser(user);
-            loginSingUpButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.getIcons().add(new Image(getClass().getResourceAsStream("/data/icon.png")));
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+          User user = userRepository.findByUsername(loginText);
+          if (user != null) {
+            // Хешування введеного пароля
+            String hashedPassword = PasswordHashing.getInstance().hashedPassword(loginPassword);
+            if (user.password().equals(hashedPassword)) {
+              AuthenticatedUser.getInstance().setCurrentUser(user);
+              loginSingUpButton.getScene().getWindow().hide();
+              FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
+              Parent root = loader.load();
+              Stage stage = new Stage();
+              stage.getIcons().add(new Image(getClass().getResourceAsStream("/data/icon.png")));
+              stage.initStyle(StageStyle.UNDECORATED);
+              stage.setScene(new Scene(root));
+              stage.showAndWait();
+            } else {
+              errorMessageLabel.setText("Невірний логін або пароль");
+              Shake userLoginAnim = new Shake(login_field);
+              Shake userPassAnim = new Shake(password_field);
+              userLoginAnim.playAnim();
+              userPassAnim.playAnim();
+            }
           } else {
             errorMessageLabel.setText("Невірний логін або пароль");
             Shake userLoginAnim = new Shake(login_field);

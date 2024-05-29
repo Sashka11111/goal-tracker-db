@@ -130,6 +130,23 @@ public class GoalRepositoryImpl implements GoalRepository {
     }
     return goals;
   }
+  @Override
+  public List<Goal> findGoalsByUserId(int userId) {
+    List<Goal> goals = new ArrayList<>();
+    String query = "SELECT * FROM Goals WHERE id_user = ?";
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+      preparedStatement.setInt(1, userId);
+      try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        while (resultSet.next()) {
+          goals.add(extractGoalFromResultSet(resultSet));
+        }
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return goals;
+  }
 
   @Override
   public List<Goal> getAllGoalsByUserId(int userId) {

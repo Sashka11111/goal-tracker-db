@@ -1,17 +1,21 @@
 
-›	java:S116"YRename this field "btn_myActivity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ…š×8ô¥õú1J$cf98e572-c091-466f-ac3c-6b75d0911d46
-	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8ô¥õú1J$399e66a3-4fdd-4a28-9a11-843d7e20bce7
-	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8ô¥õú1J$0622294d-f430-4aa3-a618-317f2c15aa89
-–	java:S116"TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¼‹á8ô¥õú1J$cf25dccb-d291-488e-8e2d-cfdb7c6ab18b
-š	java:S116"SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰äÌıÿÿÿÿ8ô¥õú1J$127aea2b-0a34-432e-94b4-ef37c3eb2bab
-¢	java:S116!"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8ô¥õú1J$deeef92b-dbd6-4170-b08b-806a639dae86
-£	java:S116$"\Rename this field "btn_completeSteps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Ïæ†üÿÿÿÿ8ô¥õú1J$40682544-a156-457f-b603-2e6edf2e592b
-›	java:S116'"TRename this field "btn_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¤ışÿÿÿÿ8ƒ°•õú1J$6b2cb953-4170-44ed-9265-697a85c8e67b
-™	java:S116*"WRename this field "btn_maximize" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İäˆ8Î¸Îøú1J$8f943517-2142-43f3-8db7-00b8e7f28574
-	java:S116-"WRename this field "btn_minimize" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾üùïûÿÿÿÿ8Î¸Îøú1J$028c6115-0691-40ab-a9f8-af5351919591
-t
-java:S16027",Remove useless curly braces around statement(çùúŠùÿÿÿÿ8ÃÛ”õú1J$5ffa63d0-9d3c-4397-89a3-3a20b8dd784e
+›	java:S116"YRename this field "btn_myActivity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ…š×8Òú¶¬û1J$27afcf8b-9300-4f4b-97a3-17bea05697e9
+	java:S116"WRename this field "btn_category" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡æ–üÿÿÿÿ8Òú¶¬û1J$e1f4bca3-f181-4a11-9afc-085d666d46bd
+	java:S116"VRename this field "btn_myGoals" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Úæ£úÿÿÿÿ8Òú¶¬û1J$f94e8446-bfe4-4488-84a1-e763ffcea30c
+–	java:S116 "TRename this field "btn_steps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¼‹á8Óú¶¬û1J$f316ba89-1281-4270-99e5-11f5b6666ff7
+š	java:S116""SRename this field "btn_tips" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰äÌıÿÿÿÿ8Óú¶¬û1J$9098ac11-b2cc-4052-b592-5f89b770b4fe
+¢	java:S116$"[Rename this field "btn_completeGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚÷½Ğûÿÿÿÿ8Óú¶¬û1J$218f725e-9884-477a-9a6b-fb4eeb423d17
+£	java:S116&"\Rename this field "btn_completeSteps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Ïæ†üÿÿÿÿ8Ôú¶¬û1J$91ae5861-aae6-4b35-834d-4274f4e3bea4
+›	java:S116("TRename this field "btn_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¤ışÿÿÿÿ8Ôú¶¬û1J$844e8a04-eca2-476e-b534-af2cdf6ca52e
+™	java:S116*"WRename this field "btn_maximize" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İäˆ8Ôú¶¬û1J$57198550-4230-4c6f-ba4e-d2645e55ad0e
+	java:S116,"WRename this field "btn_minimize" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾üùïûÿÿÿÿ8Ôú¶¬û1J$06e6a7f5-00a3-4f6d-b68f-7675028b7665
+Œ
+java:S1854Œ"HRemove this useless assignment to local variable "myActivityController".(·¯Ç­8éú¶¬û1J$6572da3c-57ad-48ad-a6f5-3cd3154f4946
+}
+java:S1481Œ"9Remove this unused "myActivityController" local variable.(·¯Ç­8îú¶¬û1J$4fb1ad76-bb1c-4169-99b7-35db85013c57
 ‹
-java:S1854x"HRemove this useless assignment to local variable "myActivityController".(·¯Ç­8†¹õú1J$bcc929bc-f3cc-4400-aeac-2f61fb999f65
-|
-java:S1481x"9Remove this unused "myActivityController" local variable.(·¯Ç­8¹õú1J$f8db4ef0-cffe-4f01-96f0-fd5e98cb7a65
+java:S1126˜"BReplace this if-then-else statement by a single method invocation.(ÿ„©©ıÿÿÿÿ8òú¶¬û1J$61b08255-424a-44fe-8dc0-50f0436708cb
+‚
+java:S1117­"9Rename "stage" which hides the field declared at line 56.(áıÉ§øÿÿÿÿ8öú¶¬û1J$be84d7c9-b235-4d17-983a-62d4b4828355
+‘	java:S100²"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û˜¤™8÷ú¶¬û1J$83a1dc0a-f552-49ab-8116-758d15fc0baa
+„	java:S125¿"<This block of commented-out lines of code should be removed.(ºÊ“³ÿÿÿÿÿ8ıú¶¬û1J$1781736b-f86b-43c6-8b9f-323bc61f2b0d

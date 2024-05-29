@@ -1,11 +1,13 @@
 package com.liamtseva.presentation.controller;
 
+import com.liamtseva.domain.PasswordHashing;
 import com.liamtseva.domain.validation.UserValidator;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.User;
 import com.liamtseva.persistence.repository.contract.UserRepository;
 import com.liamtseva.persistence.repository.impl.UserRepositoryImpl; // Імплементація UserRepository
 import com.liamtseva.presentation.animation.Shake;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -41,8 +43,6 @@ public class RegistrationController {
 
   @FXML
   private Label errorMessageLabel;
-  @FXML
-  private Label errorPassword;
 
   @FXML
   private ImageView profileImageView;
@@ -68,6 +68,7 @@ public class RegistrationController {
       return null;
     }
   }
+
   private byte[] loadDefaultImageBytes() {
     try (InputStream is = getClass().getResourceAsStream("/data/profile.png")) {
       if (is == null) {
@@ -79,10 +80,12 @@ public class RegistrationController {
       return null;
     }
   }
+
   @FXML
   void chooseImageButtonClicked() {
     chooseImage();
   }
+
   public void chooseImage() {
     FileChooser fileChooser = new FileChooser();
     fileChooser.setTitle("Choose Profile Image");
@@ -101,10 +104,9 @@ public class RegistrationController {
     }
   }
 
-
   @FXML
   void initialize() {
-    btn_close.setOnAction(event ->{
+    btn_close.setOnAction(event -> {
       System.exit(0);
     });
     authSignInButton.setOnAction(event -> {
@@ -131,12 +133,13 @@ public class RegistrationController {
       }
       if (UserValidator.isUsernameValid(username) && UserValidator.isPasswordValid(password)) {
         if (!userRepository.isUsernameExists(username)) {
+          // Хешування пароля
+          String hashedPassword = PasswordHashing.getInstance().hashedPassword(password);
+
           // Створення нового користувача
-          User user = new User(0, username, password, imageBytes);
+          User user = new User(0, username, hashedPassword, imageBytes);
           // Додавання користувача до бази даних через UserRepository
           userRepository.addUser(user);
-
-          System.out.println("Registration successful.");
 
           Scene currentScene = authSignInButton.getScene();
           FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/authorization.fxml"));
@@ -152,14 +155,12 @@ public class RegistrationController {
           userLoginAnim.playAnim();
         }
       } else {
-        errorMessageLabel.setText("Пароль має мати велику, маленьку букву та цифру");
-        errorPassword.setText("Мінімальна довжина паролю: 6 символів");
+        errorMessageLabel.setText("Пароль має мати велику, маленьку букву та цифру.\n" + "Мінімальна довжина паролю: 6 символів");
         Shake userLoginAnim = new Shake(login_field);
         Shake userPassAnim = new Shake(password_field);
         userLoginAnim.playAnim();
         userPassAnim.playAnim();
       }
     });
-
   }
 }

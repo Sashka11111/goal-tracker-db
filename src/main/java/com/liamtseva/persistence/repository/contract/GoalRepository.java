@@ -10,6 +10,7 @@ public interface GoalRepository {
   Goal getGoalByName(String name) throws EntityNotFoundException;
   List<Goal> getAllGoalsByUserId(int userId);
   List<Goal> getAllGoals();
+  List<Goal> findGoalsByUserId(int userId);
   List<Goal> filterGoalsByUserId(int userId);
   void updateGoal(Goal goal) throws EntityNotFoundException;
   void deleteGoal(int id) throws EntityNotFoundException;
