@@ -1,13 +1,12 @@
 
+	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÓÇçü1J$afaa000f-2a9f-471f-a52c-de4b2d675b26
 
-java:S11924"KDefine a constant instead of duplicating this literal " not found" 3 times.(²Ùí^8¥â¤ï÷1J$50747256-1312-48cc-b81f-3ed44a8763bf
+java:S11928"KDefine a constant instead of duplicating this literal " not found" 3 times.(²Ùí^8ÂÓóœü1J$351af436-a7b6-49f0-82d7-6a6a24c286fb
 
-java:S11924"NDefine a constant instead of duplicating this literal "Step with id " 3 times.(²Ùí^8¥â¤ï÷1J$2764d87a-8cab-4df5-846d-fb0eb6413f5a
-j
-java:S1481"'Remove this unused "id" local variable.(ÌéÕ†8ÑÛ¾Ûú1J$7ec269cf-97e0-4dcf-a23d-4e8f3553b471
+java:S11928"NDefine a constant instead of duplicating this literal "Step with id " 3 times.(²Ùí^8ÃÓóœü1J$e38e5ace-81e1-433e-8a71-7b7e6b25ad25
 b
-java:S6905,"Don't use the query "SELECT *".(Õìëª8½â¤ï÷1J$093ff651-89cc-4403-bcd2-fd26a40d1251
+java:S69050"Don't use the query "SELECT *".(Õìëª8ãÓóœü1J$eedfbb87-91c6-4444-9655-c981b5621eb0
 g
-java:S6905?"Don't use the query "SELECT *".(¸¡”Öşÿÿÿÿ8¤¶Öï÷1J$b56fe084-b90a-4030-9e92-b1ff29da39ca
+java:S6905C"Don't use the query "SELECT *".(¸¡”Öşÿÿÿÿ8æÓóœü1J$9f4cc7ac-c71c-446f-a9ce-bc312906106e
 g
-java:S6905S"Don't use the query "SELECT *".(½ô—ãÿÿÿÿÿ8½â¤ï÷1J$612bd31d-8ff0-4b84-9447-5c7a386dca13
+java:S6905W"Don't use the query "SELECT *".(½ô—ãÿÿÿÿÿ8èÓóœü1J$f397a6a7-c94c-4ac8-b641-11cc404cbd62

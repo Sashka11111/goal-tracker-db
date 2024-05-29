@@ -3,7 +3,6 @@ package com.liamtseva.presentation.controller;
 import com.liamtseva.domain.exception.EntityNotFoundException;
 import com.liamtseva.persistence.AuthenticatedUser;
 import com.liamtseva.persistence.config.DatabaseConnection;
-import com.liamtseva.persistence.entity.Category;
 import com.liamtseva.persistence.entity.Goal;
 import com.liamtseva.persistence.entity.Step;
 import com.liamtseva.persistence.entity.User;
@@ -11,12 +10,8 @@ import com.liamtseva.persistence.repository.contract.GoalRepository;
 import com.liamtseva.persistence.repository.contract.StepRepository;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.StepRepositoryImpl;
-import com.liamtseva.presentation.viewmodel.GoalViewModel;
 import com.liamtseva.presentation.viewmodel.StepViewModel;
-import java.net.URL;
-import java.time.LocalDate;
 import java.util.List;
-import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -28,12 +23,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class StepsToGoalController {
-
-  @FXML
-  private ResourceBundle resources;
-
-  @FXML
-  private URL location;
 
   @FXML
   private TableView<StepViewModel> Steps_tableView;
@@ -71,9 +60,6 @@ public class StepsToGoalController {
 
   @FXML
   void initialize() {
-    // Ініціалізація ComboBox
-
-
     Steps_col_NameGoal.setCellValueFactory(cellData -> cellData.getValue().goalNameProperty());
     Steps_col_description.setCellValueFactory(cellData -> cellData.getValue().descriptionProperty());
     loadSteps();
@@ -89,7 +75,7 @@ public class StepsToGoalController {
     if (currentUser != null) {
       List<Goal> userGoals = goalRepository.filterGoalsByUserId(currentUser.id());
       ObservableList<Goal> observableUserGoals = FXCollections.observableArrayList(userGoals);
-      // Після циклу завантаження списку цілей у методі loadGoals()
+
       for (Goal goal : userGoals) {
         List<Step> stepsForGoal = stepRepository.getStepsByGoalId(goal.id());
         for (Step step : stepsForGoal) {
@@ -98,7 +84,6 @@ public class StepsToGoalController {
       }
 
       goal.setItems(observableUserGoals);
-      // Встановлення фабрики відображення для комбобокса
       goal.setCellFactory(param -> new ListCell<>() {
         @Override
         protected void updateItem(Goal item, boolean empty) {
@@ -113,14 +98,20 @@ public class StepsToGoalController {
     }
   }
 
-  private void onAddClicked()  {
+
+  private void onAddClicked() {
     Goal selectedGoal = goal.getValue();
     String stepDescription = description.getText();
-    if (selectedGoal != null && !stepDescription.isEmpty()){
-      Step newStep = new Step(0,selectedGoal.id(),selectedGoal.nameGoal(),stepDescription);
+    if (selectedGoal != null && !stepDescription.isEmpty()) {
+      Step newStep = new Step(0, selectedGoal.id(), selectedGoal.nameGoal(), stepDescription); // Initial ID is 0
       try {
-        stepRepository.addStep(newStep);
-        Steps_tableView.getItems().add(new StepViewModel(newStep));
+        int generatedId = stepRepository.addStep(newStep);
+
+        // Create a new Step record with the generated ID
+        Step stepWithId = new Step(generatedId, newStep.goalId(), newStep.goalName(), newStep.description());
+
+        // Add the new Step with the correct ID to the TableView
+        Steps_tableView.getItems().add(new StepViewModel(stepWithId));
         clearField();
       } catch (EntityNotFoundException e) {
         throw new RuntimeException(e);
@@ -129,20 +120,23 @@ public class StepsToGoalController {
   }
 
 
+
+
   private void onDeleteClicked() {
     StepViewModel selectedStep = Steps_tableView.getSelectionModel().getSelectedItem();
     if (selectedStep != null) {
       try {
         // Видаляємо крок з бази даних
         stepRepository.deleteStep(selectedStep.getIdStep());
-        // Після видалення перезавантажуємо список кроків
-        loadSteps();
+        // Видаляємо крок з таблиці
+        Steps_tableView.getItems().remove(selectedStep);
         clearField();
       } catch (EntityNotFoundException e) {
         e.printStackTrace(); // Обробка помилки
       }
     }
   }
+
 
   private void clearField() {
     description.clear();

@@ -5,15 +5,9 @@ import com.liamtseva.persistence.AuthenticatedUser;
 import com.liamtseva.persistence.config.DatabaseConnection;
 import com.liamtseva.persistence.entity.Goal;
 import com.liamtseva.persistence.entity.User;
-import com.liamtseva.persistence.repository.contract.CategoryRepository;
 import com.liamtseva.persistence.repository.contract.GoalRepository;
-import com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
 import com.liamtseva.presentation.viewmodel.GoalViewModel;
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.List;
-import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -24,21 +18,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.time.LocalDate;
+import java.util.List;
+
 public class CompleteGoalsController {
-
-  @FXML
-  private ResourceBundle resources;
-
-  @FXML
-  private URL location;
-
-  @FXML
-  private TextField complateGoal_GoalID;
-
-  @FXML
-  private Button complateGoal_btnUpdate;
-  @FXML
-  private TableColumn<GoalViewModel, Integer> complateGoal_col_GoalID;
 
   @FXML
   private TableColumn<GoalViewModel, String> complateGoal_col_GoalName;
@@ -49,30 +32,48 @@ public class CompleteGoalsController {
   @FXML
   private TableColumn<GoalViewModel, LocalDate> complateGoal_col_startGoal;
 
+  @FXML
+  private TableColumn<GoalViewModel, String> complateGoal_col_status;
+
+  @FXML
+  private TableView<GoalViewModel> complateGoal_tableView;
 
   @FXML
   private ComboBox<String> complateGoal_status;
 
   @FXML
-  private TableView<GoalViewModel> complateGoal_tableView;
+  private TextField complateGoal_GoalID;
+
+  @FXML
+  private Button complateGoal_btnUpdate;
 
   private final GoalRepository goalRepository;
 
-
   public CompleteGoalsController() {
-    this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення GoalRepositoryImpl з DatabaseConnection
-  }@FXML
+    this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource());
+  }
+
+  @FXML
   void initialize() {
-    loadGoals();
     complateGoal_status.getItems().addAll("Активна", "Завершена", "Відкладена");
 
-    complateGoal_col_GoalID.setCellValueFactory(cellData -> cellData.getValue().idGoalProperty().asObject());
     complateGoal_col_GoalName.setCellValueFactory(cellData -> cellData.getValue().nameGoalProperty());
-    complateGoal_col_endGoal.setCellValueFactory(cellData -> cellData.getValue().startDateProperty());
-    complateGoal_col_startGoal.setCellValueFactory(cellData -> cellData.getValue().endDateProperty());
+    complateGoal_col_endGoal.setCellValueFactory(cellData -> cellData.getValue().endDateProperty());
+    complateGoal_col_startGoal.setCellValueFactory(cellData -> cellData.getValue().startDateProperty());
+    complateGoal_col_status.setCellValueFactory(cellData -> cellData.getValue().statusProperty());
+
+    loadGoals();
+
+    complateGoal_tableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+      if (newSelection != null) {
+        complateGoal_GoalID.setText(newSelection.getNameGoal());
+        complateGoal_status.setValue(newSelection.getStatus());
+      }
+    });
 
     complateGoal_btnUpdate.setOnAction(event -> onUpdateStatusClicked());
   }
+
   private void loadGoals() {
     User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
     if (currentUser != null) {
@@ -86,23 +87,19 @@ public class CompleteGoalsController {
       // Обробити випадок, коли користувач не знайдений
     }
   }
+
   @FXML
   void onUpdateStatusClicked() {
-    String goalIdString = complateGoal_GoalID.getText();
+    GoalViewModel selectedGoal = complateGoal_tableView.getSelectionModel().getSelectedItem();
     String newStatus = complateGoal_status.getValue();
-    if (goalIdString != null && !goalIdString.isEmpty() && newStatus != null) {
+    if (selectedGoal != null && newStatus != null) {
       try {
-        int goalId = Integer.parseInt(goalIdString);
-        // Оновлення статусу в базі даних
+        int goalId = selectedGoal.getIdGoal();
         goalRepository.updateGoalStatus(goalId, newStatus);
 
-        // Отримання обраного елемента у таблиці
-        GoalViewModel selectedGoal = complateGoal_tableView.getSelectionModel().getSelectedItem();
-        if (selectedGoal != null) {
-          // Оновлення статусу обраної цілі в ObservableList
-          selectedGoal.setStatus(newStatus);
-        }
-      } catch (NumberFormatException | EntityNotFoundException e) {
+        selectedGoal.setStatus(newStatus);
+        complateGoal_tableView.refresh();
+      } catch (EntityNotFoundException e) {
         e.printStackTrace();
         // Обробити виняток відповідним чином
       }

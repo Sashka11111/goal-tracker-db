@@ -16,30 +16,34 @@ public class StepRepositoryImpl implements StepRepository {
     this.dataSource = dataSource;
   }
 
-  @Override
-  public void addStep(Step step) throws EntityNotFoundException {
-    String query = "INSERT INTO Steps (id_goal, goal_name, description) VALUES (?, ?, ?)";
+  public int addStep(Step step) throws EntityNotFoundException {
+    String sql = "INSERT INTO Steps (id_goal, goal_name, description) VALUES (?, ?, ?)";
     try (Connection connection = dataSource.getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
-      preparedStatement.setInt(1, step.goalId());
-      preparedStatement.setString(2, step.goalName());
-      preparedStatement.setString(3, step.description());
-      preparedStatement.executeUpdate();
-      ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
-      if (generatedKeys.next()) {
-        int id = generatedKeys.getInt(1); // Отримуємо згенерований ідентифікатор з результату запиту
-        step.id(); // Присвоюємо згенерований ідентифікатор об'єкту кроку
-      } else {
-        throw new SQLException("Adding step failed, no ID obtained.");
+        PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+      statement.setInt(1, step.goalId());
+      statement.setString(2, step.goalName());
+      statement.setString(3, step.description());
+
+      int affectedRows = statement.executeUpdate();
+      if (affectedRows == 0) {
+        throw new EntityNotFoundException("Creating step failed, no rows affected.");
+      }
+
+      try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+        if (generatedKeys.next()) {
+          return generatedKeys.getInt(1);
+        } else {
+          throw new EntityNotFoundException("Creating step failed, no ID obtained.");
+        }
       }
     } catch (SQLException e) {
-      throw new EntityNotFoundException("Failed to add step.", e);
+      throw new RuntimeException(e);
     }
   }
 
 
 
-  @Override
+    @Override
   public Step getStepById(int id) throws EntityNotFoundException {
     String query = "SELECT * FROM Steps WHERE id_step = ?";
     try (Connection connection = dataSource.getConnection();
@@ -53,10 +57,10 @@ public class StepRepositoryImpl implements StepRepository {
         }
       }
     } catch (SQLException e) {
-      e.printStackTrace();
-      throw new EntityNotFoundException("Error while fetching step with id " + id);
+      throw new EntityNotFoundException("Error while fetching step with id " + id, e);
     }
   }
+
   @Override
   public List<Step> getStepsByGoalId(int goalId) {
     List<Step> steps = new ArrayList<>();
@@ -72,7 +76,7 @@ public class StepRepositoryImpl implements StepRepository {
       }
     } catch (SQLException e) {
       e.printStackTrace();
-      // Handle exception
+      // Handle exception properly, maybe rethrow or log it
     }
     return steps;
   }
@@ -90,7 +94,7 @@ public class StepRepositoryImpl implements StepRepository {
       }
     } catch (SQLException e) {
       e.printStackTrace();
-      // Handle exception
+      // Handle exception properly, maybe rethrow or log it
     }
     return steps;
   }
@@ -107,8 +111,7 @@ public class StepRepositoryImpl implements StepRepository {
         throw new EntityNotFoundException("Step with id " + step.id() + " not found");
       }
     } catch (SQLException e) {
-      e.printStackTrace();
-      // Handle exception
+      throw new EntityNotFoundException("Failed to update step.", e);
     }
   }
 
@@ -123,8 +126,7 @@ public class StepRepositoryImpl implements StepRepository {
         throw new EntityNotFoundException("Step with id " + id + " not found");
       }
     } catch (SQLException e) {
-      e.printStackTrace();
-      // Handle exception
+      throw new EntityNotFoundException("Failed to delete step.", e);
     }
   }
 

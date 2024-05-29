@@ -223,3 +223,5 @@ Msrc/main/java/com/liamtseva/presentation/controller/MyActivityController.java,
 Psrc/main/java/com/liamtseva/presentation/controller/CompleteStepsController.java,c\5\c5942511945fffa903a4cdc48d0016c0e84544b9
 g
 7src/main/java/com/liamtseva/domain/PasswordHashing.java,0\3\03c8d2a03b28643572133abcaa5078e1feb68655
+p
+@src/main/java/com/liamtseva/domain/validation/GoalValidator.java,8\8\88f16fa4298dfa397932bfe0d8b1ab0edc4339c4

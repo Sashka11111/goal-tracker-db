@@ -5,7 +5,7 @@ import com.liamtseva.domain.exception.EntityNotFoundException;
 import java.util.List;
 
 public interface StepRepository {
-  void addStep(Step step)throws EntityNotFoundException;
+  int addStep(Step step)throws EntityNotFoundException;
   Step getStepById(int id) throws EntityNotFoundException;
   List<Step> getStepsByGoalId(int goalId);
   List<Step> getAllSteps();

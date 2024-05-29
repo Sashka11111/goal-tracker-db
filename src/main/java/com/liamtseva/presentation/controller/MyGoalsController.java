@@ -13,18 +13,20 @@ import com.liamtseva.persistence.repository.impl.CategoryRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.GoalRepositoryImpl;
 import com.liamtseva.persistence.repository.impl.UserRepositoryImpl;
 import com.liamtseva.presentation.viewmodel.GoalViewModel;
+import com.liamtseva.domain.validation.GoalValidator;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import org.controlsfx.control.CheckComboBox;
+
 import java.time.LocalDate;
 import java.util.List;
-import org.controlsfx.control.CheckComboBox;
 
 public class MyGoalsController {
 
@@ -65,24 +67,27 @@ public class MyGoalsController {
   private CheckComboBox<Category> categories;
 
   @FXML
+  private Label errorMessage;
+
+  @FXML
   private DatePicker endDate;
 
   @FXML
   private DatePicker startDate;
+
   private final GoalRepository goalRepository;
   private final CategoryRepository categoryRepository;
   private final UserRepository userRepository;
 
   public MyGoalsController() {
-    this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення GoalRepositoryImpl з DatabaseConnection
-    this.categoryRepository = new CategoryRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
+    this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource());
+    this.categoryRepository = new CategoryRepositoryImpl(new DatabaseConnection().getDataSource());
     this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource());
   }
 
   @FXML
   void initialize() {
     loadGoals();
-    // Ініціалізація CheckComboBox категорій
     ObservableList<Category> categoryList = FXCollections.observableArrayList();
     categoryList.addAll(categoryRepository.getAllCategories());
     categories.getItems().addAll(categoryList);
@@ -93,16 +98,13 @@ public class MyGoalsController {
     MyGoals_col_endDate.setCellValueFactory(cellData -> cellData.getValue().endDateProperty());
     MyGoals_col_status.setCellValueFactory(cellData -> cellData.getValue().statusProperty());
 
-    // Загрузка цілей з бази даних та відображення їх у таблиці
     loadGoals();
 
-    // Обробники подій для кнопок
     btn_add.setOnAction(event -> onAddClicked());
     btn_clear.setOnAction(event -> onClearClicked());
     btn_delete.setOnAction(event -> onDeleteClicked());
   }
 
-  // Завантаження цілей з бази даних
   private void loadGoals() {
     User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
     if (currentUser != null) {
@@ -115,40 +117,44 @@ public class MyGoalsController {
     }
   }
 
-  // Логіка додавання нової цілі
   @FXML
   private void onAddClicked() {
+    clearErrorMessage();
+
     String goalName = goal.getText();
     String goalDescription = description.getText();
     List<Category> selectedCategories = categories.getCheckModel().getCheckedItems();
     LocalDate goalStartDate = startDate.getValue();
     LocalDate goalEndDate = endDate.getValue();
 
-    if (goalName != null && !goalName.isEmpty() && !selectedCategories.isEmpty() && goalStartDate != null && goalEndDate != null) {
-      User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
-      if (currentUser != null) {
-        Goal newGoal = new Goal(0, currentUser.id(), goalName, goalDescription, goalStartDate, goalEndDate, "Активна");
-        int newGoalId = goalRepository.addGoal(newGoal);
+    String validationError = GoalValidator.validate(goalName, goalDescription, selectedCategories, goalStartDate, goalEndDate);
+    if (validationError != null) {
+      showErrorMessage(validationError);
+      return;
+    }
 
-        if (newGoalId != -1) {
-          for (Category category : selectedCategories) {
-            goalRepository.addCategoryToGoal(newGoalId, category.id());
-          }
-          loadGoals();
-          clearFields();
-        } else {
-          // Обробити помилку створення нової цілі
+    User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
+    if (currentUser != null) {
+      Goal newGoal = new Goal(0, currentUser.id(), goalName, goalDescription, goalStartDate, goalEndDate, "Активна");
+      int newGoalId = goalRepository.addGoal(newGoal);
+
+      if (newGoalId != -1) {
+        for (Category category : selectedCategories) {
+          goalRepository.addCategoryToGoal(newGoalId, category.id());
         }
+        loadGoals();
+        clearFields();
+      } else {
+        showErrorMessage("Помилка при створенні нової цілі");
       }
     }
   }
 
-  // Логіка очищення полів вводу
   private void onClearClicked() {
     clearFields();
+    clearErrorMessage();
   }
 
-  // Логіка видалення обраної цілі
   private void onDeleteClicked() {
     GoalViewModel selectedGoal = MyGoals_tableView.getSelectionModel().getSelectedItem();
     if (selectedGoal != null) {
@@ -156,19 +162,27 @@ public class MyGoalsController {
         goalRepository.deleteGoal(selectedGoal.getIdGoal());
         loadGoals();
         clearFields();
+        clearErrorMessage();
       } catch (EntityNotFoundException e) {
         e.printStackTrace();
-        // Обробити виняток відповідним чином
+        showErrorMessage("Помилка при видаленні цілі");
       }
     }
   }
 
-  // Очищення полів вводу
   private void clearFields() {
     goal.clear();
     description.clear();
     categories.getCheckModel().clearChecks();
     startDate.setValue(null);
     endDate.setValue(null);
+  }
+
+  private void clearErrorMessage() {
+    errorMessage.setText("");
+  }
+
+  private void showErrorMessage(String message) {
+    errorMessage.setText(message);
   }
 }
