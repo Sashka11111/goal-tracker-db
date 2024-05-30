@@ -27,6 +27,7 @@ import org.controlsfx.control.CheckComboBox;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MyGoalsController {
 
@@ -64,6 +65,9 @@ public class MyGoalsController {
   private Button btn_delete;
 
   @FXML
+  private Button btn_edit;
+
+  @FXML
   private CheckComboBox<Category> categories;
 
   @FXML
@@ -75,9 +79,14 @@ public class MyGoalsController {
   @FXML
   private DatePicker startDate;
 
+  @FXML
+  private TextField searchField;
+
   private final GoalRepository goalRepository;
   private final CategoryRepository categoryRepository;
   private final UserRepository userRepository;
+
+  private ObservableList<GoalViewModel> goalViewModels;
 
   public MyGoalsController() {
     this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource());
@@ -103,17 +112,51 @@ public class MyGoalsController {
     btn_add.setOnAction(event -> onAddClicked());
     btn_clear.setOnAction(event -> onClearClicked());
     btn_delete.setOnAction(event -> onDeleteClicked());
+    btn_edit.setOnAction(event -> onEditClicked());
+
+    searchField.textProperty().addListener((observable, oldValue, newValue) -> filterGoals(newValue));
+
+    MyGoals_tableView.getSelectionModel().selectedItemProperty().addListener(
+        (observable, oldValue, newValue) -> onGoalSelected(newValue));
   }
 
   private void loadGoals() {
     User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
     if (currentUser != null) {
       List<Goal> goals = goalRepository.getAllGoalsByUserId(currentUser.id());
-      ObservableList<GoalViewModel> goalViewModels = FXCollections.observableArrayList();
+      goalViewModels = FXCollections.observableArrayList();
       for (Goal goal : goals) {
         goalViewModels.add(new GoalViewModel(goal));
       }
       MyGoals_tableView.setItems(goalViewModels);
+    }
+  }
+
+  private void filterGoals(String searchText) {
+    User currentUser = AuthenticatedUser.getInstance().getCurrentUser();
+    if (currentUser != null) {
+      List<Goal> goals = goalRepository.searchGoalsByUserIdAndText(currentUser.id(), searchText);
+      ObservableList<GoalViewModel> filteredList = FXCollections.observableArrayList();
+      for (Goal goal : goals) {
+        filteredList.add(new GoalViewModel(goal));
+      }
+      MyGoals_tableView.setItems(filteredList);
+
+      if (filteredList.isEmpty()) {
+        MyGoals_tableView.setPlaceholder(new Label("На жаль у Вас немає такої цілі"));
+      } else {
+        MyGoals_tableView.setPlaceholder(null);
+      }
+    }
+  }
+
+  private void onGoalSelected(GoalViewModel selectedGoal) {
+    if (selectedGoal != null) {
+      goal.setText(selectedGoal.getNameGoal());
+      description.setText(selectedGoal.getDescription());
+      startDate.setValue(selectedGoal.getStartDate());
+      endDate.setValue(selectedGoal.getEndDate());
+      categories.getCheckModel().clearChecks();
     }
   }
 
@@ -159,6 +202,13 @@ public class MyGoalsController {
     GoalViewModel selectedGoal = MyGoals_tableView.getSelectionModel().getSelectedItem();
     if (selectedGoal != null) {
       try {
+        // Видаляємо всі зв'язки з категоріями
+        List<Integer> categoryIds = goalRepository.getCategoriesByGoalId(selectedGoal.getIdGoal());
+        for (int categoryId : categoryIds) {
+          goalRepository.removeCategoryFromGoal(selectedGoal.getIdGoal(), categoryId);
+        }
+
+        // Видаляємо саму ціль
         goalRepository.deleteGoal(selectedGoal.getIdGoal());
         loadGoals();
         clearFields();
@@ -170,12 +220,49 @@ public class MyGoalsController {
     }
   }
 
+
+  private void onEditClicked() {
+    clearErrorMessage();
+
+    GoalViewModel selectedGoal = MyGoals_tableView.getSelectionModel().getSelectedItem();
+    if (selectedGoal != null) {
+      String goalName = goal.getText();
+      String goalDescription = description.getText();
+      List<Category> selectedCategories = categories.getCheckModel().getCheckedItems();
+      LocalDate goalStartDate = startDate.getValue();
+      LocalDate goalEndDate = endDate.getValue();
+
+      String validationError = GoalValidator.validate(goalName, goalDescription, selectedCategories, goalStartDate, goalEndDate);
+      if (validationError != null) {
+        showErrorMessage(validationError);
+        return;
+      }
+
+      Goal updatedGoal = new Goal(selectedGoal.getIdGoal(), selectedGoal.getUserId(), goalName, goalDescription, goalStartDate, goalEndDate, selectedGoal.getStatus());
+
+      try {
+        goalRepository.updateGoal(updatedGoal);
+        // Update categories as well
+        goalRepository.clearCategoriesFromGoal(updatedGoal.id());
+        for (Category category : selectedCategories) {
+          goalRepository.addCategoryToGoal(updatedGoal.id(), category.id());
+        }
+        loadGoals();
+        clearFields();
+      } catch (EntityNotFoundException e) {
+        e.printStackTrace();
+        showErrorMessage("Помилка при редагуванні цілі");
+      }
+    }
+  }
+
   private void clearFields() {
     goal.clear();
     description.clear();
     categories.getCheckModel().clearChecks();
     startDate.setValue(null);
     endDate.setValue(null);
+    searchField.clear();
   }
 
   private void clearErrorMessage() {

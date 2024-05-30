@@ -225,3 +225,5 @@ g
 7src/main/java/com/liamtseva/domain/PasswordHashing.java,0\3\03c8d2a03b28643572133abcaa5078e1feb68655
 p
 @src/main/java/com/liamtseva/domain/validation/GoalValidator.java,8\8\88f16fa4298dfa397932bfe0d8b1ab0edc4339c4
+t
+Dsrc/main/java/com/liamtseva/domain/validation/CategoryValidator.java,6\6\66e6fe1ff9e73b81e8d3fe5f08202c151dab89de

@@ -39,7 +39,7 @@
             <Font size="18.0" />
           </font>
         </Label>
-        <TextField fx:id="complateGoal_GoalID" layoutX="127.0" layoutY="38.0" />
+        <TextField fx:id="complateGoal_Goal" layoutX="127.0" layoutY="38.0" />
         <ComboBox fx:id="complateGoal_status" layoutX="127.0" layoutY="80.0" prefWidth="150.0" promptText="Виберіть..." />
       </children>
     </AnchorPane>

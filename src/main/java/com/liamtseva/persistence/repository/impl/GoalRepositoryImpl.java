@@ -265,6 +265,38 @@ public class GoalRepositoryImpl implements GoalRepository {
   }
 
   @Override
+  public List<Goal> searchGoalsByUserIdAndText(int userId, String searchText) {
+    String sql = "SELECT * FROM Goals WHERE id_user = ? AND (name_goal LIKE ? OR description LIKE ?)";
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement statement = connection.prepareStatement(sql)) {
+      statement.setInt(1, userId);
+      String queryText = "%" + searchText + "%";
+      statement.setString(2, queryText);
+      statement.setString(3, queryText);
+      try (ResultSet resultSet = statement.executeQuery()) {
+        List<Goal> goals = new ArrayList<>();
+        while (resultSet.next()) {
+          goals.add(extractGoalFromResultSet(resultSet));
+        }
+        return goals;
+      }
+    } catch (SQLException e) {
+      throw new RuntimeException("Error fetching goals", e);
+    }
+  }
+
+  @Override
+  public void clearCategoriesFromGoal(int goalId) {
+    String query = "DELETE FROM CategoryGoals WHERE id_goal= ?";
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement statement = connection.prepareStatement(query)) {
+      statement.setInt(1, goalId);
+      statement.executeUpdate();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+  @Override
   public List<Integer> getGoalsByCategoryId(int categoryId) {
     List<Integer> goalIds = new ArrayList<>();
     String query = "SELECT id_goal FROM CategoryGoals WHERE id_category = ?";

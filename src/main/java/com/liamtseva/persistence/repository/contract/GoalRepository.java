@@ -15,9 +15,11 @@ public interface GoalRepository {
   void updateGoal(Goal goal) throws EntityNotFoundException;
   void deleteGoal(int id) throws EntityNotFoundException;
   void updateGoalStatus(int goalId, String newStatus) throws EntityNotFoundException;
+  List<Goal> searchGoalsByUserIdAndText(int userId, String searchText);
   void updateGoalStatusByName(String goalName, String newStatus) throws EntityNotFoundException;
   void addCategoryToGoal(int goalId, int categoryId);
   void removeCategoryFromGoal(int goalId, int categoryId);
+  void clearCategoriesFromGoal(int goalId);
   List<Integer> getCategoriesByGoalId(int goalId);
   List<Integer> getGoalsByCategoryId(int categoryId);
 }

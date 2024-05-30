@@ -42,7 +42,7 @@ public class CompleteGoalsController {
   private ComboBox<String> complateGoal_status;
 
   @FXML
-  private TextField complateGoal_GoalID;
+  private TextField complateGoal_Goal;
 
   @FXML
   private Button complateGoal_btnUpdate;
@@ -66,7 +66,7 @@ public class CompleteGoalsController {
 
     complateGoal_tableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
       if (newSelection != null) {
-        complateGoal_GoalID.setText(newSelection.getNameGoal());
+        complateGoal_Goal.setText(newSelection.getNameGoal());
         complateGoal_status.setValue(newSelection.getStatus());
       }
     });
@@ -98,6 +98,8 @@ public class CompleteGoalsController {
         goalRepository.updateGoalStatus(goalId, newStatus);
 
         selectedGoal.setStatus(newStatus);
+        complateGoal_Goal.clear();
+        complateGoal_status.setValue(null);
         complateGoal_tableView.refresh();
       } catch (EntityNotFoundException e) {
         e.printStackTrace();

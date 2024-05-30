@@ -1,14 +1,21 @@
 
-©	java:S116""bRename this field "MyGoals_col_Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‘‡öüÿÿÿÿ8•Å—©ü1J$111425f1-7995-4d9e-93c1-48e9524e0377
-	java:S116%"[Rename this field "MyGoals_col_Goal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓŞşÌ8•Å—©ü1J$4e7661c3-f4df-47d2-84cb-41918512d265
-¥	java:S116("^Rename this field "MyGoals_col_endDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãæÂ÷şÿÿÿÿ8•Å—©ü1J$ef039853-fbaa-4bac-bdd7-5eea884b3c6e
-¢	java:S116+"`Rename this field "MyGoals_col_startDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï÷ÀÃ8•Å—©ü1J$21a481af-fc61-445c-98bd-9fa93c6af263
-Ÿ	java:S116."]Rename this field "MyGoals_col_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¢Æ8•Å—©ü1J$7a05e822-d2e5-48c8-98d7-a4a9a3392041
-	java:S1161"\Rename this field "MyGoals_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŠâ–8•Å—©ü1J$d68b7cab-ca7f-4ba2-8186-c8d0410af5fc
-”	java:S116:"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8•Å—©ü1J$f5a5f7f8-8599-4bd9-9c35-2095819523d8
-–	java:S116="TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8—Å—©ü1J$94d00859-ea20-4dea-bf35-9a84d4752b13
-–	java:S116@"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8—Å—©ü1J$840d4970-d538-49de-8905-8ae6fee6c0a6
-{
-java:S1117q"8Rename "goal" which hides the field declared at line 54.(¼±à£8§Å—©ü1J$2f1c13a4-6366-472d-87d1-5bf6053613f2
+©	java:S116#"bRename this field "MyGoals_col_Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‘‡öüÿÿÿÿ8†¨Ëü1J$6830cff8-f476-4dff-bdcf-94fc83395d67
+	java:S116&"[Rename this field "MyGoals_col_Goal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓŞşÌ8†¨Ëü1J$6f897e3f-514b-49e3-99cd-16d8e6108139
+¥	java:S116)"^Rename this field "MyGoals_col_endDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãæÂ÷şÿÿÿÿ8†¨Ëü1J$a28cd121-a884-44fa-8ba2-a29e30c72357
+¢	java:S116,"`Rename this field "MyGoals_col_startDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï÷ÀÃ8†¨Ëü1J$6d9fba29-e28a-4362-93bc-590c00a8caf8
+Ÿ	java:S116/"]Rename this field "MyGoals_col_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¢Æ8†¨Ëü1J$23f02bd9-c018-434e-97a7-34ef485aa19d
+	java:S1162"\Rename this field "MyGoals_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŠâ–8†¨Ëü1J$94798ca4-efbc-46e8-baef-ad3e81f5ecc0
+”	java:S116;"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8†¨Ëü1J$2613b07e-2c93-4f68-9b9d-cfef547d3d7c
+–	java:S116>"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8†¨Ëü1J$4fe179af-12e7-44f0-94bd-71bea7eb4bd9
+–	java:S116A"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8†¨Ëü1J$cde75424-9b03-4504-8c6a-ce15926843ea
+•	java:S116D"SRename this field "btn_edit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñåší8ÂéÍÌü1J$226e5d50-ef5f-4140-8c7d-70f47bff6f73
+¥
+java:S1450Y"]Remove the "goalViewModels" field and declare it as a local variable in the relevant methods.(Á¤ÇÈøÿÿÿÿ8î±Îü1J$8c611545-ecc3-460e-a0e4-0852d9add1df
+|
+java:S1117€"8Rename "goal" which hides the field declared at line 55.(¼±à£8™¨İÌü1J$e1ce05cf-46c6-4be3-92e3-1b4ea65627f9
+|
+java:S1117Œ"8Rename "goal" which hides the field declared at line 55.(¼±à£8ü±Îü1J$d79dfc74-2204-4d80-8714-fd5c88042aa4
+€
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8‰²Îü1J$5eff5fc6-c410-4b09-b8be-1d6f2e49e420
 u
-java:S1068P"2Remove this unused "userRepository" private field.(¼²Æ÷8·Å—©ü1J$f390cf10-b2e2-4e24-8fa6-89010b83147a
+java:S1068W"2Remove this unused "userRepository" private field.(¼²Æ÷8Ü†¨Ëü1J$133af07c-61f6-4cd8-a2fe-f81026ad6e6e

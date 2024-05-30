@@ -6,6 +6,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.CheckComboBox?>
@@ -42,7 +44,7 @@
             <Font size="14.0" />
           </font>
         </Button>
-        <Button fx:id="btn_delete" layoutX="301.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Видалити" textFill="WHITE">
+        <Button fx:id="btn_delete" layoutX="448.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Видалити" textFill="WHITE">
           <font>
             <Font size="14.0" />
           </font>
@@ -59,10 +61,15 @@
           </font>
         </Label>
         <CheckComboBox fx:id="categories" layoutX="442.0" layoutY="104.0" prefHeight="26.0" prefWidth="166.0" />
+            <Button fx:id="btn_edit" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Редагувати" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
 
       </children>
     </AnchorPane>
-    <TableView fx:id="MyGoals_tableView" layoutX="24.0" layoutY="248.8" prefHeight="295.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="249.0">
+    <TableView fx:id="MyGoals_tableView" layoutX="24.0" layoutY="284.8" prefHeight="259.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="285.0">
       <columns>
         <TableColumn fx:id="MyGoals_col_Goal" prefWidth="124.80002212524414" text="Ціль" />
         <TableColumn fx:id="MyGoals_col_Description" prefWidth="171.1999969482422" text="Опис" />
@@ -70,10 +77,19 @@
         <TableColumn fx:id="MyGoals_col_endDate" prefWidth="105.60003662109375" text="Дата закінчення" />
         <TableColumn fx:id="MyGoals_col_status" prefWidth="115.20001220703125" text="Статус" />
       </columns>
+      <placeholder>
+        <Label text="No goals found" />
+      </placeholder>
       <columnResizePolicy>
         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
       </columnResizePolicy>
     </TableView>
       <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="TOP" layoutX="98.0" layoutY="6.0" prefHeight="20.0" prefWidth="546.0" textFill="RED" />
+      <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="33.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="33.0">
+         <image>
+            <Image url="@../data/search.png" />
+         </image>
+      </ImageView>
+    <TextField fx:id="searchField" layoutX="68.0" layoutY="235.0" prefHeight="19.0" prefWidth="513.0" promptText="Пошук цілей..." style="-fx-background-color: transparent;" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="39.200000000000045" />
   </children>
 </AnchorPane>
