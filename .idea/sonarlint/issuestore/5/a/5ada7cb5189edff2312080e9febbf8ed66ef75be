@@ -1,10 +1,11 @@
 
-	java:S112u"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8áÖ­ü1J$1958bfcc-7e1f-4e99-9116-9a82a8094797
-œ	java:S116"ZRename this field "Steps_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó„ºæ8‰ÍŸü1J$6d406e95-068a-49d1-851f-748209bc5d14
-Ÿ	java:S116"]Rename this field "Steps_col_NameGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î’Ì·8‰ÍŸü1J$bd0fc50b-80c5-4d59-8f2b-cc01fdc4fef9
-§	java:S116#"`Rename this field "Steps_col_description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¼ö“şÿÿÿÿ8‰ÍŸü1J$ba83d039-7461-446a-8cdb-fe40f60596f0
-”	java:S116&"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8‰ÍŸü1J$ca39920a-d3dd-46cf-bc4f-1921d84c3dfe
-–	java:S116)"TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8‰ÍŸü1J$8e32ff53-a52d-4a4c-9a75-50bc54f02eb6
-–	java:S116,"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8‰ÍŸü1J$8548528e-b8b6-4d34-b59a-d6037a99977c
+	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢‡×Óü1J$c65532e9-46cd-4cde-af7d-0f2886159f4c
+œ	java:S116"ZRename this field "Steps_tableView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó„ºæ8Á‡×Óü1J$6bdff6b3-a123-4e7e-baa0-70bfa78358ef
+Ÿ	java:S116"]Rename this field "Steps_col_NameGoal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î’Ì·8Á‡×Óü1J$1b488af3-932b-4244-9825-dae99a63ee41
+§	java:S116""`Rename this field "Steps_col_description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¼ö“şÿÿÿÿ8Á‡×Óü1J$e7517186-f484-421e-8a76-bf2f56042247
+”	java:S116%"RRename this field "btn_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆåÚ”8Á‡×Óü1J$197c1447-f9f4-4165-b187-2b0e37a429b2
+–	java:S116("TRename this field "btn_clear" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒáï8Á‡×Óü1J$fb59cd48-26d3-4568-9850-11d45d827aa7
+–	java:S116+"URename this field "btn_delete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°f8Â‡×Óü1J$c3df5e64-7912-496c-a9de-ab3ab07b6cdf
+•	java:S116-"SRename this field "btn_edit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñåší8Â‡×Óü1J$3e263863-0357-4610-a1f7-45ae0ebb7541
 €
-java:S1117O"8Rename "goal" which hides the field declared at line 50.(Í¸€Ğùÿÿÿÿ8úî­ü1J$0952935b-c82c-4a3a-b3f1-942595be2f76
+java:S1117U"8Rename "goal" which hides the field declared at line 50.(Í¸€Ğùÿÿÿÿ8Ê‡×Óü1J$710aad77-8b3a-4947-947f-0465c0041db2

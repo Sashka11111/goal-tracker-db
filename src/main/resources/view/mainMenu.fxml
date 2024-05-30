@@ -35,7 +35,7 @@
       </AnchorPane>
       <AnchorPane layoutX="190.0" prefHeight="47.0" prefWidth="710.0" style="-fx-background-color: #483D8B;" AnchorPane.leftAnchor="189.60000000000002" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="189.0" layoutY="8.0" prefHeight="30.0" prefWidth="225.0" text="Трекер особистих цілей" textFill="WHITE" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="295.9999999999999" AnchorPane.topAnchor="8.0">
+            <Label layoutX="210.0" layoutY="7.0" prefHeight="30.0" prefWidth="225.0" text="Трекер особистих цілей" textFill="WHITE" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="275.59999999999997" AnchorPane.topAnchor="7.0">
                <font>
                   <Font size="20.0" />
                </font>

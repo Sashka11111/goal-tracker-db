@@ -24,7 +24,7 @@
     </TableView>
     <AnchorPane layoutX="157.0" layoutY="315.0" prefHeight="200.0" prefWidth="402.0" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.bottomAnchor="42.80000000000001" AnchorPane.leftAnchor="157.0" AnchorPane.rightAnchor="154.80000000000007" AnchorPane.topAnchor="315.0">
       <children>
-        <Button fx:id="complateGoal_btnUpdate" layoutX="152.0" layoutY="151.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Оновити" textFill="WHITE">
+        <Button fx:id="updateStatusButton" layoutX="152.0" layoutY="151.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #483D8B;" styleClass="side-btn" stylesheets="@../design/mainMenu.css" text="Оновити" textFill="WHITE">
           <font>
             <Font size="14.0" />
           </font>
@@ -39,8 +39,8 @@
             <Font size="18.0" />
           </font>
         </Label>
-        <TextField fx:id="complateGoal_GoalID" layoutX="127.0" layoutY="38.0" />
-        <ComboBox fx:id="complateGoal_status" layoutX="127.0" layoutY="80.0" prefWidth="150.0" promptText="Виберіть..." />
+        <TextField fx:id="stepDescriptionTextField" layoutX="127.0" layoutY="38.0" />
+        <ComboBox fx:id="stepStatusComboBox" layoutX="127.0" layoutY="80.0" prefWidth="150.0" promptText="Виберіть..." />
       </children>
     </AnchorPane>
   </children>

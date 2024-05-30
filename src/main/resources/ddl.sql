@@ -37,6 +37,7 @@ CREATE TABLE Steps (
     id_goal     INTEGER,
     goal_name   VARCHAR (100),
     description TEXT,
+    status      VARCHAR (100) CHECK (status IN ('Активний', 'Завершений')),
     FOREIGN KEY (id_goal) REFERENCES Goals (id_goal) ON DELETE CASCADE ON UPDATE CASCADE
 );
 

@@ -4,7 +4,8 @@ public record Step(
     int id,
     int goalId,
     String goalName,
-    String description)
+    String description,
+    String status)
     implements Entity, Comparable<Step> {
 
   @Override
