@@ -5,20 +5,20 @@ import java.util.List;
 
 public class CategoryValidator {
 
-  // Метод для перевірки імені категорії
+  // Метод для перевірки назви категорії
   public static String validateCategoryName(String name, List<Category> existingCategories) {
     if (name == null || name.trim().isEmpty()) {
-      return "Ім'я категорії не може бути порожнім";
+      return "Назва категорії не може бути порожня";
     } else if (name.length() > 50) {
-      return "Ім'я категорії занадто довге";
+      return "Назва категорії занадто довга";
     } else if (isCategoryNameDuplicate(name, existingCategories)) {
-      return "Категорія з таким ім'ям вже існує";
+      return "Категорія з такою назвою вже існує";
     } else {
-      return null; // Якщо ім'я валідне, повертаємо null
+      return null; // Якщо назва валідна, повертаємо null
     }
   }
 
-  // Метод для перевірки наявності категорії з заданим ім'ям
+  // Метод для перевірки наявності категорії з заданою назвою
   private static boolean isCategoryNameDuplicate(String name, List<Category> existingCategories) {
     return existingCategories.stream().anyMatch(category -> category.name().equalsIgnoreCase(name));
   }

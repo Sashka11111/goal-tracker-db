@@ -1,6 +1,7 @@
 package com.liamtseva.persistence.repository.impl;
 
 import com.liamtseva.domain.exception.EntityNotFoundException;
+import com.liamtseva.persistence.entity.Goal;
 import com.liamtseva.persistence.entity.Step;
 import com.liamtseva.persistence.repository.contract.StepRepository;
 
@@ -130,7 +131,28 @@ public class StepRepositoryImpl implements StepRepository {
       throw new EntityNotFoundException("Failed to update step status", e);
     }
   }
-
+  @Override
+  public List<Step> searchStepsByUserIdAndText(int userId, String searchText) {
+    List<Step> steps = new ArrayList<>();
+    String query = "SELECT * FROM Steps " +
+        "JOIN Goals  ON Steps.id_goal = Goals.id_goal " +
+        "WHERE Goals.id_user = ? AND Steps.description LIKE ?";
+    try (Connection connection = dataSource.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+      preparedStatement.setInt(1, userId);
+      preparedStatement.setString(2, "%" + searchText + "%");
+      try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        while (resultSet.next()) {
+          Step step = extractStepFromResultSet(resultSet);
+          steps.add(step);
+        }
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+      // Handle exception properly, maybe rethrow or log it
+    }
+    return steps;
+  }
   @Override
   public void deleteStep(int id) throws EntityNotFoundException {
     String query = "DELETE FROM Steps WHERE id_step = ?";

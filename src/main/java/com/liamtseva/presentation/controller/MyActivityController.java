@@ -76,7 +76,6 @@ public class MyActivityController {
         .filter(goal -> "Відкладена".equals(goal.status()))
         .collect(Collectors.groupingBy(goal -> goal.startDate().format(DateTimeFormatter.ofPattern("yyyy-MM")), Collectors.counting()));
 
-    // Add data to series
     activeGoals.forEach((period, count) -> activeSeries.getData().add(new XYChart.Data<>(period, count)));
     completedGoals.forEach((period, count) -> completedSeries.getData().add(new XYChart.Data<>(period, count)));
     postponedGoals.forEach((period, count) -> postponedSeries.getData().add(new XYChart.Data<>(period, count)));

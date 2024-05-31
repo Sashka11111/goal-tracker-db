@@ -227,3 +227,5 @@ p
 @src/main/java/com/liamtseva/domain/validation/GoalValidator.java,8\8\88f16fa4298dfa397932bfe0d8b1ab0edc4339c4
 t
 Dsrc/main/java/com/liamtseva/domain/validation/CategoryValidator.java,6\6\66e6fe1ff9e73b81e8d3fe5f08202c151dab89de
+p
+@src/main/java/com/liamtseva/domain/validation/StepValidator.java,3\f\3f053bb8b5bf4dfc5e9ab2523f22097855d767da

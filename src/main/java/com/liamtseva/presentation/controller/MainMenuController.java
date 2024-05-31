@@ -187,8 +187,6 @@ public class MainMenuController {
         Image profileImage = new Image(new ByteArrayInputStream(imageBytes));
         // Встановлення зображення у profileImageView
         userImageView.setImage(profileImage);
-      } else {
-        // profileLabel.setText("Користувач не має зображення профілю");
       }
     }
   }

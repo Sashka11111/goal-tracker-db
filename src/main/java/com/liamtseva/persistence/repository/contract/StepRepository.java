@@ -12,4 +12,5 @@ public interface StepRepository {
   void updateStep(Step step) throws EntityNotFoundException;
   void updateStepStatusByName(String description, String newStatus) throws EntityNotFoundException;
   void deleteStep(int id) throws EntityNotFoundException;
+  List<Step> searchStepsByUserIdAndText(int userId, String searchText);
 }

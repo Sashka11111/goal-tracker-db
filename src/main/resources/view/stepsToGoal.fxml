@@ -56,14 +56,22 @@
             </Button>
       </children>
     </AnchorPane>
-    <TableView fx:id="Steps_tableView" layoutX="24.0" layoutY="192.0" prefHeight="352.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="192.0">
+    <TableView fx:id="Steps_tableView" layoutX="24.0" layoutY="236.0" prefHeight="308.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="236.0">
       <columns>
-        <TableColumn fx:id="Steps_col_NameGoal" prefWidth="179.19993591308594" text="Назва цілі" />
-        <TableColumn fx:id="Steps_col_description" prefWidth="352.0" text="Опис кроку" />
+        <TableColumn fx:id="Steps_col_description" prefWidth="239.20003128051758" text="Опис кроку" />
+        <TableColumn fx:id="Steps_col_NameGoal" prefWidth="243.99998474121094" text="Назва цілі" />
+            <TableColumn fx:id="Steps_col_StepStatus" prefWidth="214.4000244140625" text="Статус кроку" />
       </columns>
       <columnResizePolicy>
         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
       </columnResizePolicy>
     </TableView>
+      <Label fx:id="errorMessage" alignment="CENTER" layoutX="108.0" layoutY="6.0" prefHeight="18.0" prefWidth="546.0" textFill="RED" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="59.60000000000002" />
+    <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="42.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="42.0">
+      <image>
+        <Image url="@../data/search.png" />
+      </image>
+    </ImageView>
+    <TextField fx:id="searchField" layoutX="78.0" layoutY="189.0" prefHeight="19.0" prefWidth="513.0" promptText="Пошук кроків..." style="-fx-background-color: transparent;" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="29.200000000000045" />
   </children>
 </AnchorPane>

@@ -39,8 +39,8 @@
             <Font size="18.0" />
           </font>
         </Label>
-        <TextField fx:id="complateGoal_Goal" layoutX="127.0" layoutY="38.0" />
-        <ComboBox fx:id="complateGoal_status" layoutX="127.0" layoutY="80.0" prefWidth="150.0" promptText="Виберіть..." />
+        <TextField fx:id="complateGoal_Goal" layoutX="127.0" layoutY="38.0" AnchorPane.leftAnchor="124.4" AnchorPane.rightAnchor="125.4" />
+        <ComboBox fx:id="complateGoal_status" layoutX="127.0" layoutY="80.0" prefWidth="150.0" promptText="Виберіть..." AnchorPane.leftAnchor="124.4" AnchorPane.rightAnchor="124.6" />
       </children>
     </AnchorPane>
   </children>

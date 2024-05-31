@@ -83,8 +83,6 @@ public class CompleteGoalsController {
         goalViewModels.add(new GoalViewModel(goal));
       }
       complateGoal_tableView.setItems(goalViewModels);
-    } else {
-      // Обробити випадок, коли користувач не знайдений
     }
   }
 
@@ -103,7 +101,6 @@ public class CompleteGoalsController {
         complateGoal_tableView.refresh();
       } catch (EntityNotFoundException e) {
         e.printStackTrace();
-        // Обробити виняток відповідним чином
       }
     }
   }

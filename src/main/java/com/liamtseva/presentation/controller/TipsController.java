@@ -21,7 +21,7 @@ public class TipsController implements Initializable {
   private final TipsRepository tipsRepository;
 
   public TipsController() {
-    this.tipsRepository = new TipsRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
+    this.tipsRepository = new TipsRepositoryImpl(new DatabaseConnection().getDataSource());
   }
   @Override
   public void initialize(URL url, ResourceBundle resourceBundle) {

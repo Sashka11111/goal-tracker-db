@@ -1,12 +1,14 @@
 
-	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°¼ÛÒü1J$b8ad1315-f864-4870-a817-59c10e66117c
+	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°¼ÛÒü1J$47cdd359-7bbd-43df-aab4-39662ef91fd3
 
-java:S11928"KDefine a constant instead of duplicating this literal " not found" 4 times.(²Ùí^8³¼ÛÒü1J$e7f7614f-bd9c-459a-ab0f-e21c46400ae7
+java:S11929"KDefine a constant instead of duplicating this literal " not found" 4 times.(²Ùí^8³¼ÛÒü1J$e3ed2a18-806b-4e41-813e-804c9870b918
 
-java:S11928"NDefine a constant instead of duplicating this literal "Step with id " 3 times.(²Ùí^8´¼ÛÒü1J$402b79d8-445c-4146-a8ad-08deb5248440
+java:S11929"NDefine a constant instead of duplicating this literal "Step with id " 3 times.(²Ùí^8´¼ÛÒü1J$bb3eafd8-996b-4513-9a7c-2b9374955699
 b
-java:S69050"Don't use the query "SELECT *".(Õìëª8Ù¼ÛÒü1J$abfe4583-fb3b-49c7-815e-91340fa9bd0d
+java:S69051"Don't use the query "SELECT *".(Õìëª8Ù¼ÛÒü1J$049e93b4-e316-44fb-88fd-f1ac96c57e28
 g
-java:S6905C"Don't use the query "SELECT *".(¸¡”Öşÿÿÿÿ8à¼ÛÒü1J$5d539670-6e97-4b1b-a420-d15c5762f29f
+java:S6905D"Don't use the query "SELECT *".(¸¡”Öşÿÿÿÿ8à¼ÛÒü1J$99fb24b6-76a9-4059-96ed-d69db6452d44
 g
-java:S6905W"Don't use the query "SELECT *".(½ô—ãÿÿÿÿÿ8ä¼ÛÒü1J$b5869ee3-0a58-4b9c-98c8-8421f6447c59
+java:S6905X"Don't use the query "SELECT *".(½ô—ãÿÿÿÿÿ8ä¼ÛÒü1J$2e4dbcca-f5d2-4194-914b-9b42c628ed1e
+_
+java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.Goal'.(­•˜ı8Ùù­øü1
