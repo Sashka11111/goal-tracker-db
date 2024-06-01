@@ -45,7 +45,7 @@ public class AuthorizationController {
 
   // Параметризований конструктор, який приймає userRepository
   public AuthorizationController() {
-    this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource()); // Створення CategoryRepositoryImpl з DatabaseConnection
+    this.userRepository = new UserRepositoryImpl(new DatabaseConnection().getDataSource());
   }
 
   @FXML

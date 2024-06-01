@@ -1,7 +1,6 @@
 package com.liamtseva.persistence.repository.impl;
 
 import com.liamtseva.domain.exception.EntityNotFoundException;
-import com.liamtseva.persistence.entity.Goal;
 import com.liamtseva.persistence.entity.Step;
 import com.liamtseva.persistence.repository.contract.StepRepository;
 
@@ -45,24 +44,6 @@ public class StepRepositoryImpl implements StepRepository {
   }
 
   @Override
-  public Step getStepById(int id) throws EntityNotFoundException {
-    String query = "SELECT * FROM Steps WHERE id_step = ?";
-    try (Connection connection = dataSource.getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-      preparedStatement.setInt(1, id);
-      try (ResultSet resultSet = preparedStatement.executeQuery()) {
-        if (resultSet.next()) {
-          return extractStepFromResultSet(resultSet);
-        } else {
-          throw new EntityNotFoundException("Step with id " + id + " not found");
-        }
-      }
-    } catch (SQLException e) {
-      throw new EntityNotFoundException("Error while fetching step with id " + id, e);
-    }
-  }
-
-  @Override
   public List<Step> getStepsByGoalId(int goalId) {
     List<Step> steps = new ArrayList<>();
     String query = "SELECT * FROM Steps WHERE id_goal = ?";
@@ -77,25 +58,6 @@ public class StepRepositoryImpl implements StepRepository {
       }
     } catch (SQLException e) {
       e.printStackTrace();
-      // Handle exception properly, maybe rethrow or log it
-    }
-    return steps;
-  }
-
-  @Override
-  public List<Step> getAllSteps() {
-    List<Step> steps = new ArrayList<>();
-    String query = "SELECT * FROM Steps";
-    try (Connection connection = dataSource.getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
-        ResultSet resultSet = preparedStatement.executeQuery()) {
-      while (resultSet.next()) {
-        Step step = extractStepFromResultSet(resultSet);
-        steps.add(step);
-      }
-    } catch (SQLException e) {
-      e.printStackTrace();
-      // Handle exception properly, maybe rethrow or log it
     }
     return steps;
   }
@@ -116,6 +78,7 @@ public class StepRepositoryImpl implements StepRepository {
       throw new EntityNotFoundException("Failed to update step.", e);
     }
   }
+
   @Override
   public void updateStepStatusByName(String description, String newStatus) throws EntityNotFoundException {
     String query = "UPDATE Steps SET status = ? WHERE description = ?";
@@ -131,6 +94,7 @@ public class StepRepositoryImpl implements StepRepository {
       throw new EntityNotFoundException("Failed to update step status", e);
     }
   }
+
   @Override
   public List<Step> searchStepsByUserIdAndText(int userId, String searchText) {
     List<Step> steps = new ArrayList<>();
@@ -149,10 +113,10 @@ public class StepRepositoryImpl implements StepRepository {
       }
     } catch (SQLException e) {
       e.printStackTrace();
-      // Handle exception properly, maybe rethrow or log it
     }
     return steps;
   }
+
   @Override
   public void deleteStep(int id) throws EntityNotFoundException {
     String query = "DELETE FROM Steps WHERE id_step = ?";

@@ -71,11 +71,11 @@
     </AnchorPane>
     <TableView fx:id="MyGoals_tableView" layoutX="24.0" layoutY="284.8" prefHeight="259.0" prefWidth="672.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="285.0">
       <columns>
-        <TableColumn fx:id="MyGoals_col_Goal" prefWidth="124.80002212524414" text="Ціль" />
-        <TableColumn fx:id="MyGoals_col_Description" prefWidth="171.1999969482422" text="Опис" />
-        <TableColumn fx:id="MyGoals_col_startDate" prefWidth="143.20001220703125" text="Дата початку" />
-        <TableColumn fx:id="MyGoals_col_endDate" prefWidth="105.60003662109375" text="Дата закінчення" />
-        <TableColumn fx:id="MyGoals_col_status" prefWidth="115.20001220703125" text="Статус" />
+        <TableColumn fx:id="MyGoals_col_Goal" prefWidth="124.8" text="Ціль" />
+        <TableColumn fx:id="MyGoals_col_Description" prefWidth="171.2" text="Опис" />
+        <TableColumn fx:id="MyGoals_col_startDate" prefWidth="143.2" text="Дата початку" />
+        <TableColumn fx:id="MyGoals_col_endDate" prefWidth="105.6" text="Дата закінчення" />
+        <TableColumn fx:id="MyGoals_col_status" prefWidth="115.2" text="Статус" />
       </columns>
       <placeholder>
         <Label text="У Вас поки немає цілей" />
@@ -90,6 +90,6 @@
             <Image url="@../data/search.png" />
          </image>
       </ImageView>
-    <TextField fx:id="searchField" layoutX="68.0" layoutY="235.0" prefHeight="19.0" prefWidth="513.0" promptText="Пошук цілей..." style="-fx-background-color: transparent;" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="39.200000000000045" />
+    <TextField fx:id="searchField" layoutX="68.0" layoutY="235.0" prefHeight="19.0" prefWidth="513.0" promptText="Пошук цілей..." style="-fx-background-color: transparent;" styleClass="border" stylesheets="@../design/mainMenu.css" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="39.2" />
   </children>
 </AnchorPane>

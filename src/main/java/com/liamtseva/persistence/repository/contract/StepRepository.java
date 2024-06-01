@@ -6,9 +6,7 @@ import java.util.List;
 
 public interface StepRepository {
   int addStep(Step step)throws EntityNotFoundException;
-  Step getStepById(int id) throws EntityNotFoundException;
   List<Step> getStepsByGoalId(int goalId);
-  List<Step> getAllSteps();
   void updateStep(Step step) throws EntityNotFoundException;
   void updateStepStatusByName(String description, String newStatus) throws EntityNotFoundException;
   void deleteStep(int id) throws EntityNotFoundException;

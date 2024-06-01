@@ -1,7 +1,3 @@
 
 g
-java:S6905"Don't use the query "SELECT *".(¦Äƒ™ýÿÿÿÿ8ðÃÃ’÷1J$d8260ef3-80cd-4e8e-b05e-1fb0c37910d8
-Š
-java:S1128"BRemove this unused import 'com.liamtseva.persistence.entity.User'.(àˆ°¾ûÿÿÿÿ8¾¶è˜÷1J$fc22b422-e703-441a-a8c5-70bfd52842a7
-–
-java:S1128"SRemove this unused import 'com.liamtseva.domain.exception.EntityNotFoundException'.(¸¥ß—8¾¶è˜÷1J$ca0ea086-e542-4108-9e99-f6b93cef6291
+java:S6905"Don't use the query "SELECT *".(¦Äƒ™ýÿÿÿÿ8ðÃÃ’÷1J$66b76041-f55a-4efa-a985-00cc2dc6a172

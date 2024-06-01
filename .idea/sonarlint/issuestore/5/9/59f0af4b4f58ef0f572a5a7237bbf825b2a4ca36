@@ -1,13 +1,13 @@
 
-	java:S112E"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¾×„šü1J$42f6c79e-b07f-4df1-bec8-ca3ef862de85
+	java:S112E"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¾×„šü1J$ccf41786-1cdf-49f5-9d6e-d0f2efe376e0
 ¸
-java:S1192_"pDefine a constant instead of duplicating this literal "ĞĞµĞ²Ñ–Ñ€Ğ½Ğ¸Ğ¹ Ğ»Ğ¾Ğ³Ñ–Ğ½ Ğ°Ğ±Ğ¾ Ğ¿Ğ°Ñ€Ğ¾Ğ»ÑŒ" 3 times.(ê„÷¬şÿÿÿÿ8¾×„šü1J$391628e0-b4b0-4d1f-b260-3397cdc1f07a
-	java:S116""VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8Ø×„šü1J$1de377f2-b91a-4365-8351-12bfa634a11b
-›	java:S116%"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8Ø×„šü1J$cb6e26fd-4b76-4e10-83a4-ed4ff833238d
-›	java:S116("TRename this field "btn_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¤ışÿÿÿÿ8Ø×„šü1J$6e7ad85d-264c-4262-bb70-994785896b05
+java:S1192_"pDefine a constant instead of duplicating this literal "ĞĞµĞ²Ñ–Ñ€Ğ½Ğ¸Ğ¹ Ğ»Ğ¾Ğ³Ñ–Ğ½ Ğ°Ğ±Ğ¾ Ğ¿Ğ°Ñ€Ğ¾Ğ»ÑŒ" 3 times.(ê„÷¬şÿÿÿÿ8¾×„šü1J$d7215f1b-6505-41f4-bfea-b543e46f3a0a
+	java:S116""VRename this field "login_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü´Ûóÿÿÿÿÿ8Ø×„šü1J$b5fe4e06-c486-4bdf-b977-be460b0b337d
+›	java:S116%"YRename this field "password_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ†’ë8Ø×„šü1J$18ceb2e0-5d71-4e6c-bb25-f315f625381e
+›	java:S116("TRename this field "btn_close" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¤ışÿÿÿÿ8Ø×„šü1J$1d4a1f8a-7f4b-44cb-b728-6e9546ef2ee3
 š
-java:S37764"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8à×„šü1J$0a583509-36f2-46bf-958b-ef44adedc21a
+java:S37764"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8à×„šü1J$40b5e168-b5cd-441e-8128-ae31ade9788d
 t
-java:S16025",Remove useless curly braces around statement(çùúŠùÿÿÿÿ8â×„šü1J$163aeb9c-7897-4a4f-a721-275054f413a2
+java:S16025",Remove useless curly braces around statement(çùúŠùÿÿÿÿ8â×„šü1J$2c3b945e-6260-4035-8765-c4c87c4ba65a
 y
-java:S1481:"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8ä×„šü1J$74a62aaf-2f09-40ef-add9-8c4df3864d31
+java:S1481:"1Remove this unused "currentScene" local variable.(²Äüşÿÿÿÿ8ä×„šü1J$dc77d3a0-93f5-4e7c-b4d7-614267e239f8

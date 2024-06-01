@@ -1,22 +1,16 @@
 
-‡	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(­æşY8°È‚ùú1J$d2685b76-959c-4819-8303-17154da74007
-	java:S112l"FDefine and throw a dedicated exception instead of using a generic one.(™òŒšùÿÿÿÿ8°È‚ùú1J$579fdb7e-6ca9-456e-bdd2-8fef4531e136
-ˆ	java:S112{"FDefine and throw a dedicated exception instead of using a generic one.(¼›Û´8°È‚ùú1J$df308374-b1aa-4a26-a26a-99629df71c8c
-	java:S112Š"FDefine and throw a dedicated exception instead of using a generic one.(ÇçÜ¾úÿÿÿÿ8±È‚ùú1J$6fc860f0-668f-4ef5-8792-177b328b1308
-‰	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(¾éŒá8±È‚ùú1J$c30cbdce-1099-45de-8462-7fccaa03c8e7
-”
-java:S1192I"LDefine a constant instead of duplicating this literal "id_category" 3 times.(Ô–¡Ñşÿÿÿÿ8³È‚ùú1J$3c059b96-6fd9-4586-b47e-e1bbcdd62b59
+‡	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(­æşY8°È‚ùú1J$6616fa62-1114-4b86-bd2d-f6f183c7c2c8
+	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(™òŒšùÿÿÿÿ8°È‚ùú1J$7bdfee1f-b64c-41dc-8d87-1c5c4ba6174c
+ˆ	java:S112j"FDefine and throw a dedicated exception instead of using a generic one.(¼›Û´8°È‚ùú1J$5f1c841c-325f-459c-a92f-7092536d31d4
+	java:S112y"FDefine and throw a dedicated exception instead of using a generic one.(ÇçÜ¾úÿÿÿÿ8±È‚ùú1J$0bf92600-bd76-49f1-b4e1-57ab7dafd0b5
+‰	java:S112‰"FDefine and throw a dedicated exception instead of using a generic one.(¾éŒá8±È‚ùú1J$596363fd-4bae-443b-b1d3-35e8df7555b8
 ’
-java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8ÒÈ‚ùú1J$4ce4e017-9db1-4844-a52e-751125532d7e
+java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8ÒÈ‚ùú1J$fc4b17a9-a048-4209-b525-d4c3373596d4
 
-java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÒÈ‚ùú1J$6cfb4a02-9eaa-4b5b-9b5f-857b6e8c5922
-q
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8—ƒùú1
+java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÒÈ‚ùú1J$bd51643a-9680-4fb8-b134-580fc4dea6a5
 ’
-java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8ÒÈ‚ùú1J$1a80f8c5-1f7b-428a-909b-5d3d4d46a4de
-’
-java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‘ƒ±è8ÒÈ‚ùú1J$bc1301d8-da5f-40c1-9060-052259ee0321
+java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8ÒÈ‚ùú1J$3e6a630e-b951-4adc-a0b2-14767d565dcd
+—
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8—ƒùú1J$d6e5a91e-5c57-4b76-b8be-442619366df1
 b
-java:S6905G"Don't use the query "SELECT *".(ê™ø8âÈ‚ùú1J$338f985c-bac6-4446-8309-1366e22c44c7
-b
-java:S6905U"Don't use the query "SELECT *".(‘ƒ±è8åÈ‚ùú1J$1dcc393d-5b8f-42eb-ba42-ba443db8f054
+java:S6905G"Don't use the query "SELECT *".(ê™ø8âÈ‚ùú1J$809bf6bb-34fd-48f3-9799-cdf77f5aed55

@@ -47,7 +47,7 @@ CREATE TABLE Tips (
     tip_text TEXT NOT NULL
 );
 
--- Створення проміжної таблиці "CategoryGoals"
+-- Створення таблиці "CategoryGoals"
 CREATE TABLE CategoryGoals (
     id_category INTEGER,
     id_goal     INTEGER,

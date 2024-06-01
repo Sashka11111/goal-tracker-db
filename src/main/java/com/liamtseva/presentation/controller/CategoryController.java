@@ -55,7 +55,6 @@ public class CategoryController {
     this.goalRepository = new GoalRepositoryImpl(new DatabaseConnection().getDataSource());
   }
 
-
   @FXML
   void initialize() {
     Category_col_IdCategory.setCellValueFactory(cellData -> cellData.getValue().idCategoryProperty().asObject());
@@ -141,5 +140,4 @@ public class CategoryController {
       }
     }
   }
-
 }

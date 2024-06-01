@@ -79,24 +79,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     return categories;
   }
 
-  @Override
-  public Category getCategoryById(int categoryId) throws EntityNotFoundException {
-    try (Connection connection = dataSource.getConnection()) {
-      PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Category WHERE id_category = ?");
-      preparedStatement.setInt(1, categoryId);
-      ResultSet resultSet = preparedStatement.executeQuery();
-      if (resultSet.next()) {
-        return new Category(resultSet.getInt("id_category"), resultSet.getString("name"));
-      } else {
-        throw new EntityNotFoundException("Category not found.");
-      }
-    } catch (SQLException e) {
-      throw new EntityNotFoundException("Failed to get category by id.", e);
-    }
-  }
-
   // Методи для роботи зі зв'язком багато-до-багатьох
-
   public void addCategoryToGoal(int categoryId, int goalId) {
     String query = "INSERT INTO CategoryGoals (id_category, id_goal) VALUES (?, ?)";
     try (Connection connection = dataSource.getConnection();

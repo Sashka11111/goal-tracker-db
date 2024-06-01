@@ -11,10 +11,10 @@
 
 <AnchorPane prefHeight="558.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liamtseva.presentation.controller.CompleteStepsController">
   <children>
-    <TableView fx:id="complateSteps_tableView" layoutX="25.0" layoutY="39.0" prefHeight="256.0" prefWidth="666.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="262.79999999999995" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="22.800000000000068" AnchorPane.topAnchor="39.0">
+    <TableView fx:id="complateSteps_tableView" layoutX="25.0" layoutY="39.0" prefHeight="256.0" prefWidth="666.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="262" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="22" AnchorPane.topAnchor="39.0">
       <columns>
-        <TableColumn fx:id="complateGoal_col_Step" prefWidth="189.59996032714844" text="Опис кроку" />
-        <TableColumn fx:id="complateGoal_col_GoalName" prefWidth="111.99997329711914" text="Ціль" />
+        <TableColumn fx:id="complateGoal_col_Step" prefWidth="189" text="Опис кроку" />
+        <TableColumn fx:id="complateGoal_col_GoalName" prefWidth="111" text="Ціль" />
         <TableColumn fx:id="complateGoal_col_Status" prefWidth="150.0" text="Статус" />
       </columns>
       <columnResizePolicy>
@@ -38,8 +38,8 @@
             <Font size="18.0" />
           </font>
         </Label>
-        <TextField fx:id="stepDescriptionTextField" layoutX="127.0" layoutY="38.0" AnchorPane.leftAnchor="124.40000000000012" AnchorPane.rightAnchor="125.40000000000006" />
-        <ComboBox fx:id="stepStatusComboBox" layoutX="127.0" layoutY="80.0" prefWidth="150.0" promptText="Виберіть..." AnchorPane.leftAnchor="124.40000000000006" AnchorPane.rightAnchor="124.60000000000005" />
+        <TextField fx:id="stepDescriptionTextField" layoutX="127.0" layoutY="38.0" AnchorPane.leftAnchor="124" AnchorPane.rightAnchor="125" />
+        <ComboBox fx:id="stepStatusComboBox" layoutX="127.0" layoutY="80.0" prefWidth="150.0" promptText="Виберіть..." AnchorPane.leftAnchor="124" AnchorPane.rightAnchor="124" />
       </children>
     </AnchorPane>
   </children>

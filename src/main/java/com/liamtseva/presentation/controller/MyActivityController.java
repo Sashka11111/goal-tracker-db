@@ -19,8 +19,10 @@ public class MyActivityController {
 
   @FXML
   private Label activeGoalsLabel;
+
   @FXML
   private Label postponedGoalsLabel;
+
   @FXML
   private Label completedGoalsLabel;
 

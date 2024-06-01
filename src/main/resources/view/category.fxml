@@ -54,8 +54,8 @@
     </AnchorPane>
     <TableView fx:id="Category_tableView" layoutX="29.0" layoutY="32.0" prefHeight="510.0" prefWidth="294.0" stylesheets="@../design/mainMenu.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="15.600000000000023" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="390.80000000000007" AnchorPane.topAnchor="32.0">
       <columns>
-        <TableColumn fx:id="Category_col_IdCategory" prefWidth="105.59994888305664" text="ID категорії" />
-        <TableColumn fx:id="Category_col_NameCategory" prefWidth="119.20005798339844" text="Категорія" />
+        <TableColumn fx:id="Category_col_IdCategory" prefWidth="106" text="ID категорії" />
+        <TableColumn fx:id="Category_col_NameCategory" prefWidth="119" text="Категорія" />
       </columns>
       <columnResizePolicy>
         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

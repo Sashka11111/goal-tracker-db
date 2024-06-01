@@ -73,7 +73,6 @@ public class GoalViewModel {
     this.description.set(description);
   }
 
-
   public LocalDate getStartDate() {
     return startDate.get();
   }
@@ -109,5 +108,4 @@ public class GoalViewModel {
   public void setStatus(String status) {
     this.status.set(status);
   }
-
 }

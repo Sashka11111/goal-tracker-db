@@ -1,9 +1,7 @@
 package com.liamtseva.persistence.repository.impl;
 
 import com.liamtseva.persistence.entity.Tips;
-import com.liamtseva.persistence.entity.User;
 import com.liamtseva.persistence.repository.contract.TipsRepository;
-import com.liamtseva.domain.exception.EntityNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
