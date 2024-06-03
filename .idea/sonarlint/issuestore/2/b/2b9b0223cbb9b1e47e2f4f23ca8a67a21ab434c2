@@ -6,10 +6,10 @@
 ‰	java:S112‰"FDefine and throw a dedicated exception instead of using a generic one.(¾éŒá8±È‚ùú1J$596363fd-4bae-443b-b1d3-35e8df7555b8
 ’
 java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ªŠÚû8ÒÈ‚ùú1J$fc4b17a9-a048-4209-b525-d4c3373596d4
-
-java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÒÈ‚ùú1J$bd51643a-9680-4fb8-b134-580fc4dea6a5
 ’
 java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã¸Ê8ÒÈ‚ùú1J$3e6a630e-b951-4adc-a0b2-14767d565dcd
+
+java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÒÈ‚ùú1J$bd51643a-9680-4fb8-b134-580fc4dea6a5
 —
 java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶Ê‰şÿÿÿÿ8—ƒùú1J$d6e5a91e-5c57-4b76-b8be-442619366df1
 b

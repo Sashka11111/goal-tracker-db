@@ -215,8 +215,6 @@ w
 G.idea/sonarlint/issuestore/6/d/6d465316922e1840c7d8e18af01b7731cd3d4c4b,6\4\646e225770acff52cd54524c9c6e17972a8e3849
 \
 ,src/main/java/com/liamtseva/GoalTracker.java,1\5\157c02e48cc651bb2a75d98bd5063301f222b5f3
-C
-goal-tracker-db.exe,d\f\df7944f2397e7c3f42b3c503be8b17790bb2f9ac
 }
 Msrc/main/java/com/liamtseva/presentation/controller/MyActivityController.java,d\8\d89ad9fac60f3cbf96a54bd55dcac50aed1825a2
 €
@@ -229,3 +227,5 @@ t
 Dsrc/main/java/com/liamtseva/domain/validation/CategoryValidator.java,6\6\66e6fe1ff9e73b81e8d3fe5f08202c151dab89de
 p
 @src/main/java/com/liamtseva/domain/validation/StepValidator.java,3\f\3f053bb8b5bf4dfc5e9ab2523f22097855d767da
+@
+goal-tracker.xml,5\0\508ff864170fadc607acc283f54beeb457f94dce
